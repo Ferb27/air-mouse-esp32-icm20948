@@ -1,0 +1,205 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-16T23:32:10+0700",
+    "kicad_version": "9.0.7",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/627f4797-c193-4eb1-a88a-ee244150ef95",
+            "violations": [
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol R1 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 0.6223,
+                                "y": 1.7526
+                            },
+                            "uuid": "bfbfde71-7ef6-44fb-b002-50b768970d3a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol J2 Pin 3 [Pin_3, Passive, Line]",
+                            "pos": {
+                                "x": 2.0828,
+                                "y": 2.2479
+                            },
+                            "uuid": "3eafc525-3397-4bb9-9901-f5ec48cd27b5"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'air_mouse'.",
+                    "items": [
+                        {
+                            "description": "Symbol MOD1 [TP4056_Module]",
+                            "pos": {
+                                "x": 0.9652,
+                                "y": 0.508
+                            },
+                            "uuid": "d39f4423-04bf-44b4-a54f-f8285f01b320"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Both GND and LED_ANODE are attached to the same items; GND will be used in the netlist",
+                    "items": [
+                        {
+                            "description": "Label 'GND'",
+                            "pos": {
+                                "x": 0.4826,
+                                "y": 0.5334
+                            },
+                            "uuid": "4456e1e6-0611-43d3-90ec-22550bb63273"
+                        },
+                        {
+                            "description": "Label 'LED_ANODE'",
+                            "pos": {
+                                "x": 0.6985,
+                                "y": 1.7526
+                            },
+                            "uuid": "4e7c4ec1-477e-49a0-98e4-08c304839414"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "multiple_net_names"
+                },
+                {
+                    "description": "Label connects more than one wire at 825500, 1752600",
+                    "items": [
+                        {
+                            "description": "Label 'GND'",
+                            "pos": {
+                                "x": 0.8255,
+                                "y": 1.7526
+                            },
+                            "uuid": "3cb47411-a738-4ccc-9913-578001771b39"
+                        },
+                        {
+                            "description": "Horizontal Wire, length 0.0889 mm",
+                            "pos": {
+                                "x": 0.9398,
+                                "y": 1.7526
+                            },
+                            "uuid": "3b3f63ce-a91d-463d-80b7-744535d387ef"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "label_multiple_wires"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'air_mouse'.",
+                    "items": [
+                        {
+                            "description": "Symbol MOD2 [MT3608_Module]",
+                            "pos": {
+                                "x": 1.8796,
+                                "y": 0.508
+                            },
+                            "uuid": "65435259-a7d3-41c3-b615-83076e1c8d19"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Both 3V3 and IMU_SDA_3V3 are attached to the same items; 3V3 will be used in the netlist",
+                    "items": [
+                        {
+                            "description": "Label '3V3'",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 1.1938
+                            },
+                            "uuid": "5d31e620-398b-49da-9797-1c5874c37444"
+                        },
+                        {
+                            "description": "Label 'IMU_SDA_3V3'",
+                            "pos": {
+                                "x": 1.5748,
+                                "y": 1.3208
+                            },
+                            "uuid": "44a331e9-2e72-4b8b-9e28-66c1b97c4284"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "multiple_net_names"
+                },
+                {
+                    "description": "Pins of type Bidirectional and Power output are connected",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 33 [GPIO21, Bidirectional, Line]",
+                            "pos": {
+                                "x": 1.5748,
+                                "y": 1.3208
+                            },
+                            "uuid": "e0045b6f-b84c-49fb-a0e4-8696133acac8"
+                        },
+                        {
+                            "description": "Symbol U1 Pin 1 [3V3, Power output, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 1.1938
+                            },
+                            "uuid": "de669ad1-aa25-4f63-b424-6ec7c741e18e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "pin_to_pin"
+                },
+                {
+                    "description": "Pins of type Bidirectional and Power output are connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 3 [HV1_SDA, Bidirectional, Line]",
+                            "pos": {
+                                "x": 2.3368,
+                                "y": 1.4478
+                            },
+                            "uuid": "9685fe70-3a8e-458b-a3d3-e3e265d943f1"
+                        },
+                        {
+                            "description": "Symbol U1 Pin 1 [3V3, Power output, Line]",
+                            "pos": {
+                                "x": 1.1684,
+                                "y": 1.1938
+                            },
+                            "uuid": "de669ad1-aa25-4f63-b424-6ec7c741e18e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "pin_to_pin"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'air_mouse'.",
+                    "items": [
+                        {
+                            "description": "Symbol U3 [BSS138_LevelShifter_Module]",
+                            "pos": {
+                                "x": 2.4638,
+                                "y": 1.4224
+                            },
+                            "uuid": "6d2d233a-d906-4003-9ec5-4f066b867d77"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                }
+            ]
+        }
+    ],
+    "source": "air_mouse.kicad_sch"
+}

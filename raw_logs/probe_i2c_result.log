@@ -1,0 +1,160 @@
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+3,    +67) | OK
+ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+
+rst:ets Jul 29 2019 12:21:46
+13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+
+=======================================================
+ESP32 & WCMCU-20948 HARDWARE BRING-UP PROBE
+Direct 3.3V Connection Verification
+=======================================================
+[  2040][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=100000
+
+>>> STARTING I2C SCAN @ 100000 Hz (SDA=21, SCL=22) <<<
+[I2C ACK] Found device at address: 0x68
+[I2C SCAN RESULT] Found 1 device(s) total.
+
+[TARGET DETECTED] Primary address 0x68 is responding with ACK!
+
+Selecting User Bank 0 on device 0x68 via REG_BANK_SEL (0x7F = 0x00)...
+Bank select result: Wire.endTransmission() returned 0 (SUCCESS)
+
+--- WHO_AM_I VERIFICATION ---
+Wire status code: 0
+WHO_AM_I Raw Byte: 0xEA
+Expected: 0xEA
+>>> WHO_AM_I MATCH: 0xEA (ICM-20948 HARDWARE CONFIRMED!) <<<
+
+Waking up chip via PWR_MGMT_1 (0x06 = 0x01)...
+
+Running 100-cycle Stability Test @ 100 kHz...
+100 kHz Result: 100/100 successful (NACK/Errors: 0)
+
+Switching to Fast Mode @ 400 kHz...
+400 kHz Result: 100/100 successful (NACK/Errors: 0)
+>>> 400 kHz FAST MODE IS 100% STABLE! <<<
+
+=======================================================
+Entering continuous live monitoring loop...
+Columns: [Cycle] WHO_AM_I | Accel (X, Y, Z) | Gyro (X, Y, Z) | Bus Status
+=======================================================
+
+[00001] WHO=0xEA | A:(  +500,   +112, +16256) | G:(   -53,   -159,    +47) | OK
+[00002] WHO=0xEA | A:(  +440,   +132, +16172) | G:(   -47,   -123,    +75) | OK
+[00003] WHO=0xEA | A:(  +428,    +60, +16232) | G:(   -64,   -168,    +24) | OK
+[00004] WHO=0xEA | A:(  +432,   +136, +16248) | G:(   -68,   -124,    +35) | OK
+[00005] WHO=0xEA | A:(  +396,   +148, +16168) | G:(   -80,   -162,    +74) | OK
+[00006] WHO=0xEA | A:(  +460,    +16, +16040) | G:(   -92,   -124,    +45) | OK
+[00007] WHO=0xEA | A:(  +472,    -52, +16188) | G:(   -91,   -143,    +59) | OK
+[00008] WHO=0xEA | A:(  +392,    +72, +16232) | G:(   -98,   -202,    +59) | OK
+[00009] WHO=0xEA | A:(  +432,    -52, +16244) | G:(   -72,   -147,    +43) | OK
+[00010] WHO=0xEA | A:(  +316,    +56, +16212) | G:(   -22,   -153,    +72) | OK
+[00011] WHO=0xEA | A:(  +396,    +68, +16184) | G:(   -88,   -157,    +35) | OK

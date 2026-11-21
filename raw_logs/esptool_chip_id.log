@@ -1,0 +1,19 @@
+esptool v5.1.0
+Serial port COM8:
+Connecting.......
+Detecting chip type... ESP32
+Connected to ESP32 on COM8:
+Chip type:          ESP32-D0WD-V3 (revision v3.1)
+Features:           Wi-Fi, BT, Dual Core + LP Core, 240MHz, Vref calibration in eFuse, Coding Scheme None
+Crystal frequency:  40MHz
+MAC:                e0:8c:fe:58:48:bc
+
+Uploading stub flasher...
+Running stub flasher...
+Stub flasher running.
+
+Warning: ESP32 has no chip ID. Reading MAC address instead.
+MAC:                e0:8c:fe:58:48:bc
+
+Hard resetting via RTS pin...
+

@@ -1,0 +1,40 @@
+[19:03:48.434] ets Jul 29 2019 12:21:46
+[19:03:48.434] 
+[19:03:48.434] rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[19:03:48.434] configsip: 0, SPIWP:0xee
+[19:03:48.434] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[19:03:48.434] mode:DIO, clock div:2
+[19:03:48.434] load:0x3fff0030,len:1184
+[19:03:48.639] load:0x40078000,len:13232
+[19:03:48.639] load:0x40080400,len:3028
+[19:03:48.639] entry 0x400805e4
+[19:03:49.455] 
+[19:03:49.455] ==================================================
+[19:03:49.455]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[19:03:49.455]    Course: He Thong Nhung (Embedded Systems)
+[19:03:49.501] ==================================================
+[19:03:49.501] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[19:03:49.501] [   559][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[19:03:49.501] [DIAGNOSTICS] Register Readback Verification:
+[19:03:49.523]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[19:03:49.523]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[19:03:49.523]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[19:03:49.546]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[19:03:49.546]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[19:03:49.546]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[19:03:49.546] [CONFIG] stored settings have another size (24, expected 32) -> defaults
+[19:03:49.569] [CONFIG] in use: ver=2 gain_x=0.300 gain_y=0.300 flick_dps=150.0 flick_enable=1 click_guard_ms=40 recenter_ms=150 scroll_enable=1 scroll_sens=0.50 scroll_invert=0 hscroll=0
+[19:03:49.569] 
+[19:03:49.569] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[19:03:49.781] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[19:03:51.793] [CALIBRATION] Attempt 1: 2199 ms, 200 polls, |a| = 0.988 g, sd = 0.22/0.13/0.08 dps, half-mean diff = 0.01/0.02/0.00 dps -> ACCEPTED
+[19:03:51.793] [CALIBRATION] Zero-Rate Bias: X =  -1.37 dps | Y =  +0.51 dps | Z =  +0.40 dps
+[19:03:51.996] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[19:03:51.996] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[19:03:52.616] [  3632][I][BLEDevice.cpp:577] getAdvertising(): create advertising
+[19:03:52.818] [STATUS] Rate: 93 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.40 | Up: 3s | Frz: 0 | Heal: 0 | Rst: 1
+[19:03:53.221] [  4263][I][BLEDevice.cpp:253] gapEventHandler(): ESP_GAP_BLE_AUTH_CMPL_EVT
+[19:03:53.639] >>> @GET
+[19:03:53.812] @CFG ver=2 gain_x=0.300 gain_y=0.300 flick_dps=150.0 flick_enable=1 click_guard_ms=40 recenter_ms=150 scroll_enable=1 scroll_sens=0.50 scroll_invert=0 hscroll=0
+[19:03:54.025] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.40 | Up: 4s | Frz: 0 | Heal: 0 | Rst: 1
+[19:03:54.830] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.40 | Up: 5s | Frz: 0 | Heal: 0 | Rst: 1

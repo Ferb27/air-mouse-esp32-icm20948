@@ -1,0 +1,34 @@
+STT,Shop,Ref,San pham,Link,Gia (VND),Don vi ban,So luong dat,Thanh tien (VND),Ghi chu / can xac nhan truoc khi dat
+1,IC DAY ROI,MOD1,Mach sac pin sieu nho 4.2V 1A Type-C (TP4056 + DW01 + 8205A),https://icdayroi.com/mach-sac-pin-sieu-nho-4-2v-1a-type-c,9000,1 module,1,9000,Nhan shop: co du 4 pad B+/B-/OUT+/OUT- khong? Dong sac mac dinh 1A la QUA CAO cho pin 400mAh -> xem muc 3k ohm ben duoi
+2,IC DAY ROI,MOD2,Mach tang ap Boost DC-DC MT3608 2A,https://icdayroi.com/mach-nguon-tang-ap-dc-mt3608-2a,12000,1 module,1,12000,Chinh ra DUNG 5V bang dong ho van nang truoc khi noi vao ESP32. Xac nhan du 4 pad VIN+/VIN-/VOUT+/VOUT-
+3,IC DAY ROI,J1,PH2.0-2P 2.0mm duc thang,https://icdayroi.com/ph2-0-2p-2-0mm-duc-thang,2000,goi 10,1,2000,Han day (loi DB9) vao chan; khong cam truc tiep vao perfboard (pitch 2.0mm khac luoi 2.54mm)
+4,IC DAY ROI,SW1,Cong tac gat SS12D00,https://icdayroi.com/cong-tac-gat-ss12d00,5000,goi 10,1,5000,Chan co the cach 2.0mm; han bang day nen khong sao. Do chan bang thuoc kep khi hang ve
+5,IC DAY ROI,SW2-SW4,Nut nhan 4 chan 12x12x7.3,https://icdayroi.com/nut-nhan-4-chan-12-12-7-3,4000,goi 10,1,4000,Chan 5.0x12.5mm gan nhu trung luoi 2.54
+6,IC DAY ROI,CAP,Nap chup nut nhan B3F (vuong),https://icdayroi.com/nap-chup-nut-nhan-b3f,3000,goi 10,2,6000,Mua 2 goi (1 du phong). Thu lap vao tru nhan khi hang ve; neu long thi quan bang mong/nho keo
+7,IC DAY ROI,D1,Led mau xanh la 3MM,https://icdayroi.com/led-mau-xanh-la-3mm,2000,goi 10,1,2000,
+8,IC DAY ROI,R1,Dien tro 1K 1/4W 1%,https://icdayroi.com/dien-tro-1k-1-4w-1-goi-50-con,7000,goi 50-100,1,7000,Xac nhan so luong trong goi
+9,IC DAY ROI,R2-R3,Dien tro 100K 1/4W 1%,https://icdayroi.com/dien-tro-100k-1-4w-1-goi-50-con,6000,goi 50-100,1,6000,Xac nhan so luong trong goi
+10,IC DAY ROI,C1,Tu gom 100nF 50V,https://icdayroi.com/tu-gom-100nf50v-goi-10-con,1000,goi 10,1,1000,
+11,IC DAY ROI,C2,Tu hoa 10uF 50V (5x11mm),https://icdayroi.com/tu-hoa-10uf50v,3000,goi 10,1,3000,Chan uon duoc nen khop perfboard
+12,IC DAY ROI,TP + chan IMU,Hang rao 1x40 2.54mm Male,https://icdayroi.com/header-1x40-2-54mm-male,1000,dai 40 chan,2,2000,Be 1 dai thanh 1x4 lam test point; dai con lai han chan cho WCMCU-20948 neu chua co
+13,IC DAY ROI,J_ESP,Hang rao 1x20 2.54mm Female,https://icdayroi.com/header-1x20-2-54mm-female,1500,1 cai,2,3000,Dung nguyen 1x20 (thua 1 lo). Do khoang cach 2 hang tren ESP32 that truoc khi han
+14,IC DAY ROI,J_IMU,Hang rao 1x10 2.54mm Female,https://icdayroi.com/header-1x10-2-54mm-female,1100,1 cai,1,1100,
+15,THE GIOI IC,Board,FR4 PCB Han Test Board 10x10cm phu xanh 1 mat,https://www.thegioiic.com/fr4-pcb-han-test-board-10x10cm-phu-xanh-1-mat,14800,1 board,1,14800,Dung lam board thu mach. Con thieu board 9x15cm lam board chinh (chua co link)
+16,THE GIOI IC,Day,Cap DB9 9 loi 28AWG ma thiec,https://www.thegioiic.com/day-cap-dong-ma-thiec-9-loi-boc-chong-nhieu-cho-cong-db9,,theo met,1-2,,Chua biet gia. Mua 2 soi hoac 1 cuon vai met. Duong nguon chap 2-3 loi song song
+17,SHOPEE,BAT1,Pin sac LiPo 1s 3.7v co mach bao ve - loai 802030 400mAh,https://shopee.vn/ (link shop da gui),24514,1 vien,1,24514,Do cuc day do/den bang dong ho truoc khi noi. Day tran khong co dau JST
+18,SHOPEE / VAN PHONG PHAM,INS1,Bang keo Kapton + mut xop EVA/PE 1-2mm,,,1 bo,1,,Uoc khoang 25.000 VND. Lot giua pin va mat han cua board
+20,CAN TIM,Board,Board perfboard 9x15cm (hoac 8x12 / 10x15 / 7x15),,,,,,Board chinh. Nho GPT tim o icdayroi / thegioiic / nshop
+,,,,,,,,,
+,,,TONG DA BIET GIA (chua gom muc 16 18 20),,,,,"=SUM(I2:I20)",
+21,KIEM KE / CAN TIM,J5V_F,Header cai 1x10 pitch 2.54mm bo sung de tach 2 o cho J5V,,,1 dai,1,,THEM BOI HUONG DAN V2; Khong cat 2 socket 1x20 ESP32 hay socket IMU; xac nhan dong tiep diem va cach dien
+22,KIEM KE / CAN TIM,INS2,Ong co nhiet cach dien cac co phu hop day va chan giac,,,1 bo,1,,THEM BOI HUONG DAN V2; Boc rieng chan J1 J5V va moi noi; kiem ke truoc mua
+23,KIEM KE / CAN TIM,INS3,Bang dan hai mat phu hop pin va dem cach dien,,,1 phan dung,1,,THEM BOI HUONG DAN V2; Khong ep tui pin; kiem ke truoc mua
+24,KIEM KE / CAN TIM,FIX1,Bo ga phi kim va dem cach dien module nguon giac va cong,,,1 bo,1,,THEM BOI HUONG DAN V2; Do than module truoc; khong ga len vung pin; keo nen chi bo tro
+25,KIEM KE / CAN TIM,USB_ESP,Cap USB du lieu dung dau cong ESP32 thuc te,,,1 cap,1,,THEM BOI HUONG DAN V2; Kiem ke cap san co; can do loai dau; goc vuong chi neu vuong co khi
+26,KIEM KE / CAN TIM,USB_CHG,Cap cap nguon USB Type-C cho TP4056,,,1 cap,1,,THEM BOI HUONG DAN V2; Chi dung khi thu sac pin that; co the dung chung cap phu hop STT25; khong mua trung
+27,KIEM KE / CAN TIM,SOLDER,Thiec han dien tu co loi flux,,,1 phan dung,1,,THEM BOI HUONG DAN V2; Dung lai neu da co; chon loai theo muc 3.1
+28,KIEM KE / CAN TIM,FLUX,Flux tro han dien tu,,,1 phan dung,1,,THEM BOI HUONG DAN V2; Khong dung axit han ong nuoc; dung lai neu da co
+29,KIEM KE / CAN TIM,DESOLDER,Day hut thiec hoac bom hut thiec phu hop,,,1 phan dung,1,,THEM BOI HUONG DAN V2; Chi can mot trong hai; khong mua neu da co dung cu hut phu hop
+30,KIEM KE / CAN TIM,TAPE,Bang keo giay giu linh kien khi han,,,1 phan dung,1,,THEM BOI HUONG DAN V2; Khong thay cach dien lau dai cua nguon; dung lai neu da co
+31,KIEM KE / CAN TIM,J1_TEST,Day thu JST-PH 2.0 2P cai de noi nguon thay pin vao J1,,,1 day,1,,THEM BOI HUONG DAN V2; Do cuc ngay dau cam; nguon tat khi ghep; khong cap USB TP4056 khi nguon thay pin dang noi
+32,KIEM KE / CAN TIM,TOOLS,Kiem ke dung cu con thieu: de mo han dong ho kim nhip thuoc kinh kep va phong dai,,,1 bo kiem ke,1,,THEM BOI HUONG DAN V2; Mo han co ban da co; dung lai hoac muon; chi mua mon thieu; can thong gio khi han

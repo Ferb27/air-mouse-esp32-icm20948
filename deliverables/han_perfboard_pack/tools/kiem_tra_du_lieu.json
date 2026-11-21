@@ -1,0 +1,11 @@
+{
+  "wire_rows": 43,
+  "nets": 15,
+  "components": 22,
+  "coordinates": "MATCH_GUIDE",
+  "source_table_rows": "MATCH",
+  "measurements": "NOT_PERFORMED",
+  "svg_count": 12,
+  "description": "GENERATED_FROM_SVG_AND_SHARED_DATA",
+  "html": "INLINE_NO_EXTERNAL_RESOURCES"
+}

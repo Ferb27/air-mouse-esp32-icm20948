@@ -1,0 +1,61 @@
+[22:19:09.809] ets Jul 29 2019 12:21:46
+[22:19:09.810] 
+[22:19:09.810] rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[22:19:09.810] configsip: 0, SPIWP:0xee
+[22:19:09.810] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[22:19:09.810] mode:DIO, clock div:2
+[22:19:09.810] load:0x3fff0030,len:1184
+[22:19:10.012] load:0x40078000,len:13232
+[22:19:10.012] load:0x40080400,len:3028
+[22:19:10.012] entry 0x400805e4
+[22:19:10.817] 
+[22:19:10.839] ==================================================
+[22:19:10.839]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[22:19:10.839]    Course: He Thong Nhung (Embedded Systems)
+[22:19:10.839] ==================================================
+[22:19:10.886] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[22:19:10.886] [   557][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[22:19:10.886] [DIAGNOSTICS] Register Readback Verification:
+[22:19:10.886]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[22:19:10.908]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[22:19:10.908]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[22:19:10.908]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[22:19:10.908]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[22:19:10.931]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[22:19:10.931] [CONFIG] stored settings have another size (36, expected 40) -> defaults
+[22:19:10.952] [CONFIG] in use: ver=5 gain_x=0.300 gain_y=0.300 flick_dps=150.0 flick_enable=1 click_guard_ms=40 recenter_ms=150 scroll_enable=1 scroll_sens=2.00 scroll_dead=2.5 scroll_invert=0 hscroll=0 scroll_ref=0 btn_left=1 btn_right=2 btn_mode=6 invert_x=0 invert_y=0
+[22:19:10.952] 
+[22:19:10.952] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[22:19:11.159] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[22:19:13.206] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, |a| = 0.980 g, sd = 24.65/20.80/7.78 dps, half-mean diff = 27.44/17.66/0.07 dps -> REJECTED (board not still), retrying
+[22:19:15.460] [CALIBRATION] Attempt 2: 2200 ms, 200 polls, |a| = 0.975 g, sd = 47.17/19.00/25.66 dps, half-mean diff = 20.68/4.75/0.10 dps -> REJECTED (board not still), retrying
+[22:19:17.706] [CALIBRATION] Attempt 3: 2200 ms, 200 polls, |a| = 0.986 g, sd = 10.01/7.87/17.97 dps, half-mean diff = 1.28/7.84/11.97 dps -> REJECTED (board not still), retrying
+[22:19:19.927] [CALIBRATION] Attempt 4: 2200 ms, 200 polls, |a| = 0.988 g, sd = 0.66/0.19/1.32 dps, half-mean diff = 0.11/0.06/0.29 dps -> REJECTED (board not still), retrying
+[22:19:22.016] [CALIBRATION] Attempt 5: 2200 ms, 200 polls, |a| = 0.989 g, sd = 1.56/0.78/8.88 dps, half-mean diff = 0.29/0.66/7.46 dps -> REJECTED (board not still), retrying
+[22:19:22.218] [CALIBRATION][WARN] Board never held still; using the last attempt. It will recalibrate by itself once it rests on a surface (or send 'c').
+[22:19:22.218] [CALIBRATION] Zero-Rate Bias: X =  -1.74 dps | Y =  +0.27 dps | Z =  +4.20 dps
+[22:19:22.218] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[22:19:22.218] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[22:19:22.836] [ 12497][I][BLEDevice.cpp:577] getAdvertising(): create advertising
+[22:19:23.251] [STATUS] Rate: 93 Hz | Stat: 0 | Clutch: 0 | dX:   +4, dY:   +0 | BiasZ: +4.20 | Up: 12s | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1
+[22:19:23.653] [ 13176][I][BLEDevice.cpp:253] gapEventHandler(): ESP_GAP_BLE_AUTH_CMPL_EVT
+[22:19:24.055] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +1, dY:   +0 | BiasZ: +4.20 | Up: 13s | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1
+[22:19:25.101] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   -1, dY:  -11 | BiasZ: +4.20 | Up: 14s | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1
+[22:19:26.118] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +1, dY:   +0 | BiasZ: +4.20 | Up: 15s | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1
+[22:19:27.167] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   -4, dY:   +8 | BiasZ: +4.20 | Up: 16s | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1
+[22:19:28.174] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +3, dY:   -6 | BiasZ: +4.20 | Up: 17s | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1
+[22:19:29.205] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:  +11, dY:  -18 | BiasZ: +4.20 | Up: 18s | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1
+[22:19:30.236] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:  +13, dY:   +8 | BiasZ: +4.20 | Up: 19s | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1
+[22:19:31.280] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:  +13, dY:   +6 | BiasZ: +4.20 | Up: 20s | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1
+[22:19:32.123] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   -1, dY:   +2 | BiasZ: +4.20 | Up: 21s | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1
+[22:19:33.141] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +1, dY:   +0 | BiasZ: +4.20 | Up: 22s | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1
+[22:19:34.160] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:  -13, dY:  -11 | BiasZ: +4.20 | Up: 23s | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1
+[22:19:35.178] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +1, dY:   +0 | BiasZ: +4.20 | Up: 24s | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1
+[22:19:36.238] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +1, dY:   +0 | BiasZ: +4.20 | Up: 25s | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1
+[22:19:37.271] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +1, dY:   +0 | BiasZ: +4.20 | Up: 26s | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1
+[22:19:38.115] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +1, dY:   +0 | BiasZ: +4.20 | Up: 27s | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1
+[22:19:39.153] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +2, dY:   +0 | BiasZ: +4.20 | Up: 28s | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1
+[22:19:39.366] [HEAL] Resting on a surface but bias is off by 0.22/0.26/-3.79 dps -> recalibrating
+[22:19:39.366] 
+[22:19:39.366] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[22:19:39.366] [CALIBRATION] Please leave the device completely STATIONARY on the table.

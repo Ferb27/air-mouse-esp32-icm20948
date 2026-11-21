@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="794" height="1123" viewBox="0 0 794 1123" role="img">
+<title>Hai trạng thái J5V</title>
+<defs><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M-2,2 L2,-2 M0,10 L10,0 M8,12 L12,8" stroke="#d49b38" stroke-width="1.5"/></pattern></defs>
+<style>text{font-family:Arial,"Segoe UI",sans-serif;fill:#183044} .muted{fill:#4c6475}</style>
+<rect x="0.00" y="0.00" width="794.00" height="1123.00" rx="5" fill="#fff" stroke="none" stroke-width="0" />
+<text x="28.00" y="37.00" font-size="23" text-anchor="start" style="fill:#183044" font-weight="700">Hai trạng thái J5V</text>
+<text x="28.00" y="64.00" font-size="13" text-anchor="start" style="fill:#183044">Quy tắc bắt buộc; J5V là cặp dây +5V/GND, không phải shunt chập hai chân.</text>
+<text x="766.00" y="87.00" font-size="12" text-anchor="end" style="fill:#be2832">đề xuất, chưa đo thực tế</text>
+<line x1="28.00" y1="101.00" x2="766.00" y2="101.00" stroke="#cbd5df" stroke-width="1"/>
+<rect x="35.00" y="150.00" width="724.00" height="360.00" rx="5" fill="#eaf6ef" stroke="#599274" stroke-width="2" />
+<text x="65.00" y="198.00" font-size="28" text-anchor="start" style="fill:#183044" font-weight="700">CHẠY PIN</text>
+<text x="65.00" y="255.00" font-size="20" text-anchor="start" style="fill:#183044" font-weight="700">✓ Cắm J5V đúng chiều + / −</text>
+<text x="65.00" y="303.00" font-size="20" text-anchor="start" style="fill:#183044" font-weight="700">✓ RÚT USB ESP32 và USB sạc</text>
+<text x="65.00" y="351.00" font-size="20" text-anchor="start" style="fill:#183044" font-weight="700">✓ SW1 ON sau kiểm tra</text>
+<text x="65.00" y="399.00" font-size="20" text-anchor="start" style="fill:#be2832" font-weight="700">✗ Không đồng thời USB ESP32</text>
+<text x="65.00" y="475.00" font-size="15" text-anchor="start" style="fill:#183044">J5V.1 = AC34 +5V; J5V.2 = AD34 GND</text>
+<rect x="35.00" y="590.00" width="724.00" height="360.00" rx="5" fill="#eaf1fa" stroke="#6688b0" stroke-width="2" />
+<text x="65.00" y="638.00" font-size="28" text-anchor="start" style="fill:#183044" font-weight="700">CẮM USB ESP32</text>
+<text x="65.00" y="695.00" font-size="20" text-anchor="start" style="fill:#183044" font-weight="700">✓ SW1 OFF, RÚT J5V</text>
+<text x="65.00" y="743.00" font-size="20" text-anchor="start" style="fill:#183044" font-weight="700">✓ Chỉ cấp USB vào ESP32</text>
+<text x="65.00" y="791.00" font-size="20" text-anchor="start" style="fill:#183044" font-weight="700">✓ Bọc/cố định đầu tháo</text>
+<text x="65.00" y="839.00" font-size="20" text-anchor="start" style="fill:#be2832" font-weight="700">✗ SW1 OFF một mình chưa đủ</text>
+<text x="65.00" y="915.00" font-size="15" text-anchor="start" style="fill:#183044">J5V.1 = AC34 +5V; J5V.2 = AD34 GND</text>
+<text x="40.00" y="1013.00" font-size="16" text-anchor="start" style="fill:#be2832">Tắt SW1 trước cắm/rút. Đầu cái 1 tới VIN, cái 2 tới GND. Cắm đảo có thể chập; đo</text>
+<text x="40.00" y="1034.60" font-size="16" text-anchor="start" style="fill:#be2832">cực và chặn hướng trước vận hành.</text>
+<line x1="28.00" y1="1069.00" x2="766.00" y2="1069.00" stroke="#cbd5df" stroke-width="1"/>
+<text x="28.00" y="1090.00" font-size="12" text-anchor="start" style="fill:#183044">Nguồn: V2 §3.6.8/3.9.1. Không suy có diode trên DevKit tham khảo thành bo thật được cấp hai nguồn.</text>
+</svg>

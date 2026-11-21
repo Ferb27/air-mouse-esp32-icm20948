@@ -1,0 +1,172 @@
+# capture_serial.py port=rfc2217://<LAPTOP_IP>:4000?ign_set_control baud=115200 reset=True seconds=130.0 start=2026-10-14 21:20:04
+[21:20:04.553] ets Jul 29 2019 12:21:46
+[21:20:04.553] 
+[21:20:04.554] rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[21:20:04.554] configsip: 0, SPIWP:0xee
+[21:20:04.554] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[21:20:04.554] mode:DIO, clock div:2
+[21:20:04.554] load:0x3fff0030,len:1184
+[21:20:04.554] load:0x40078000,len:13232
+[21:20:04.554] load:0x40080400,len:3028
+[21:20:04.554] entry 0x400805e4
+[21:20:04.562] ets Jul 29 2019 12:21:46
+[21:20:04.562] 
+[21:20:04.566] rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[21:20:04.569] configsip: 0, SPIWP:0xee
+[21:20:04.575] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[21:20:04.577] mode:DIO, clock div:2
+[21:20:04.579] load:0x3fff0030,len:1184
+[21:20:04.582] load:0x40078000,len:13232
+[21:20:04.584] load:0x40080400,len:3028
+[21:20:04.585] entry 0x400805e4
+[21:20:05.580] 
+[21:20:05.585] ==================================================
+[21:20:05.590]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[21:20:05.594]    Course: He Thong Nhung (Embedded Systems)
+[21:20:05.598] ==================================================
+[21:20:05.603] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[21:20:05.610] [   554][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[21:20:05.639] [DIAGNOSTICS] Register Readback Verification:
+[21:20:05.643]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[21:20:05.651]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[21:20:05.657]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[21:20:05.664]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[21:20:05.670]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[21:20:05.677]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[21:20:05.677] 
+[21:20:05.683] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[21:20:05.689] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[21:20:07.913] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, sd = 137.43/15.36/13.98 dps, half-mean diff = 3.64/4.07/1.59 dps -> REJECTED (board not still), retrying
+[21:20:10.112] [CALIBRATION] Attempt 2: 2200 ms, 200 polls, sd = 130.69/18.41/14.63 dps, half-mean diff = 1.39/2.99/0.40 dps -> REJECTED (board not still), retrying
+[21:20:12.323] [CALIBRATION] Attempt 3: 2200 ms, 200 polls, sd = 136.77/10.70/16.51 dps, half-mean diff = 14.27/0.30/2.91 dps -> REJECTED (board not still), retrying
+[21:20:14.534] [CALIBRATION] Attempt 4: 2200 ms, 200 polls, sd = 148.34/11.07/19.46 dps, half-mean diff = 2.00/2.52/2.23 dps -> REJECTED (board not still), retrying
+[21:20:16.745] ����������������������������������������������������������������ALIBRATION] Attempt 5: 2200 ms, 200 polls, sd = 168.72/17.83/21.86 dps, half-mean diff = 2.52/4.02/1.52 dps -> REJECTED (board not still), retrying
+[21:20:16.758] [CALIBRATION][WARN] Board never held still; using the last attempt. It will recalibrate by itself once it rests on a surface (or send 'c').
+[21:20:16.764] [CALIBRATION] Zero-Rate Bias: X = +13.27 dps | Y =  +0.95 dps | Z =  +0.28 dps
+[21:20:16.769] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[21:20:16.846] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[21:20:16.846] 
+[21:20:17.497] [ 12443][I][BLEDevice.cpp:577] getAdvertising(): create advertising
+[21:20:17.776] [STATUS] Rate: 93 Hz | Stat: 0 | Clutch: 0 | dX:   +2, dY:   +2 | BiasZ: +0.28
+[21:20:18.007] [ 12952][I][BLEDevice.cpp:253] gapEventHandler(): ESP_GAP_BLE_AUTH_CMPL_EVT
+[21:20:18.777] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   -7, dY:   -2 | BiasZ: +0.28
+[21:20:19.778] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +4, dY:  -11 | BiasZ: +0.28
+[21:20:20.778] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +5, dY:   +3 | BiasZ: +0.28
+[21:20:21.778] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:  +12, dY:  +14 | BiasZ: +0.28
+[21:20:22.779] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:  +19, dY:  +15 | BiasZ: +0.28
+[21:20:23.778] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +4, dY:   +5 | BiasZ: +0.28
+[21:20:24.779] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   -3, dY:   -3 | BiasZ: +0.28
+[21:20:25.779] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:  -25, dY:  -17 | BiasZ: +0.28
+[21:20:26.779] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   -8, dY:   -7 | BiasZ: +0.28
+[21:20:27.779] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   -9, dY:   -7 | BiasZ: +0.28
+[21:20:28.780] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   -4, dY:   -7 | BiasZ: +0.28
+[21:20:29.781] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:  -18, dY:   +4 | BiasZ: +0.28
+[21:20:30.780] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:  -19, dY:   -5 | BiasZ: +0.28
+[21:20:31.780] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +7, dY:  +21 | BiasZ: +0.28
+[21:20:32.780] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:  +12, dY:   -1 | BiasZ: +0.28
+[21:20:33.782] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +4, dY:  +12 | BiasZ: +0.28
+[21:20:34.781] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:  -16, dY:   +4 | BiasZ: +0.28
+[21:20:35.781] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:  -15, dY:   +1 | BiasZ: +0.28
+[21:20:36.782] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +4, dY:  +11 | BiasZ: +0.28
+[21:20:37.783] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:  +12, dY:  +48 | BiasZ: +0.28
+[21:20:38.783] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +1, dY:   +0 | BiasZ: +0.28
+[21:20:39.782] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.28
+[21:20:40.782] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.28
+[21:20:41.783] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.28
+[21:20:42.784] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.28
+[21:20:43.783] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.28
+[21:20:43.854] [HEAL] Resting on a surface but bias is off by -14.76/-0.39/0.06 dps -> recalibrating
+[21:20:43.854] 
+[21:20:43.859] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[21:20:43.866] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[21:20:46.068] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, sd = 0.10/0.08/0.09 dps, half-mean diff = 0.00/0.01/0.01 dps -> ACCEPTED
+[21:20:46.075] [CALIBRATION] Zero-Rate Bias: X =  -1.48 dps | Y =  +0.57 dps | Z =  +0.35 dps
+[21:20:47.076] [STATUS] Rate: 107 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:20:48.077] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:20:49.078] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:20:50.077] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:20:51.079] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:20:52.078] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:20:53.080] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:20:54.079] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:20:55.079] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:20:56.079] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:20:57.080] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:20:58.080] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:20:59.080] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:00.080] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:01.079] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:02.080] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:03.081] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:04.080] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:05.081] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:06.081] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:07.081] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:08.082] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:09.082] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:10.082] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:11.082] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:12.083] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:13.086] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:14.083] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:15.084] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:16.085] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:17.084] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:18.084] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:19.084] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:20.085] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:21.085] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:22.086] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:23.085] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:24.086] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:25.086] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:26.087] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:27.087] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:28.087] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:29.087] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:30.088] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:31.088] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:32.088] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:33.089] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:34.088] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:35.089] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:36.089] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:37.089] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:38.089] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:39.089] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:40.090] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:41.090] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:42.094] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:43.091] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:44.091] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:45.091] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:46.092] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:47.092] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:48.092] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:49.093] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:50.093] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:51.093] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:52.094] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:53.094] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:54.094] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:55.094] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:56.094] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:21:57.094] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:58.095] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35
+[21:21:59.094] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:22:00.095] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:22:01.095] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:22:02.095] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:22:03.096] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:22:04.096] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:22:05.096] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:22:06.096] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:22:07.098] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:22:08.098] ����������������������������������������������������������������TATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:22:09.097] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:22:10.098] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:22:11.098] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:22:12.099] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:22:13.099] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+[21:22:14.099] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34
+# end elapsed_s=130.1 lines=170 bytes=12584 stopped_by=timeout

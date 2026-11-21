@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="794" height="1123" viewBox="0 0 794 1123" role="img">
+<title>Nút, LED, điện trở và tụ</title>
+<defs><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M-2,2 L2,-2 M0,10 L10,0 M8,12 L12,8" stroke="#d49b38" stroke-width="1.5"/></pattern></defs>
+<style>text{font-family:Arial,"Segoe UI",sans-serif;fill:#183044} .muted{fill:#4c6475}</style>
+<rect x="0.00" y="0.00" width="794.00" height="1123.00" rx="5" fill="#fff" stroke="none" stroke-width="0" />
+<text x="28.00" y="37.00" font-size="23" text-anchor="start" style="fill:#183044" font-weight="700">Nút, LED, điện trở và tụ</text>
+<text x="28.00" y="64.00" font-size="13" text-anchor="start" style="fill:#183044">Sơ đồ nhận biết; không theo tỉ lệ. Hướng nhóm chân nút chỉ là logic, phải đo.</text>
+<text x="766.00" y="87.00" font-size="12" text-anchor="end" style="fill:#be2832">đề xuất, chưa đo thực tế</text>
+<line x1="28.00" y1="101.00" x2="766.00" y2="101.00" stroke="#cbd5df" stroke-width="1"/>
+<text x="40.00" y="141.00" font-size="18" text-anchor="start" style="fill:#183044" font-weight="700">NÚT 4 CHÂN: đo hai nhóm A/B</text>
+<circle cx="125.00" cy="192.00" r="9" stroke="#2563eb" fill="white" />
+<circle cx="125.00" cy="282.00" r="9" stroke="#2563eb" fill="white" />
+<line x1="125.00" y1="201.00" x2="125.00" y2="273.00" stroke="#2563eb" stroke-width="4"/>
+<text x="125.00" y="320.00" font-size="15" text-anchor="middle" style="fill:#2563eb" font-weight="700">A → GPIO</text>
+<circle cx="330.00" cy="192.00" r="9" stroke="#20252b" fill="white" />
+<circle cx="330.00" cy="282.00" r="9" stroke="#20252b" fill="white" />
+<line x1="330.00" y1="201.00" x2="330.00" y2="273.00" stroke="#20252b" stroke-width="4"/>
+<text x="330.00" y="320.00" font-size="15" text-anchor="middle" style="fill:#20252b" font-weight="700">B → GND</text>
+<line x1="134.00" y1="237.00" x2="321.00" y2="237.00" stroke="#64748b" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="165.00" y="225.00" font-size="13" text-anchor="start" style="fill:#183044">nhấn mới thông</text>
+<text x="40.00" y="350.00" font-size="14" text-anchor="start" style="fill:#183044">Cùng nhóm luôn thông. Khác nhóm: thả hở, nhấn</text>
+<text x="40.00" y="368.90" font-size="14" text-anchor="start" style="fill:#183044">thông. Không đo ohm khi có nguồn; không suy nhóm</text>
+<text x="40.00" y="387.80" font-size="14" text-anchor="start" style="fill:#183044">A/B từ góc nhìn hình.</text>
+<g data-ref="D1">
+<rect x="470.00" y="135.00" width="280.00" height="150.00" rx="5" fill="#bfe8c1" stroke="#587082" stroke-width="1.2" />
+<text x="482.00" y="159.00" font-size="15" text-anchor="start" style="fill:#183044" font-weight="700">D1 · LED xanh</text>
+<text x="482.00" y="181.00" font-size="13" text-anchor="start" style="fill:#183044">A: chân dài nếu chưa cắt</text>
+<text x="482.00" y="198.55" font-size="13" text-anchor="start" style="fill:#183044">K: chân ngắn/vát; diode test</text>
+<text x="482.00" y="216.10" font-size="13" text-anchor="start" style="fill:#183044">GPIO32 → R1 → A; K → GND</text>
+</g>
+<line x1="540.00" y1="286.00" x2="540.00" y2="337.00" stroke="#a61b29" stroke-width="3"/>
+<line x1="675.00" y1="286.00" x2="675.00" y2="318.00" stroke="#20252b" stroke-width="3"/>
+<text x="528.00" y="362.00" font-size="17" text-anchor="start" style="fill:#183044" font-weight="700">A</text>
+<text x="669.00" y="344.00" font-size="17" text-anchor="start" style="fill:#183044" font-weight="700">K</text>
+<text x="40.00" y="455.00" font-size="18" text-anchor="start" style="fill:#183044" font-weight="700">ĐIỆN TRỞ 1%, năm vạch (đo lại bằng đồng hồ)</text>
+<line x1="65.00" y1="525.00" x2="715.00" y2="525.00" stroke="#556976" stroke-width="2"/>
+<rect x="200.00" y="500.00" width="240.00" height="50.00" rx="15" fill="#e8d8b8" stroke="#876c46" stroke-width="1" />
+<rect x="220.00" y="500.00" width="15.00" height="50.00" rx="0" fill="#795335" stroke="none" stroke-width="0" />
+<rect x="260.00" y="500.00" width="15.00" height="50.00" rx="0" fill="#111827" stroke="none" stroke-width="0" />
+<rect x="300.00" y="500.00" width="15.00" height="50.00" rx="0" fill="#111827" stroke="none" stroke-width="0" />
+<rect x="340.00" y="500.00" width="15.00" height="50.00" rx="0" fill="#795335" stroke="none" stroke-width="0" />
+<rect x="380.00" y="500.00" width="15.00" height="50.00" rx="0" fill="#795335" stroke="none" stroke-width="0" />
+<text x="470.00" y="510.00" font-size="20" text-anchor="start" style="fill:#183044" font-weight="700">R1 · 1 kΩ</text>
+<text x="80.00" y="586.00" font-size="15" text-anchor="start" style="fill:#183044">nâu – đen – đen – nâu – nâu</text>
+<line x1="65.00" y1="675.00" x2="715.00" y2="675.00" stroke="#556976" stroke-width="2"/>
+<rect x="200.00" y="650.00" width="240.00" height="50.00" rx="15" fill="#e8d8b8" stroke="#876c46" stroke-width="1" />
+<rect x="220.00" y="650.00" width="15.00" height="50.00" rx="0" fill="#795335" stroke="none" stroke-width="0" />
+<rect x="260.00" y="650.00" width="15.00" height="50.00" rx="0" fill="#111827" stroke="none" stroke-width="0" />
+<rect x="300.00" y="650.00" width="15.00" height="50.00" rx="0" fill="#111827" stroke="none" stroke-width="0" />
+<rect x="340.00" y="650.00" width="15.00" height="50.00" rx="0" fill="#ed8b24" stroke="none" stroke-width="0" />
+<rect x="380.00" y="650.00" width="15.00" height="50.00" rx="0" fill="#795335" stroke="none" stroke-width="0" />
+<text x="470.00" y="660.00" font-size="20" text-anchor="start" style="fill:#183044" font-weight="700">R2/R3 · 100 kΩ</text>
+<text x="80.00" y="736.00" font-size="15" text-anchor="start" style="fill:#183044">nâu – đen – đen – cam – nâu</text>
+<g data-ref="C1">
+<rect x="40.00" y="825.00" width="330.00" height="125.00" rx="5" fill="#fbe2b8" stroke="#587082" stroke-width="1.2" />
+<text x="52.00" y="849.00" font-size="15" text-anchor="start" style="fill:#183044" font-weight="700">C1 · 100 nF</text>
+<text x="52.00" y="871.00" font-size="13" text-anchor="start" style="fill:#183044">100 nF / mã 104</text>
+<text x="52.00" y="888.55" font-size="13" text-anchor="start" style="fill:#183044">Không phân cực; BAT_SENSE–GND</text>
+</g>
+<g data-ref="C2">
+<rect x="420.00" y="825.00" width="330.00" height="125.00" rx="5" fill="#fbe2b8" stroke="#587082" stroke-width="1.2" />
+<text x="432.00" y="849.00" font-size="15" text-anchor="start" style="fill:#183044" font-weight="700">C2 · 10 µF, có cực</text>
+<text x="432.00" y="871.00" font-size="13" text-anchor="start" style="fill:#183044">10 µF; có vạch cực âm (−)</text>
+<text x="432.00" y="888.55" font-size="13" text-anchor="start" style="fill:#183044">+5V → (+), GND → (−)</text>
+</g>
+<text x="40.00" y="995.00" font-size="15" text-anchor="start" style="fill:#be2832">Vạch/độ dài chân chỉ hỗ trợ nhận biết. Chân đã cắt phải đo/đối chiếu nhãn. Đảo C2 có</text>
+<text x="40.00" y="1015.25" font-size="15" text-anchor="start" style="fill:#be2832">thể gây nóng/rò/vỡ; LED phải có R1.</text>
+<line x1="28.00" y1="1069.00" x2="766.00" y2="1069.00" stroke="#cbd5df" stroke-width="1"/>
+<text x="28.00" y="1090.00" font-size="12" text-anchor="start" style="fill:#183044">Nguồn: V2 §3.6/3.12.2, BOM. Không xem hình nhóm chân nút là footprint đã xác nhận.</text>
+</svg>

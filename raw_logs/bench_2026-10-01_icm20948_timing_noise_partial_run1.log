@@ -1,0 +1,14 @@
+=== SERIAL OPENED: COM3 @ 115200 ===
+[B3] static noise | N=1000 | fails=0 | ACCEL +/-4g (8192 LSB/g), GYRO +/-500dps (65.5 LSB/dps)
+[B3] AX mean=   +126.5 LSB (+0.0154 g) sd= 19.01 LSB (0.0023 g) min=62 max=196
+[B3] AY mean=    -47.2 LSB (-0.0058 g) sd= 15.18 LSB (0.0019 g) min=-101 max=-2
+[B3] AZ mean=  +8095.7 LSB (+0.9882 g) sd= 19.18 LSB (0.0023 g) min=8034 max=8155
+[B3] GX mean=    -36.3 LSB (-0.5544 dps) sd=  5.75 LSB (0.0877 dps) min=-54 max=-18
+[B3] GY mean=    -96.3 LSB (-1.4697 dps) sd=  5.89 LSB (0.0900 dps) min=-114 max=-76
+[B3] GZ mean=    +21.0 LSB (+0.3200 dps) sd=  6.50 LSB (0.0992 dps) min=-4 max=43
+[B3] |A| mean=8096.8 LSB -> 0.9884 g (expected ~8192 LSB = 1 g at rest)
+[B4] TEMP_OUT raw=4528 -> 34.56 degC (die temperature, not ambient)
+[B5] 10ms polling loop | N=500 | period us: min=10000 avg=10000.0 max=10000 | >10.1ms: 0
+[BENCH] DONE
+
+=== SERIAL CLOSED ===

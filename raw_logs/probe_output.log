@@ -1,0 +1,64 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+
+=======================================================
+ESP32 & WCMCU-20948 HARDWARE BRING-UP PROBE
+Direct 3.3V Connection Verification
+=======================================================
+[  2040][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=100000
+
+>>> STARTING I2C SCAN @ 100000 Hz (SDA=21, SCL=22) <<<
+[I2C SCAN RESULT] NO I2C devices found on bus!
+
+[ERROR] Neither 0x68 nor 0x69 responded to I2C ping!
+
+=======================================================
+Entering continuous live monitoring loop...
+Columns: [Cycle] WHO_AM_I | Accel (X, Y, Z) | Gyro (X, Y, Z) | Bus Status
+=======================================================
+
+[  2194][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00001] Read error (code=5, whoami=0x00)
+[  2410][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00002] Read error (code=5, whoami=0x00)
+[  2618][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00003] Read error (code=5, whoami=0x00)
+[  2825][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00004] Read error (code=5, whoami=0x00)
+[  3032][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00005] Read error (code=5, whoami=0x00)
+[  3239][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00006] Read error (code=5, whoami=0x00)
+[  3447][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00007] Read error (code=5, whoami=0x00)
+[  3655][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00008] Read error (code=5, whoami=0x00)
+[  3862][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00009] Read error (code=5, whoami=0x00)
+[  4069][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00010] Read error (code=5, whoami=0x00)
+[  4276][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00011] Read error (code=5, whoami=0x00)
+[  4483][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00012] Read error (code=5, whoami=0x00)
+[  4690][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00013] Read error (code=5, whoami=0x00)
+[  4897][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00014] Read error (code=5, whoami=0x00)
+[  5104][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00015] Read error (code=5, whoami=0x00)
+[  5311][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00016] Read error (code=5, whoami=0x00)
+[  5519][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00017] Read error (code=5, whoami=0x00)
+[  5727][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[00018] Read error (code=5, whoami=0x00)
+[  5934][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1

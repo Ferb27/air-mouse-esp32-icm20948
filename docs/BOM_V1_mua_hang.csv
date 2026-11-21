@@ -1,0 +1,20 @@
+STT,Ref,Ten linh kien,Variant / Thong so de tim mua,So luong,Don gia tham chieu (VND),Thanh tien (VND),Nhom
+1,MOD1,Module sac & bao ve pin LiPo,TP4056 Type-C with Protection (DW01A + FS8205A),1,12000,12000,Nguon
+2,MOD2,Module tang ap DC-DC Boost 5V,MT3608 2A Step-Up Module,1,15000,15000,Nguon
+3,BAT1,Pin LiPo 1S dep,LiPo 1S 3.7V 1000mAh model 523450 (co PCM) JST-PH 2.0,1,65000,65000,Nguon
+4,J1,Coc cam nguon pin,JST-PH 2.0mm 2-pin THT (B2B-PH-K),1,2500,2500,Nguon
+5,SW1,Cong tac nguon truot,Slide Switch SPDT SS12D00,1,3000,3000,Nguon
+6,SW2-SW4,Nut nhan tactile chuot trai/phai/bat tat,Tactile Switch 12x12x7.3mm TC-1212T 4 chan THT,3,3000,9000,Phim bam
+7,D1,LED bao trang thai,LED 3mm khuech tan xanh la,1,1000,1000,Phim bam
+8,R1,Dien tro han dong LED,1k ohm 1/4W 1% THT,1,500,500,Phim bam
+9,R2-R3,Dien tro cau phan ap do pin,100k ohm 1/4W 1% THT,2,500,1000,Do pin
+10,C1,Tu loc ADC do pin,Tu gom 100nF 50V THT,1,500,500,Do pin
+11,C2,Tu on dinh 5V,Tu hoa nhom 10uF 25V THT,1,1000,1000,Do pin
+12,J2,Header mo rong I2C,Male pin header 1x4 thang P2.54mm,1,1000,1000,Phim bam
+13,J_ESP_L/J_ESP_R,Socket cam ESP32 DevKit,Female header 1x19 thang P2.54mm,2,3500,7000,Socket
+14,J_IMU,Socket cam WCMCU-20948,Female header 1x10 thang P2.54mm,1,2500,2500,Socket
+15,TP1-TP4,Test point I2C (SCL/SDA/3V3/GND),Male pin header 1x4 thang P2.54mm,1,1000,1000,Test point
+16,CAP_L/CAP_R/CAP_M,Nap chup nut bam,Button cap tron D12mm cho nut 12x12,3,2000,6000,Co khi
+17,INS1,Cach dien & dem pin LiPo,Bang keo Kapton + mut xop EVA 1.5mm (cat ~54x36mm),1,25000,25000,An toan pin
+,,,,,,,
+,TONG,,,23,,153000,Gia tham chieu - can kiem tra lai truoc khi mua

@@ -1,0 +1,37 @@
+log: raw_logs\bias_drift_2026-10-04_B_cold.log
+cal: [CAL] bias_x=-0.6039 bias_y=-1.4399 bias_z=+0.3633 dps polls=200 elapsed_ms=2199 temp=32.84
+seconds parsed: 711 (t=1..720), non-consecutive jumps: 9
+samples/second: mean=100.0 min=100 max=100 (expect ~100); total failed reads=0
+
+PER-MINUTE TABLE (residual = mean raw gyro - startup calibration, dps; averaged over the minute)
+min | temp_end | rx      ry      rz     | max|10s-mean| rx   ry   rz  | cnt(sum) | stat%  | fixlock%
+  1 |    33.12 | -0.003 -0.005 +0.002 | 0.008 0.012 0.006 |        6 |  95.8  |  95.4
+  2 |    33.03 | +0.000 -0.014 -0.003 | 0.016 0.019 0.009 |      141 |  91.3  |  91.3
+  3 |    33.12 | +0.001 -0.017 +0.003 | 0.009 0.024 0.010 |      196 |  90.4  |  90.3
+  4 |    32.79 | +0.002 -0.022 +0.006 | 0.010 0.029 0.013 |       32 |  89.1  |  89.4
+  5 |    32.79 | +0.000 -0.011 +0.003 | 0.009 0.016 0.010 |      315 |  64.0  |  62.7
+  6 |    32.69 | -0.003 -0.029 +0.006 | 0.010 0.037 0.057 |      555 |  57.4  |  56.2
+  7 |    32.79 | -0.006 -0.029 -0.006 | 0.016 0.036 0.010 |       64 |  84.3  |  83.2
+  8 |    32.65 | -0.006 -0.033 -0.003 | 0.013 0.040 0.011 |      146 |  87.6  |  86.6
+  9 |    32.79 | -0.009 -0.041 +0.001 | 0.017 0.046 0.011 |       91 |  86.5  |  85.9
+ 10 |    33.03 | -0.007 -0.046 -0.005 | 0.013 0.054 0.012 |      132 |  80.7  |  78.3
+ 11 |    32.79 | -0.009 -0.039 -0.000 | 0.014 0.047 0.008 |      341 |  81.9  |  80.2
+ 12 |    32.79 | -0.007 -0.044 +0.000 | 0.018 0.050 0.007 |      409 |  60.9  |  59.1
+
+SUMMARY
+die temperature: first 10 s avg 32.76 C -> last 10 s avg 32.87 C (delta +0.11 C)
+rx(roll,no cursor)   first-30s avg -0.003 | last-60s avg -0.008 | change -0.005 dps | max |10s mean| 0.018 at t~699s | slope -0.0009 dps/min
+ry(pitch->dY)        first-30s avg -0.006 | last-60s avg -0.044 | change -0.038 dps | max |10s mean| 0.054 at t~571s | slope -0.0036 dps/min
+rz(yaw->dX)          first-30s avg +0.002 | last-60s avg +0.001 | change -0.002 dps | max |10s mean| 0.057 at t~347s | slope -0.0004 dps/min
+noise (mean per-second std-dev): gx 0.110  gy 0.135  gz 0.093 dps (bench 2026-10-01: ~0.09)
+windows (10 s mean) where max(|ry|,|rz|) >= 0.1: 0 of 702
+windows (10 s mean) where max(|ry|,|rz|) >= 0.2: 0 of 702
+windows (10 s mean) where max(|ry|,|rz|) >= 0.3: 0 of 702
+largest max(|ry|,|rz|) of any 10 s mean: 0.057 dps
+possible disturbance (any per-second std-dev > 0.25 dps, i.e. touch/vibration): 69 s, at t = [115, 117, 119, 120, 126, 127, 131, 132, 262, 268, 271, 276, 277, 281, 293] ...
+
+REAL PIPELINE (production motion_process, clutch released): total |dX|+|dY| = 2428 counts in 711 s; reported stationary 81.1% of samples
+WORST CASE (fixed startup calibration, no auto-zero): stationary lock would hold 80.2% of samples
+pipeline bias estimate: start (-0.604,-1.440,+0.363) -> end (-0.614,-1.483,+0.365) dps
+
+REFERENCE SCALE (simulation, noise 0.09 dps, residual on yaw, counts per 10 s of resting): 0.1 -> 1-3 | 0.2 -> 27-45 | 0.3 -> 161-171 | 0.5 -> ~415 (docs/FIRMWARE_CHANGELOG_2026-10-03.md, section 6)

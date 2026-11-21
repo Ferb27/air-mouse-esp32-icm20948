@@ -1,0 +1,424 @@
+# capture_serial.py port=COM3 baud=115200 reset=True seconds=40.0 start=2026-10-10 23:00:30
+[23:00:30.634] POWERON_RESET�ets Jul 29 2019 12:21:46
+[23:00:30.634] 
+[23:00:30.635] rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[23:00:30.635] configsip: 0, SPIWP:0xee
+[23:00:30.636] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[23:00:30.636] mode:DIO, clock div:2
+[23:00:30.636] load:0x3fff0030,len:1184
+[23:00:30.637] load:0x40078000,len:13232
+[23:00:30.637] load:0x40080400,len:3028
+[23:00:30.637] entry 0x400805e4
+[23:00:30.638] ets Jul 29 2019 12:21:46
+[23:00:30.638] 
+[23:00:30.641] rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[23:00:30.643] configsip: 0, SPIWP:0xee
+[23:00:30.650] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[23:00:30.652] mode:DIO, clock div:2
+[23:00:30.654] load:0x3fff0030,len:1184
+[23:00:30.656] load:0x40078000,len:13232
+[23:00:30.658] load:0x40080400,len:3028
+[23:00:30.660] entry 0x400805e4
+[23:00:31.654] 
+[23:00:31.659] ==================================================
+[23:00:31.663]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[23:00:31.667]    Course: He Thong Nhung (Embedded Systems)
+[23:00:31.672] ==================================================
+[23:00:31.677] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[23:00:31.685] [   554][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[23:00:31.713] [DIAGNOSTICS] Register Readback Verification:
+[23:00:31.718]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[23:00:31.724]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[23:00:31.731]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[23:00:31.738]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[23:00:31.744]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[23:00:31.751]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[23:00:31.751] 
+[23:00:31.757] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[23:00:31.764] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[23:00:33.973] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, sd = 0.19/0.09/0.09 dps, half-mean diff = 0.00/0.01/0.00 dps -> ACCEPTED
+[23:00:33.979] [CALIBRATION] Zero-Rate Bias: X =  -1.32 dps | Y =  +0.56 dps | Z =  +0.35 dps
+[23:00:33.985] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[23:00:33.990] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[23:00:33.990] 
+[23:00:34.018] 
+[23:00:34.021] Brownout detector was triggered
+[23:00:34.021] 
+[23:00:34.024] ets Jul 29 2019 12:21:46
+[23:00:34.024] 
+[23:00:34.029] rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[23:00:34.031] configsip: 0, SPIWP:0xee
+[23:00:34.037] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[23:00:34.039] mode:DIO, clock div:2
+[23:00:34.042] load:0x3fff0030,len:1184
+[23:00:34.044] load:0x40078000,len:13232
+[23:00:34.046] load:0x40080400,len:3028
+[23:00:34.048] entry 0x400805e4
+[23:00:35.042] 
+[23:00:35.046] ==================================================
+[23:00:35.051]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[23:00:35.055]    Course: He Thong Nhung (Embedded Systems)
+[23:00:35.059] ==================================================
+[23:00:35.064] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[23:00:35.072] [   554][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[23:00:35.100] [DIAGNOSTICS] Register Readback Verification:
+[23:00:35.105]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[23:00:35.112]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[23:00:35.118]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[23:00:35.125]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[23:00:35.131]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[23:00:35.138]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[23:00:35.138] 
+[23:00:35.144] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[23:00:35.151] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[23:00:37.360] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, sd = 0.19/0.11/0.09 dps, half-mean diff = 0.01/0.02/0.01 dps -> ACCEPTED
+[23:00:37.367] [CALIBRATION] Zero-Rate Bias: X =  -1.30 dps | Y =  +0.57 dps | Z =  +0.35 dps
+[23:00:37.372] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[23:00:37.378] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[23:00:37.378] 
+[23:00:37.405] 
+[23:00:37.408] Brownout detector was triggered
+[23:00:37.408] 
+[23:00:37.411] ets Jul 29 2019 12:21:46
+[23:00:37.411] 
+[23:00:37.416] rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[23:00:37.418] configsip: 0, SPIWP:0xee
+[23:00:37.425] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[23:00:37.427] mode:DIO, clock div:2
+[23:00:37.429] load:0x3fff0030,len:1184
+[23:00:37.431] load:0x40078000,len:13232
+[23:00:37.434] load:0x40080400,len:3028
+[23:00:37.435] entry 0x400805e4
+[23:00:38.429] 
+[23:00:38.434] ==================================================
+[23:00:38.438]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[23:00:38.442]    Course: He Thong Nhung (Embedded Systems)
+[23:00:38.447] ==================================================
+[23:00:38.451] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[23:00:38.460] [   554][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[23:00:38.488] [DIAGNOSTICS] Register Readback Verification:
+[23:00:38.492]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[23:00:38.499]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[23:00:38.506]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[23:00:38.513]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[23:00:38.519]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[23:00:38.526]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[23:00:38.526] 
+[23:00:38.532] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[23:00:38.538] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[23:00:40.747] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, sd = 0.22/0.12/0.08 dps, half-mean diff = 0.02/0.01/0.00 dps -> ACCEPTED
+[23:00:40.754] [CALIBRATION] Zero-Rate Bias: X =  -1.29 dps | Y =  +0.56 dps | Z =  +0.34 dps
+[23:00:40.760] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[23:00:40.765] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[23:00:40.765] 
+[23:00:40.793] 
+[23:00:40.796] Brownout detector was triggered
+[23:00:40.796] 
+[23:00:40.799] ets Jul 29 2019 12:21:46
+[23:00:40.799] 
+[23:00:40.804] rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[23:00:40.806] configsip: 0, SPIWP:0xee
+[23:00:40.812] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[23:00:40.814] mode:DIO, clock div:2
+[23:00:40.816] load:0x3fff0030,len:1184
+[23:00:40.819] load:0x40078000,len:13232
+[23:00:40.821] load:0x40080400,len:3028
+[23:00:40.823] entry 0x400805e4
+[23:00:41.817] 
+[23:00:41.821] ==================================================
+[23:00:41.826]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[23:00:41.830]    Course: He Thong Nhung (Embedded Systems)
+[23:00:41.834] ==================================================
+[23:00:41.839] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[23:00:41.847] [   554][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[23:00:41.875] [DIAGNOSTICS] Register Readback Verification:
+[23:00:41.880]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[23:00:41.887]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[23:00:41.893]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[23:00:41.900]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[23:00:41.906]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[23:00:41.913]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[23:00:41.913] 
+[23:00:41.919] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[23:00:41.926] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[23:00:44.135] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, sd = 0.21/0.12/0.09 dps, half-mean diff = 0.02/0.01/0.00 dps -> ACCEPTED
+[23:00:44.142] [CALIBRATION] Zero-Rate Bias: X =  -1.32 dps | Y =  +0.58 dps | Z =  +0.34 dps
+[23:00:44.147] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[23:00:44.153] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[23:00:44.153] 
+[23:00:44.180] 
+[23:00:44.183] Brownout detector was triggered
+[23:00:44.183] 
+[23:00:44.186] ets Jul 29 2019 12:21:46
+[23:00:44.186] 
+[23:00:44.191] rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[23:00:44.193] configsip: 0, SPIWP:0xee
+[23:00:44.200] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[23:00:44.202] mode:DIO, clock div:2
+[23:00:44.204] load:0x3fff0030,len:1184
+[23:00:44.206] load:0x40078000,len:13232
+[23:00:44.209] load:0x40080400,len:3028
+[23:00:44.210] entry 0x400805e4
+[23:00:45.204] 
+[23:00:45.209] ==================================================
+[23:00:45.213]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[23:00:45.217]    Course: He Thong Nhung (Embedded Systems)
+[23:00:45.222] ==================================================
+[23:00:45.226] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[23:00:45.235] [   554][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[23:00:45.263] [DIAGNOSTICS] Register Readback Verification:
+[23:00:45.267]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[23:00:45.274]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[23:00:45.281]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[23:00:45.288]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[23:00:45.294]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[23:00:45.301]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[23:00:45.301] 
+[23:00:45.307] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[23:00:45.313] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[23:00:47.523] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, sd = 0.20/0.10/0.09 dps, half-mean diff = 0.02/0.00/0.02 dps -> ACCEPTED
+[23:00:47.529] [CALIBRATION] Zero-Rate Bias: X =  -1.30 dps | Y =  +0.58 dps | Z =  +0.35 dps
+[23:00:47.535] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[23:00:47.540] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[23:00:47.540] 
+[23:00:47.568] 
+[23:00:47.571] Brownout detector was triggered
+[23:00:47.571] 
+[23:00:47.574] ets Jul 29 2019 12:21:46
+[23:00:47.574] 
+[23:00:47.579] rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[23:00:47.581] configsip: 0, SPIWP:0xee
+[23:00:47.587] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[23:00:47.589] mode:DIO, clock div:2
+[23:00:47.592] load:0x3fff0030,len:1184
+[23:00:47.594] load:0x40078000,len:13232
+[23:00:47.596] load:0x40080400,len:3028
+[23:00:47.598] entry 0x400805e4
+[23:00:48.592] 
+[23:00:48.596] ==================================================
+[23:00:48.601]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[23:00:48.605]    Course: He Thong Nhung (Embedded Systems)
+[23:00:48.609] ==================================================
+[23:00:48.614] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[23:00:48.622] [   554][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[23:00:48.650] [DIAGNOSTICS] Register Readback Verification:
+[23:00:48.655]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[23:00:48.662]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[23:00:48.669]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[23:00:48.675]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[23:00:48.682]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[23:00:48.688]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[23:00:48.688] 
+[23:00:48.694] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[23:00:48.701] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[23:00:50.910] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, sd = 0.21/0.12/0.08 dps, half-mean diff = 0.01/0.00/0.00 dps -> ACCEPTED
+[23:00:50.917] [CALIBRATION] Zero-Rate Bias: X =  -1.32 dps | Y =  +0.59 dps | Z =  +0.35 dps
+[23:00:50.923] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[23:00:50.928] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[23:00:50.928] 
+[23:00:50.955] 
+[23:00:50.958] Brownout detector was triggered
+[23:00:50.958] 
+[23:00:50.961] ets Jul 29 2019 12:21:46
+[23:00:50.961] 
+[23:00:50.966] rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[23:00:50.969] configsip: 0, SPIWP:0xee
+[23:00:50.975] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[23:00:50.977] mode:DIO, clock div:2
+[23:00:50.979] load:0x3fff0030,len:1184
+[23:00:50.982] load:0x40078000,len:13232
+[23:00:50.984] load:0x40080400,len:3028
+[23:00:50.985] entry 0x400805e4
+[23:00:51.979] 
+[23:00:51.984] ==================================================
+[23:00:51.988]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[23:00:51.992]    Course: He Thong Nhung (Embedded Systems)
+[23:00:51.997] ==================================================
+[23:00:52.002] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[23:00:52.010] [   554][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[23:00:52.038] [DIAGNOSTICS] Register Readback Verification:
+[23:00:52.043]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[23:00:52.049]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[23:00:52.056]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[23:00:52.063]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[23:00:52.069]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[23:00:52.076]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[23:00:52.076] 
+[23:00:52.082] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[23:00:52.088] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[23:00:54.298] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, sd = 0.26/0.13/0.09 dps, half-mean diff = 0.01/0.01/0.01 dps -> ACCEPTED
+[23:00:54.304] [CALIBRATION] Zero-Rate Bias: X =  -1.31 dps | Y =  +0.57 dps | Z =  +0.34 dps
+[23:00:54.310] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[23:00:54.315] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[23:00:54.316] 
+[23:00:54.343] 
+[23:00:54.346] Brownout detector was triggered
+[23:00:54.346] 
+[23:00:54.349] ets Jul 29 2019 12:21:46
+[23:00:54.349] 
+[23:00:54.354] rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[23:00:54.356] configsip: 0, SPIWP:0xee
+[23:00:54.362] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[23:00:54.364] mode:DIO, clock div:2
+[23:00:54.366] load:0x3fff0030,len:1184
+[23:00:54.369] load:0x40078000,len:13232
+[23:00:54.371] load:0x40080400,len:3028
+[23:00:54.373] entry 0x400805e4
+[23:00:55.367] 
+[23:00:55.371] ==================================================
+[23:00:55.376]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[23:00:55.380]    Course: He Thong Nhung (Embedded Systems)
+[23:00:55.384] ==================================================
+[23:00:55.389] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[23:00:55.397] [   554][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[23:00:55.425] [DIAGNOSTICS] Register Readback Verification:
+[23:00:55.430]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[23:00:55.437]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[23:00:55.443]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[23:00:55.450]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[23:00:55.456]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[23:00:55.463]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[23:00:55.463] 
+[23:00:55.469] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[23:00:55.476] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[23:00:57.685] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, sd = 0.28/0.14/0.09 dps, half-mean diff = 0.01/0.02/0.00 dps -> ACCEPTED
+[23:00:57.692] [CALIBRATION] Zero-Rate Bias: X =  -1.32 dps | Y =  +0.58 dps | Z =  +0.33 dps
+[23:00:57.697] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[23:00:57.703] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[23:00:57.703] 
+[23:00:57.730] 
+[23:00:57.733] Brownout detector was triggered
+[23:00:57.733] 
+[23:00:57.736] ets Jul 29 2019 12:21:46
+[23:00:57.736] 
+[23:00:57.741] rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[23:00:57.743] configsip: 0, SPIWP:0xee
+[23:00:57.750] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[23:00:57.752] mode:DIO, clock div:2
+[23:00:57.754] load:0x3fff0030,len:1184
+[23:00:57.756] load:0x40078000,len:13232
+[23:00:57.759] load:0x40080400,len:3028
+[23:00:57.760] entry 0x400805e4
+[23:00:58.754] 
+[23:00:58.759] ==================================================
+[23:00:58.763]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[23:00:58.767]    Course: He Thong Nhung (Embedded Systems)
+[23:00:58.772] ==================================================
+[23:00:58.776] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[23:00:58.785] [   554][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[23:00:58.813] [DIAGNOSTICS] Register Readback Verification:
+[23:00:58.817]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[23:00:58.824]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[23:00:58.831]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[23:00:58.838]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[23:00:58.844]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[23:00:58.851]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[23:00:58.851] 
+[23:00:58.857] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[23:00:58.863] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[23:01:01.072] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, sd = 0.27/0.14/0.09 dps, half-mean diff = 0.01/0.00/0.00 dps -> ACCEPTED
+[23:01:01.079] [CALIBRATION] Zero-Rate Bias: X =  -1.32 dps | Y =  +0.56 dps | Z =  +0.33 dps
+[23:01:01.085] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[23:01:01.090] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[23:01:01.090] 
+[23:01:01.118] 
+[23:01:01.120] Brownout detector was triggered
+[23:01:01.121] 
+[23:01:01.124] ets Jul 29 2019 12:21:46
+[23:01:01.124] 
+[23:01:01.129] rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[23:01:01.131] configsip: 0, SPIWP:0xee
+[23:01:01.137] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[23:01:01.139] mode:DIO, clock div:2
+[23:01:01.141] load:0x3fff0030,len:1184
+[23:01:01.144] load:0x40078000,len:13232
+[23:01:01.146] load:0x40080400,len:3028
+[23:01:01.148] entry 0x400805e4
+[23:01:02.141] 
+[23:01:02.146] ==================================================
+[23:01:02.150]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[23:01:02.154]    Course: He Thong Nhung (Embedded Systems)
+[23:01:02.159] ==================================================
+[23:01:02.164] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[23:01:02.172] [   554][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[23:01:02.200] [DIAGNOSTICS] Register Readback Verification:
+[23:01:02.205]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[23:01:02.212]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[23:01:02.218]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[23:01:02.225]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[23:01:02.231]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[23:01:02.238]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[23:01:02.238] 
+[23:01:02.244] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[23:01:02.251] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[23:01:04.460] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, sd = 0.14/0.10/0.07 dps, half-mean diff = 0.01/0.00/0.01 dps -> ACCEPTED
+[23:01:04.467] [CALIBRATION] Zero-Rate Bias: X =  -1.32 dps | Y =  +0.58 dps | Z =  +0.34 dps
+[23:01:04.472] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[23:01:04.478] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[23:01:04.478] 
+[23:01:04.505] 
+[23:01:04.508] Brownout detector was triggered
+[23:01:04.508] 
+[23:01:04.511] ets Jul 29 2019 12:21:46
+[23:01:04.511] 
+[23:01:04.516] rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[23:01:04.518] configsip: 0, SPIWP:0xee
+[23:01:04.525] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[23:01:04.527] mode:DIO, clock div:2
+[23:01:04.529] load:0x3fff0030,len:1184
+[23:01:04.531] load:0x40078000,len:13232
+[23:01:04.533] load:0x40080400,len:3028
+[23:01:04.535] entry 0x400805e4
+[23:01:05.529] 
+[23:01:05.533] ==================================================
+[23:01:05.538]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[23:01:05.542]    Course: He Thong Nhung (Embedded Systems)
+[23:01:05.546] ==================================================
+[23:01:05.551] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[23:01:05.560] [   554][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[23:01:05.588] [DIAGNOSTICS] Register Readback Verification:
+[23:01:05.592]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[23:01:05.599]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[23:01:05.606]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[23:01:05.613]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[23:01:05.619]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[23:01:05.626]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[23:01:05.626] 
+[23:01:05.632] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[23:01:05.638] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[23:01:07.847] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, sd = 0.12/0.09/0.08 dps, half-mean diff = 0.01/0.01/0.01 dps -> ACCEPTED
+[23:01:07.854] [CALIBRATION] Zero-Rate Bias: X =  -1.32 dps | Y =  +0.57 dps | Z =  +0.34 dps
+[23:01:07.860] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[23:01:07.865] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[23:01:07.865] 
+[23:01:07.893] 
+[23:01:07.895] Brownout detector was triggered
+[23:01:07.896] 
+[23:01:07.898] ets Jul 29 2019 12:21:46
+[23:01:07.899] 
+[23:01:07.903] rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[23:01:07.906] configsip: 0, SPIWP:0xee
+[23:01:07.912] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[23:01:07.914] mode:DIO, clock div:2
+[23:01:07.916] load:0x3fff0030,len:1184
+[23:01:07.919] load:0x40078000,len:13232
+[23:01:07.921] load:0x40080400,len:3028
+[23:01:07.922] entry 0x400805e4
+[23:01:08.916] 
+[23:01:08.921] ==================================================
+[23:01:08.925]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[23:01:08.929]    Course: He Thong Nhung (Embedded Systems)
+[23:01:08.934] ==================================================
+[23:01:08.939] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[23:01:08.947] [   554][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[23:01:08.975] [DIAGNOSTICS] Register Readback Verification:
+[23:01:08.980]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[23:01:08.986]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[23:01:08.993]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[23:01:09.000]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[23:01:09.006]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[23:01:09.013]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[23:01:09.013] 
+[23:01:09.019] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[23:01:09.026] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+# end elapsed_s=40.4 lines=422 bytes=19698 stopped_by=timeout

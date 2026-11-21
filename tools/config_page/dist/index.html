@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Air Mouse Config</title>
+<style>
+  :root {
+    --bg: #f5f6f8; --card: #ffffff; --ink: #1c2330; --muted: #5c6678; --line: #dfe3ea;
+    --accent: #1f6feb; --accent-ink: #ffffff; --ok: #1a7f37; --warn: #9a6700; --bad: #cf222e;
+    --dirty: #fff4d6; --field: #ffffff; --shadow: 0 1px 2px rgba(20,30,50,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #11151c; --card: #1a2029; --ink: #e6eaf1; --muted: #98a2b3; --line: #2b3442;
+      --accent: #4c8dff; --accent-ink: #0b1220; --ok: #3fb950; --warn: #d29922; --bad: #f85149;
+      --dirty: #3a3114; --field: #11151c; --shadow: none;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #11151c; --card: #1a2029; --ink: #e6eaf1; --muted: #98a2b3; --line: #2b3442;
+    --accent: #4c8dff; --accent-ink: #0b1220; --ok: #3fb950; --warn: #d29922; --bad: #f85149;
+    --dirty: #3a3114; --field: #11151c; --shadow: none;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  header { padding: 14px 16px; background: var(--card); border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
+  header h1 { font-size: 18px; margin: 0; }
+  .conn { display: flex; align-items: center; gap: 8px; margin-left: auto; flex-wrap: wrap; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--muted); display: inline-block; }
+  .dot.on { background: var(--ok); } .dot.wait { background: var(--warn); } .dot.err { background: var(--bad); }
+  main { max-width: 1040px; margin: 0 auto; padding: 16px 16px 130px; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); }
+  section.card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; box-shadow: var(--shadow); }
+  section.card h2 { font-size: 15px; margin: 0 0 2px; }
+  section.card > p.lead { margin: 0 0 10px; color: var(--muted); font-size: 13px; }
+  .wide { grid-column: 1 / -1; }
+  .field { padding: 8px 8px; margin: 0 -8px; border-radius: 8px; }
+  .field.dirty { background: var(--dirty); }
+  .field.error { outline: 2px solid var(--bad); }
+  .field label.name { font-weight: 600; display: flex; justify-content: space-between; gap: 8px; }
+  .field .help { color: var(--muted); font-size: 12.5px; margin: 1px 0 4px; }
+  .row { display: flex; align-items: center; gap: 10px; }
+  .row input[type=range] { flex: 1; min-width: 0; accent-color: var(--accent); }
+  input[type=number], select { width: 88px; padding: 5px 6px; border: 1px solid var(--line); border-radius: 6px; background: var(--field); color: var(--ink); font: inherit; }
+  select { width: auto; max-width: 100%; }
+  .unit { color: var(--muted); font-size: 12.5px; white-space: nowrap; min-width: 96px; text-align: right; }
+  .switch { display: flex; align-items: center; gap: 8px; }
+  .switch input { width: 18px; height: 18px; accent-color: var(--accent); }
+  button { font: inherit; padding: 6px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer; }
+  button:hover:not(:disabled) { border-color: var(--accent); }
+  button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 600; }
+  button:disabled { opacity: .45; cursor: not-allowed; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 8px; }
+  .stat { border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; }
+  .stat b { display: block; font-size: 18px; font-variant-numeric: tabular-nums; }
+  .stat span { color: var(--muted); font-size: 12px; }
+  .events { margin: 8px 0 0; padding: 0; list-style: none; font-size: 13px; font-family: ui-monospace, Consolas, monospace; max-height: 150px; overflow: auto; }
+  .events li { padding: 1px 0; color: var(--muted); } .events li:first-child { color: var(--ink); }
+  pre#log { margin: 0; max-height: 220px; overflow: auto; font: 12px/1.45 ui-monospace, Consolas, monospace; background: var(--field); border: 1px solid var(--line); border-radius: 8px; padding: 8px; white-space: pre-wrap; word-break: break-all; }
+  details summary { cursor: pointer; font-weight: 600; }
+  .bar { max-height: 48vh; overflow-y: auto; align-items: flex-start; position: fixed; left: 0; right: 0; bottom: 0; background: var(--card); border-top: 1px solid var(--line); padding: 8px 12px; display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: center; justify-content: center; }
+  .bar .msg { flex-basis: 100%; text-align: center; font-size: 13.5px; min-height: 20px; }
+  .msg.ok { color: var(--ok); } .msg.bad { color: var(--bad); } .msg.warn { color: var(--warn); }
+  .placeholder { border: 1px dashed var(--line); border-radius: 8px; padding: 10px 12px; color: var(--muted); font-size: 13.5px; }
+  .banner { max-width: 1040px; margin: 12px auto 0; padding: 10px 16px; border-radius: 8px; background: var(--dirty); border: 1px solid var(--line); font-size: 14px; }
+  .presets { list-style: none; margin: 8px 0; padding: 0; display: grid; gap: 6px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+  .presets li { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; cursor: pointer; background: var(--field); }
+  .presets li:hover { border-color: var(--accent); }
+  .presets li.sel { outline: 2px solid var(--accent); }
+  .presets li b { display: flex; justify-content: space-between; gap: 6px; align-items: baseline; }
+  .presets li small { display: block; color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .tag { font-size: 11px; border-radius: 10px; padding: 1px 8px; background: var(--ok); color: #fff; white-space: nowrap; }
+  .tag.builtin { background: var(--muted); }
+  .pactions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+  .pdiff { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
+  .ends { display: flex; justify-content: space-between; gap: 8px; color: var(--muted); font-size: 11.5px; margin: 1px 0 0; }
+  .state, .optdesc { color: var(--muted); font-size: 12.5px; margin: 4px 0 0; }
+  .state b, .optdesc b { color: var(--ink); font-weight: 600; }
+  .act { display: flex; flex-direction: column; gap: 3px; flex: 1 1 150px; max-width: 230px; }
+  .act small { color: var(--muted); font-size: 11.5px; line-height: 1.3; }
+  .pactions .act { flex: 1 1 190px; max-width: 260px; }
+  .pactions { align-items: flex-start; }
+  .barhelp { display: none; }
+  @media (max-width: 640px) {
+    .bar .act small { display: none; }
+    .bar.help-open .act small { display: block; }
+    .bar .act { flex: 1 1 120px; max-width: none; }
+    .barhelp { display: inline-block; flex-basis: 100%; text-align: center; border: 0; background: transparent; color: var(--accent); font-size: 13px; padding: 0; }
+    .bar { max-height: 40vh; }
+  }
+  .hidden { display: none !important; }
+  @media (max-width: 520px) { .unit { min-width: 0; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Air Mouse &mdash; Cấu hình</h1>
+  <div class="conn">
+    <span id="dot" class="dot"></span>
+    <span id="connText">Chưa kết nối</span>
+    <button id="btnConnect" class="primary">Kết nối board (USB)</button>
+    <button id="btnDemo" title="Dùng một board giả lập trong trang để làm quen giao diện, không cần cắm board">Chế độ thử (không cần board)</button>
+    <button id="btnDisconnect" class="hidden">Ngắt kết nối</button>
+  </div>
+</header>
+<div id="banner" class="banner hidden"></div>
+
+<main id="main">
+  <section class="card wide" id="cardPresets">
+    <h2>Preset (bộ thông số đã lưu)</h2>
+    <p class="lead" id="presetLead">Lưu bộ thông số hiện tại thành một preset, thêm bao nhiêu cũng được, rồi bấm một cái là áp dụng lại. Preset nằm trong trình duyệt của máy này; dùng "Xuất" để mang sang máy khác.</p>
+    <div id="presetWarn" class="pdiff hidden"></div>
+    <ul class="presets" id="presetList"></ul>
+    <div class="pdiff" id="presetDiff"></div>
+    <div class="pactions">
+      <div class="act"><button id="pApply" disabled>Áp dụng preset này</button><small>Đưa các giá trị của preset đang chọn vào board (chưa lưu vào bộ nhớ board).</small></div>
+      <div class="act"><button id="pNew" disabled>+ Lưu thông số hiện tại thành preset mới</button><small>Chụp các giá trị đang hiển thị trên trang thành một preset mới có tên.</small></div>
+      <div class="act"><button id="pUpdate" disabled>Cập nhật preset này</button><small>Ghi đè preset đang chọn bằng các giá trị đang hiển thị.</small></div>
+      <div class="act"><button id="pRename" disabled>Đổi tên</button><small>Đổi tên preset đang chọn.</small></div>
+      <div class="act"><button id="pDelete" disabled>Xóa</button><small>Xóa preset đang chọn (có hỏi lại).</small></div>
+      <div class="act"><button id="pExport">Xuất file</button><small>Tải preset của bạn về file .json để lưu hoặc mang sang máy khác.</small></div>
+      <div class="act"><button id="pImport">Nhập file</button><small>Thêm preset từ một file .json (không xóa preset đang có).</small></div>
+      <input type="file" id="pFile" accept=".json,application/json" class="hidden">
+    </div>
+  </section>
+
+  <section class="card" id="cardCursor">
+    <h2>Con trỏ</h2>
+    <p class="lead">Tốc độ con trỏ khi bạn xoay cổ tay, và bộ chống rung khi bấm nút.</p>
+    <div id="gCursor"></div>
+    <label class="switch" style="margin-top:6px"><input type="checkbox" id="linkXY" checked> Giữ tốc độ ngang và dọc bằng nhau <span class="help">(kéo một thanh thì thanh kia đi theo)</span></label>
+  </section>
+
+  <section class="card" id="cardFlick">
+    <h2>Lắc nhanh = Back / Forward</h2>
+    <p class="lead">Giữ nút Mode rồi quay nhanh sang trái (Back) hoặc phải (Forward).</p>
+    <div id="gFlick"></div>
+  </section>
+
+  <section class="card" id="cardScroll">
+    <h2>Cuộn trang</h2>
+    <p class="lead">Chạm nút Mode, nhấn lại nhanh và giữ lần hai rồi nghiêng lên/xuống: nghiêng càng nhiều thì cuộn càng nhanh.</p>
+    <div id="gScroll"></div>
+  </section>
+
+  <section class="card" id="cardButtons">
+    <h2>Gán nút</h2>
+    <p class="lead">Chọn chức năng cho từng nút trên board. Hai nút có thể cùng một chức năng; đổi trái/phải cho người thuận tay trái.</p>
+    <div id="gButtons"></div>
+    <div id="btnWarn" class="pdiff hidden"></div>
+    <div id="demoButtons" class="pactions hidden">
+      <span class="help">Chế độ thử: giả lập nhấn nút để xem sự kiện:</span>
+      <button data-sim="LEFT">Nhấn nút trái</button>
+      <button data-sim="RIGHT">Nhấn nút phải</button>
+      <button data-sim="MODE">Nhấn nút Mode</button>
+    </div>
+  </section>
+
+  <section class="card wide" id="cardLive">
+    <h2>Trạng thái trực tiếp</h2>
+    <p class="lead">Lấy từ dòng <code>[STATUS]</code> board gửi mỗi giây, cùng các sự kiện nút để bạn kiểm tra.</p>
+    <div class="stats">
+      <div class="stat"><b id="sRate">&ndash;</b><span>vòng lặp / giây</span></div>
+      <div class="stat"><b id="sStat">&ndash;</b><span>đứng yên (1 = đang khóa)</span></div>
+      <div class="stat"><b id="sClutch">&ndash;</b><span>Mode giữ (1 = có)</span></div>
+      <div class="stat"><b id="sBias">&ndash;</b><span>bias trục Z (&deg;/s)</span></div>
+      <div class="stat"><b id="sUp">&ndash;</b><span>chạy được (giây)</span></div>
+      <div class="stat"><b id="sFrz">&ndash;</b><span>lần cảm biến đơ</span></div>
+      <div class="stat"><b id="sErr">&ndash;</b><span>lần đọc I2C lỗi</span></div>
+      <div class="stat"><b id="sRec">&ndash;</b><span>lần phục hồi bus I2C</span></div>
+    </div>
+    <ul class="events" id="events"></ul>
+  </section>
+
+  <section class="card wide">
+    <details>
+      <summary>Nhật ký thô (chữ board gửi về; chép vài dòng cuối khi cần báo lỗi)</summary>
+      <pre id="log"></pre>
+    </details>
+  </section>
+</main>
+
+<div class="bar">
+  <div class="msg" id="msg"></div>
+  <button id="barHelp" class="barhelp" type="button">ℹ Hiện giải thích các nút</button>
+  <div class="act"><button id="btnApply" class="primary" disabled>Áp dụng thử (chưa lưu)</button><small>Gửi các thay đổi tới board để thử ngay trên chuột. <b>Chưa lưu</b>: tắt nguồn là mất.</small></div>
+  <div class="act"><button id="btnSave" disabled>Lưu vào board</button><small>Ghi vào bộ nhớ của board: tắt nguồn bật lại vẫn giữ.</small></div>
+  <div class="act"><button id="btnRevert" disabled>Hoàn tác</button><small>Bỏ các thay đổi trên trang mà bạn chưa áp dụng.</small></div>
+  <div class="act"><button id="btnDefaults" disabled>Mặc định</button><small>Đưa mọi thông số về giá trị gốc của firmware (chưa lưu cho tới khi bấm Lưu).</small></div>
+  <div class="act"><button id="btnCal" disabled>Đo lại bias</button><small>Đo lại độ lệch gốc của cảm biến. <b>Đặt board nằm yên trên bàn</b> rồi mới bấm.</small></div>
+  <div class="act"><button id="btnRead" disabled>Đọc lại từ board</button><small>Lấy lại thông số đang chạy trên board và hiện lên trang, bỏ thay đổi chưa áp dụng. Dùng khi nghi trang và board không khớp.</small></div>
+</div>
+
+<script>
+'use strict';
+/* ============================================================================================
+   Air Mouse config page. Talks to the firmware with the line protocol of air_config.h:
+     @GET  @SET k=v ...  @SAVE  @DEFAULTS  @CAL     ->  @CFG ... / @OK ... / @ERR ...
+   Transports: Web Serial (real board, Chrome/Edge) or a built-in simulated board (demo mode).
+   ============================================================================================ */
+const EXPECTED_VERSION = 5;
+
+// Button actions: [value, label, what it does]
+const ACTIONS = [
+  [0, 'Không làm gì', 'Nút này không có tác dụng.'],
+  [1, 'Chuột trái', 'Bấm trái. Giữ nút để kéo thả.'],
+  [2, 'Chuột phải', 'Bấm phải (mở menu ngữ cảnh).'],
+  [3, 'Chuột giữa', 'Bấm con lăn: thường mở liên kết ở tab mới hoặc bật cuộn tự động.'],
+  [4, 'Back (lùi trang)', 'Nút bên của chuột: lùi một trang trong trình duyệt.'],
+  [5, 'Forward (tiến trang)', 'Nút bên của chuột: tiến một trang trong trình duyệt.'],
+  [6, 'Mode', 'Giữ: khóa con trỏ để đặt lại tay; thả: cân lại. Giữ + quay nhanh sang trái/phải = Back/Forward. Chạm rồi nhấn lại và giữ = cuộn trang.'],
+];
+
+// One entry per setting. min/max/def mirror firmware/include/air_config.h (the board checks the values again).
+const FIELDS = [
+  { key: 'gain_x', group: 'gCursor', label: 'Tốc độ con trỏ (ngang)', type: 'float', min: 0.02, max: 3, step: 0.01, dec: 3, log: true, def: 0.3,
+    help: 'Càng cao thì xoay một chút con trỏ chạy càng xa.', unit: v => '≈ ' + Math.round(v * 100) + ' điểm/độ' , ends: ['chậm, chính xác', 'nhanh, quét xa'] },
+  { key: 'gain_y', group: 'gCursor', label: 'Tốc độ con trỏ (dọc)', type: 'float', min: 0.02, max: 3, step: 0.01, dec: 3, log: true, def: 0.3,
+    help: 'Tốc độ khi nghiêng mũi lên/xuống.', unit: v => '≈ ' + Math.round(v * 100) + ' điểm/độ' , ends: ['chậm, chính xác', 'nhanh, quét xa'] },
+  { key: 'click_guard_ms', group: 'gCursor', label: 'Chống lệch khi bấm', type: 'int', min: 0, max: 100, step: 10, def: 40,
+    help: 'Bấm nút làm tay giật; bộ chống này bỏ cú giật ngay trước lúc bấm. 0 = tắt.', unit: v => v + ' ms' , ends: ['0 = tắt', 'chống mạnh hơn nhưng con trỏ trễ hơn'] },
+  { key: 'recenter_ms', group: 'gCursor', label: 'Chờ trước khi cân lại', type: 'int', min: 50, max: 500, step: 10, def: 150,
+    help: 'Sau khi thả Mode, chờ bấy lâu rồi mới lấy tư thế hiện tại làm gốc.', unit: v => v + ' ms' , ends: ['cân lại sớm', 'chờ lâu hơn cho tay yên'] },
+
+  { key: 'invert_x', group: 'gCursor', label: 'Đảo chiều ngang', type: 'flag', def: 0,
+    help: 'Bật nếu xoay phải mà con trỏ chạy sang trái.' , states: ['Tắt: xoay phải thì con trỏ sang phải (bình thường).', 'Bật: xoay phải thì con trỏ sang trái.'] },
+  { key: 'invert_y', group: 'gCursor', label: 'Đảo chiều dọc', type: 'flag', def: 0,
+    help: 'Bật nếu ngẩng mũi lên mà con trỏ đi xuống.' , states: ['Tắt: ngẩng mũi lên thì con trỏ đi lên (bình thường).', 'Bật: ngẩng mũi lên thì con trỏ đi xuống.'] },
+
+  { key: 'btn_left', group: 'gButtons', label: 'Nút trái (SW2, GPIO25)', type: 'select', def: 1, options: ACTIONS,
+    help: 'Chức năng của nút này.' },
+  { key: 'btn_right', group: 'gButtons', label: 'Nút phải (SW3, GPIO26)', type: 'select', def: 2, options: ACTIONS,
+    help: 'Chức năng của nút này.' },
+  { key: 'btn_mode', group: 'gButtons', label: 'Nút Mode (SW4, GPIO27)', type: 'select', def: 6, options: ACTIONS,
+    help: 'Mặc định là Mode: giữ để khóa con trỏ, thả để cân lại; giữ + lắc nhanh = Back/Forward; chạm rồi nhấn lại và giữ = cuộn.' },
+
+  { key: 'flick_enable', group: 'gFlick', label: 'Bật lắc nhanh', type: 'flag', def: 1,
+    help: 'Tắt thì Mode chỉ còn là nút khóa con trỏ.' , states: ['Tắt: giữ Mode chỉ khóa con trỏ, không có Back/Forward.', 'Bật: giữ Mode rồi quay nhanh sang trái = Back, sang phải = Forward.'] },
+  { key: 'flick_dps', group: 'gFlick', label: 'Ngưỡng lắc', type: 'float', min: 40, max: 600, step: 10, dec: 1, def: 150,
+    help: 'Quay nhanh hơn mức này mới tính là lắc. Thấp = dễ kích hoạt (dễ nhầm), cao = phải lắc mạnh.', unit: v => Math.round(v) + ' °/s' , ends: ['dễ kích hoạt, dễ nhầm', 'phải lắc mạnh mới tính'] },
+
+  { key: 'scroll_enable', group: 'gScroll', label: 'Bật chế độ cuộn', type: 'flag', def: 1,
+    help: 'Tắt thì nhấn đúp Mode không làm gì thêm.' , states: ['Tắt: nhấn đúp Mode không có tác dụng.', 'Bật: chạm Mode, nhấn lại ngay và giữ, rồi nghiêng lên/xuống để cuộn trang.'] },
+  { key: 'scroll_sens', group: 'gScroll', label: 'Tốc độ cuộn', type: 'float', min: 0.1, max: 10, step: 0.1, dec: 2, log: true, def: 2,
+    help: 'Số nấc con lăn mỗi giây cho mỗi độ nghiêng vượt vùng chết.', unit: v => v.toFixed(1) + ' nấc/s/độ' , ends: ['cuộn chậm', 'cuộn nhanh'] },
+  { key: 'scroll_dead', group: 'gScroll', label: 'Vùng chết', type: 'float', min: 0, max: 15, step: 0.5, dec: 1, def: 2.5,
+    help: 'Nghiêng ít hơn mức này thì không cuộn (tay run nhẹ không làm trang trôi).', unit: v => v.toFixed(1) + ' °' , ends: ['rất nhạy, tay run dễ làm trang trôi', 'phải nghiêng nhiều mới cuộn'] },
+  { key: 'scroll_ref', group: 'gScroll', label: 'Tâm cuộn', type: 'select', def: 0,
+    options: [[0, 'Tư thế thoải mái trước khi nhấn đúp (khuyên dùng)', 'Tâm cuộn là tư thế bạn đang cầm ngay TRƯỚC khi chạm Mode. Tay bị lệch lúc nhấn đúp cũng không làm tâm lệch; trang cuộn khi bạn nghiêng ra khỏi tư thế thoải mái đó.'], [1, 'Tư thế lúc nhấn lần hai', 'Tâm cuộn là tư thế ngay lúc bạn nhấn lần hai. Nếu tay lệch khi nhấn thì tâm lệch theo; phải giữ tay yên một chút rồi mới nghiêng.']],
+    help: 'Nghiêng so với tư thế nào thì tính là cuộn.' },
+  { key: 'scroll_invert', group: 'gScroll', label: 'Đảo chiều cuộn', type: 'flag', def: 0,
+    help: 'Bật nếu bạn muốn nghiêng lên thì trang đi xuống.' , states: ['Tắt: ngẩng mũi lên thì trang cuộn lên (bình thường).', 'Bật: ngẩng mũi lên thì trang cuộn xuống.'] },
+  { key: 'hscroll', group: 'gScroll', label: 'Cuộn ngang', type: 'flag', def: 0,
+    help: 'Bật thì lăn cổ tay sang phải/trái (nghiêng nghiêng) cũng cuộn ngang.' , states: ['Tắt: chỉ cuộn lên/xuống.', 'Bật: trong lúc cuộn, nghiêng cổ tay sang phải/trái thì trang cuộn ngang.'] },
+];
+const BY_KEY = Object.fromEntries(FIELDS.map(f => [f.key, f]));
+
+// ---------------------------------------------------------------- state
+const state = {
+  transport: null,           // object with write(text), close()
+  mode: 'none',              // 'none' | 'serial' | 'demo'
+  device: {},                // values last confirmed by the board
+  edit: {},                  // values on the page
+  ver: null,
+  connected: false,
+  waiter: null,              // the command in flight
+  queue: Promise.resolve(),
+};
+
+const $ = id => document.getElementById(id);
+function say(text, cls) { const m = $('msg'); m.textContent = text || ''; m.className = 'msg ' + (cls || ''); }
+function setConn(kind, text) { $('dot').className = 'dot ' + kind; $('connText').textContent = text; }
+function logLine(s) {
+  const el = $('log'); el.textContent += s + '\n';
+  if (el.textContent.length > 40000) el.textContent = el.textContent.slice(-30000);
+  el.scrollTop = el.scrollHeight;
+}
+function addEvent(text) {
+  const ul = $('events'); const li = document.createElement('li');
+  li.textContent = new Date().toLocaleTimeString() + '  ' + text;
+  ul.insertBefore(li, ul.firstChild);
+  while (ul.children.length > 30) ul.removeChild(ul.lastChild);
+}
+
+// ---------------------------------------------------------------- building the form
+const controls = {};   // key -> { wrap, set(value), ... }
+
+function fmt(f, v) {
+  if (f.type === 'float') return Number(v).toFixed(f.dec);
+  return String(Math.round(v));
+}
+function toSlider(f, v) {                       // 0..1000
+  if (f.log) return Math.round(1000 * Math.log(v / f.min) / Math.log(f.max / f.min));
+  return Math.round(1000 * (v - f.min) / (f.max - f.min));
+}
+function fromSlider(f, s) {
+  let v = f.log ? f.min * Math.pow(f.max / f.min, s / 1000) : f.min + (f.max - f.min) * s / 1000;
+  return snap(f, v);
+}
+function snap(f, v) {
+  v = Math.min(f.max, Math.max(f.min, v));
+  if (f.type === 'int') return Math.round(v / f.step) * f.step;
+  const p = Math.pow(10, f.dec);
+  return Math.round(v * p) / p;
+}
+
+function rangeOf(f) {
+  if (f.type === 'flag') return [0, 1];
+  if (f.type === 'select') { const v = f.options.map(o => o[0]); return [Math.min(...v), Math.max(...v)]; }
+  return [f.min, f.max];
+}
+
+function build() {
+  for (const f of FIELDS) {
+    const wrap = document.createElement('div'); wrap.className = 'field'; wrap.id = 'f_' + f.key;
+    const name = document.createElement('label'); name.className = 'name'; name.textContent = f.label;
+    const help = document.createElement('div'); help.className = 'help'; help.textContent = f.help;
+    wrap.append(name, help);
+    const row = document.createElement('div'); row.className = 'row';
+    const c = { wrap, f };
+    let extra = null;
+    if (f.type === 'flag') {
+      const lab = document.createElement('label'); lab.className = 'switch';
+      const cb = document.createElement('input'); cb.type = 'checkbox';
+      cb.addEventListener('change', () => setEdit(f.key, cb.checked ? 1 : 0));
+      const t = document.createElement('span'); t.textContent = 'Tắt';
+      lab.append(cb, t); row.append(lab);
+      const st = document.createElement('div'); st.className = 'state';
+      extra = st;
+      c.set = v => { cb.checked = !!v; t.textContent = v ? 'Đang bật' : 'Đang tắt'; if (f.states) st.textContent = f.states[v ? 1 : 0]; };
+      c.disable = d => { cb.disabled = d; };
+    } else if (f.type === 'select') {
+      const sel = document.createElement('select');
+      for (const [val, text] of f.options) { const o = document.createElement('option'); o.value = val; o.textContent = text; sel.append(o); }
+      sel.addEventListener('change', () => setEdit(f.key, Number(sel.value)));
+      row.append(sel);
+      const od = document.createElement('div'); od.className = 'optdesc';
+      extra = od;
+      c.set = v => { sel.value = String(v); const o = f.options.find(x => x[0] === Number(v)); od.textContent = o && o[2] ? o[2] : ''; };
+      c.disable = d => { sel.disabled = d; };
+    } else {
+      const rng = document.createElement('input'); rng.type = 'range'; rng.min = 0; rng.max = 1000; rng.step = 1;
+      const num = document.createElement('input'); num.type = 'number'; num.min = f.min; num.max = f.max; num.step = f.step;
+      const unit = document.createElement('span'); unit.className = 'unit';
+      rng.addEventListener('input', () => setEdit(f.key, fromSlider(f, Number(rng.value))));
+      num.addEventListener('change', () => { const v = parseFloat(num.value); if (Number.isFinite(v)) setEdit(f.key, snap(f, v)); else c.set(state.edit[f.key]); });
+      row.append(rng, num, unit);
+      if (f.ends) {
+        const e = document.createElement('div'); e.className = 'ends';
+        const a = document.createElement('span'); a.textContent = '\u2190 ' + f.ends[0];
+        const b = document.createElement('span'); b.textContent = f.ends[1] + ' \u2192';
+        e.append(a, b); extra = e;
+      }
+      c.set = v => { rng.value = toSlider(f, v); num.value = fmt(f, v); unit.textContent = f.unit ? f.unit(v) : ''; };
+      c.disable = d => { rng.disabled = d; num.disabled = d; };
+    }
+    wrap.append(row);
+    if (extra) wrap.append(extra);
+    $(f.group).append(wrap);
+    controls[f.key] = c;
+  }
+}
+
+function setEdit(key, v) {
+  state.edit[key] = v;
+  if ((key === 'gain_x' || key === 'gain_y') && $('linkXY').checked) {
+    const other = key === 'gain_x' ? 'gain_y' : 'gain_x';
+    if (other in state.edit) state.edit[other] = v;
+  }
+  render();
+}
+
+function same(f, a, b) { return f.type === 'float' ? Math.abs(a - b) < Math.pow(10, -f.dec) / 2 : a === b; }
+function dirtyKeys() {
+  return FIELDS.filter(f => f.key in state.device && f.key in state.edit && !same(f, state.edit[f.key], state.device[f.key])).map(f => f.key);
+}
+
+function mappingWarning() {
+  const g = k => (k in state.edit ? state.edit[k] : null);
+  const a = [g('btn_left'), g('btn_right'), g('btn_mode')];
+  if (a.some(v => v === null)) return '';
+  const msgs = [];
+  if (!a.includes(6)) msgs.push('Không có nút nào là Mode: sẽ không có khóa con trỏ, cân lại, lắc nhanh Back/Forward và cuộn trang.');
+  if (!a.includes(1)) msgs.push('Không có nút nào là chuột trái: bạn sẽ không bấm trái được.');
+  return msgs.join(' ');
+}
+
+function render() {
+  const dirty = new Set(dirtyKeys());
+  for (const f of FIELDS) {
+    const c = controls[f.key];
+    const has = f.key in state.device;
+    c.disable(!has || !state.connected);
+    if (f.key in state.edit) c.set(state.edit[f.key]);
+    c.wrap.classList.toggle('dirty', dirty.has(f.key));
+    if (!dirty.has(f.key)) c.wrap.classList.remove('error');
+  }
+  const n = dirty.size, on = state.connected;
+  $('btnApply').disabled = !(on && n > 0);
+  $('btnRevert').disabled = !(on && n > 0);
+  $('btnSave').disabled = !on;
+  $('btnDefaults').disabled = !on;
+  $('btnCal').disabled = !on;
+  $('btnRead').disabled = !on;
+  const w = mappingWarning(); const bw = $('btnWarn');
+  if (bw) { bw.textContent = w ? 'Lưu ý: ' + w : ''; bw.classList.toggle('hidden', !w); }
+  if (typeof renderPresets === 'function' && $('presetList')) renderPresets();
+  $('btnApply').textContent = n > 0 ? `Áp dụng thử (${n} thay đổi, chưa lưu)` : 'Áp dụng thử (chưa lưu)';
+}
+
+// ---------------------------------------------------------------- protocol
+function parsePairs(text) {
+  const out = {};
+  for (const tok of text.trim().split(/\s+/)) {
+    const i = tok.indexOf('=');
+    if (i > 0) out[tok.slice(0, i)] = tok.slice(i + 1);
+  }
+  return out;
+}
+function applyPairs(pairs, intoDevice) {
+  for (const [k, raw] of Object.entries(pairs)) {
+    const f = BY_KEY[k]; if (!f) continue;
+    const v = Number(raw); if (!Number.isFinite(v)) continue;
+    state.device[k] = v;
+    if (intoDevice) state.edit[k] = v;
+  }
+}
+
+function handleReply(line) {            // line without the leading '@'
+  const w = state.waiter;
+  if (!w) { logLine('(không có lệnh nào đang chờ) @' + line); return; }
+  clearTimeout(w.timer);
+  state.waiter = null;
+  w.resolve(line);
+}
+function command(text, timeoutMs) {
+  // One command at a time; resolves with the reply line (without '@') or rejects on timeout.
+  const run = () => new Promise((resolve, reject) => {
+    if (!state.transport) { reject(new Error('Chưa kết nối')); return; }
+    const timer = setTimeout(() => { state.waiter = null; reject(new Error('Board không trả lời (' + text.split(' ')[0] + ')')); }, timeoutMs || 3000);
+    state.waiter = { resolve, reject, timer };
+    logLine('>>> ' + text);
+    state.transport.write(text + '\n');
+  });
+  const p = state.queue.then(run, run);
+  state.queue = p.catch(() => {});
+  return p;
+}
+
+async function readConfig(quiet) {
+  const reply = await command('@GET', 2500);
+  if (!reply.startsWith('CFG')) throw new Error('Trả lời lạ: ' + reply);
+  const pairs = parsePairs(reply.slice(3));
+  state.ver = Number(pairs.ver);
+  applyPairs(pairs, true);
+  const banner = $('banner');
+  if (state.ver !== EXPECTED_VERSION) {
+    banner.textContent = `Firmware dùng cấu hình phiên bản ${state.ver}, trang này viết cho phiên bản ${EXPECTED_VERSION}. Chỉ các mục trùng khóa được hiển thị; cập nhật trang hoặc firmware cho khớp.`;
+    banner.classList.remove('hidden');
+  } else banner.classList.add('hidden');
+  render();
+  if (!quiet) say('Đã đọc cấu hình từ board.', 'ok');
+}
+
+async function waitForBoard() {
+  // Opening the port can reset the board (about 3 s of boot + calibration). Ask until it answers.
+  const t0 = Date.now();
+  say('Đang chờ board khởi động (đặt board nằm yên vài giây)…', 'warn');
+  setConn('wait', 'Đang chờ board…');
+  while (Date.now() - t0 < 30000 && state.transport) {
+    try { await readConfig(true); return true; } catch (e) { await sleep(700); }
+  }
+  return false;
+}
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+async function apply() {
+  const keys = dirtyKeys();
+  if (!keys.length) return true;
+  const parts = keys.map(k => k + '=' + fmt(BY_KEY[k], state.edit[k]));
+  try {
+    const reply = await command('@SET ' + parts.join(' '), 3000);
+    if (reply.startsWith('OK')) {
+      applyPairs(parsePairs(reply.slice(2)), true);     // the board may round (click guard): take its values
+      // a key the board did not echo keeps the value we sent
+      for (const k of keys) { if (!(k in parsePairs(reply.slice(2)))) state.device[k] = state.edit[k]; }
+      render();
+      say('Đã áp dụng. Thử ngay trên chuột; chưa lưu nên tắt nguồn là mất.', 'ok');
+      return true;
+    }
+    showError(reply);
+    return false;
+  } catch (e) { say(e.message, 'bad'); return false; }
+}
+function showError(reply) {
+  const m = /^ERR\s+(range|format|unknown-key)\s*(\S*)/.exec(reply);
+  let text = 'Board từ chối: ' + reply;
+  if (m) {
+    const f = BY_KEY[m[2]];
+    const name = f ? f.label : m[2];
+    text = m[1] === 'range' ? `Giá trị "${name}" ngoài khoảng cho phép (board từ chối, không đổi gì).`
+         : m[1] === 'format' ? `Giá trị "${name}" sai định dạng (board từ chối, không đổi gì).`
+         : `Board không biết cài đặt "${m[2]}" (firmware cũ hơn trang này?).`;
+    if (f && controls[f.key]) controls[f.key].wrap.classList.add('error');
+  }
+  say(text, 'bad');
+}
+async function save() {
+  try {
+    if (dirtyKeys().length && !(await apply())) return;
+    const reply = await command('@SAVE', 5000);
+    if (reply.startsWith('OK')) say('Đã lưu vào board. Tắt nguồn bật lại vẫn giữ.', 'ok');
+    else say(reply === 'ERR nvs' ? 'Lưu thất bại (bộ nhớ flash của board báo lỗi).' : 'Board trả lời: ' + reply, 'bad');
+  } catch (e) { say(e.message, 'bad'); }
+}
+async function defaults() {
+  if (!confirm('Khôi phục MẶC ĐỊNH? Áp dụng ngay trên board; bạn vẫn phải bấm "Lưu vào board" nếu muốn giữ.')) return;
+  try { await command('@DEFAULTS', 3000); await readConfig(true); say('Đã đặt về mặc định (chưa lưu vào board).', 'ok'); }
+  catch (e) { say(e.message, 'bad'); }
+}
+async function calibrate() {
+  if (!confirm('Đặt board NẰM YÊN trên mặt bàn rồi bấm OK. Mất khoảng 2–10 giây.')) return;
+  say('Đang đo lại bias… đừng chạm vào board.', 'warn');
+  try {
+    const reply = await command('@CAL', 25000);
+    say(reply.startsWith('OK') ? 'Đã đo lại bias.' : (reply === 'ERR not-still' ? 'Board không nằm yên nên giữ bias cũ. Thử lại.' : 'Board trả lời: ' + reply), reply.startsWith('OK') ? 'ok' : 'bad');
+  } catch (e) { say(e.message, 'bad'); }
+}
+function revert() { for (const k of Object.keys(state.device)) state.edit[k] = state.device[k]; render(); say('Đã hoàn tác các thay đổi chưa áp dụng.', ''); }
+
+const ACTION_NAME = { NONE: 'không làm gì', LEFT: 'chuột trái', RIGHT: 'chuột phải', MIDDLE: 'chuột giữa', BACK: 'Back', FORWARD: 'Forward', MODE: 'Mode' };
+const ACTION_ID_NAME = ['NONE', 'LEFT', 'RIGHT', 'MIDDLE', 'BACK', 'FORWARD', 'MODE'];
+
+// ---------------------------------------------------------------- lines from the board
+function onBoardLine(line) {
+  if (!line) return;
+  if (line.startsWith('@')) { logLine(line); handleReply(line.slice(1)); return; }
+  logLine(line);
+  let m;
+  if ((m = /\[STATUS\].*Rate:\s*(\d+)\s*Hz.*Stat:\s*(\d).*Clutch:\s*(\d).*BiasZ:\s*([+-]?[\d.]+).*Up:\s*(\d+)s.*Frz:\s*(\d+)(?:.*Err:\s*(\d+).*Rec:\s*(\d+))?/.exec(line))) {
+    $('sRate').textContent = m[1]; $('sStat').textContent = m[2]; $('sClutch').textContent = m[3];
+    $('sBias').textContent = m[4]; $('sUp').textContent = m[5]; $('sFrz').textContent = m[6];
+    if (m[7] !== undefined) { $('sErr').textContent = m[7]; $('sRec').textContent = m[8]; }
+  } else if ((m = /\[BTN\] (LEFT|RIGHT|MODE) (down|up)(?: -> (\w+))?/.exec(line))) {
+    const phys = { LEFT: 'trái', RIGHT: 'phải', MODE: 'Mode' }[m[1]];
+    const act = m[3] ? ' → ' + (ACTION_NAME[m[3]] || m[3]) : '';
+    addEvent('Nút ' + phys + (m[2] === 'down' ? ': nhấn' : ': nhả') + act);
+  } else if (/\[MODE\] down/.test(line)) addEvent('Mode: nhấn (khóa con trỏ)');
+  else if (/\[MODE\] up/.test(line)) addEvent('Mode: nhả');
+  else if (/\[MODE\] Recentered/.test(line)) addEvent('Đã cân lại hệ quy chiếu');
+  else if ((m = /\[FLICK\] (LEFT|RIGHT)/.exec(line))) addEvent('Lắc nhanh ' + (m[1] === 'LEFT' ? 'trái → Back' : 'phải → Forward'));
+  else if (/\[SCROLL\] on/.test(line)) addEvent('Chế độ cuộn: BẬT');
+  else if (/\[SCROLL\] off/.test(line)) addEvent('Chế độ cuộn: tắt');
+  else if (/Main Loop/.test(line)) addEvent('Board vừa khởi động xong');
+  else if (/\[IMU\] sensor lost/.test(line)) addEvent('Cảm biến bị mất → đã phục hồi bus I2C và khởi tạo lại');
+}
+
+// ---------------------------------------------------------------- transports
+async function connectSerial() {
+  if (!('serial' in navigator)) { say('Trình duyệt này không hỗ trợ Web Serial. Dùng Chrome hoặc Edge trên máy tính (hoặc bấm "Chế độ thử").', 'bad'); return; }
+  let port;
+  try { port = await navigator.serial.requestPort(); } catch (e) { say('Đã hủy chọn cổng.', ''); return; }
+  try {
+    await port.open({ baudRate: 115200 });
+    try { await port.setSignals({ dataTerminalReady: false, requestToSend: false }); } catch (_) {}
+  } catch (e) { say('Không mở được cổng (đang bị chương trình khác dùng?): ' + e.message, 'bad'); return; }
+
+  const enc = new TextEncoder();
+  const writer = port.writable.getWriter();
+  let closing = false;
+  state.transport = {
+    write: text => { writer.write(enc.encode(text)).catch(() => {}); },
+    close: async () => {
+      closing = true;
+      try { reader && await reader.cancel(); } catch (_) {}
+      try { writer.releaseLock(); } catch (_) {}
+      try { await port.close(); } catch (_) {}
+    },
+  };
+  state.mode = 'serial';
+  state.connected = true;
+  showConnected();
+  const reader = port.readable.getReader();
+  (async () => {
+    const dec = new TextDecoder(); let buf = '';
+    try {
+      for (;;) {
+        const { value, done } = await reader.read();
+        if (done) break;
+        buf += dec.decode(value, { stream: true });
+        let i;
+        while ((i = buf.indexOf('\n')) >= 0) { onBoardLine(buf.slice(0, i).replace(/\r$/, '')); buf = buf.slice(i + 1); }
+      }
+    } catch (e) { if (!closing) logLine('(lỗi đọc: ' + e.message + ')'); }
+    if (!closing) lost();
+  })();
+  if (!(await waitForBoard())) { say('Board không trả lời lệnh @GET. Firmware có hỗ trợ cấu hình không? Thử rút cắm cáp.', 'bad'); setConn('err', 'Đã mở cổng, board không trả lời'); }
+  else { setConn('on', 'Đã kết nối board (firmware cấu hình v' + state.ver + ')'); say('Đã đọc cấu hình từ board.', 'ok'); }
+}
+
+function showConnected() {
+  $('btnConnect').classList.add('hidden'); $('btnDemo').classList.add('hidden'); $('btnDisconnect').classList.remove('hidden');
+  render();
+}
+function lost() {
+  state.connected = false; state.transport = null; state.mode = 'none';
+  $('btnConnect').classList.remove('hidden'); $('btnDemo').classList.remove('hidden'); $('btnDisconnect').classList.add('hidden');
+  setConn('err', 'Mất kết nối'); say('Mất kết nối với board.', 'bad');
+  if (state.waiter) { clearTimeout(state.waiter.timer); state.waiter.reject(new Error('Mất kết nối')); state.waiter = null; }
+  render();
+}
+async function disconnect() {
+  const t = state.transport;
+  state.connected = false; state.transport = null; state.mode = 'none';
+  if (t) await t.close();
+  $('btnConnect').classList.remove('hidden'); $('btnDemo').classList.remove('hidden'); $('btnDisconnect').classList.add('hidden');
+  setConn('', 'Chưa kết nối'); say('', '');
+  $('demoButtons').classList.add('hidden');
+  render();
+}
+
+// ---------------------------------------------------------------- demo mode: a simulated board with the same rules as the firmware
+function makeDemoBoard(emit) {
+  const cfg = {}; for (const f of FIELDS) cfg[f.key] = f.def;
+  let saved = null, up = 0, timers = [];
+  const fmtK = k => { const f = BY_KEY[k]; return k + '=' + (f.type === 'float' ? cfg[k].toFixed(f.key === 'scroll_sens' ? 2 : f.key === 'flick_dps' || f.key === 'scroll_dead' ? 1 : 3) : String(cfg[k])); };
+  const all = () => 'ver=' + EXPECTED_VERSION + ' ' + FIELDS.map(f => fmtK(f.key)).join(' ');
+  function set(tokens) {
+    const work = Object.assign({}, cfg), touched = [];
+    for (const t of tokens) {
+      const i = t.indexOf('=');
+      if (i <= 0 || i === t.length - 1) return 'ERR format';
+      const k = t.slice(0, i), raw = t.slice(i + 1), f = BY_KEY[k];
+      if (!f) return 'ERR unknown-key ' + k;
+      const v = Number(raw);
+      if (!Number.isFinite(v) || !/^[-+]?[\d.]+(e[-+]?\d+)?$/i.test(raw)) return 'ERR format ' + k;
+      if (f.type !== 'float' && !Number.isInteger(v)) return 'ERR format ' + k;
+      const [lo, hi] = rangeOf(f);
+      if (v < lo || v > hi) return 'ERR range ' + k;
+      work[k] = f.key === 'click_guard_ms' ? Math.round(v / 10) * 10 : v;
+      touched.push(k);
+    }
+    Object.assign(cfg, work);
+    return 'OK ' + [...new Set(touched)].map(fmtK).join(' ');
+  }
+  function handle(line) {
+    const tok = line.trim().replace(/^@/, '').split(/\s+/).filter(Boolean);
+    const cmd = (tok[0] || '').toUpperCase();
+    if (cmd === 'GET') return 'CFG ' + all();
+    if (cmd === 'SET') return tok.length < 2 ? 'ERR format' : set(tok.slice(1));
+    if (cmd === 'SAVE') { saved = Object.assign({}, cfg); return 'OK saved'; }
+    if (cmd === 'DEFAULTS') { for (const f of FIELDS) cfg[f.key] = f.def; return 'OK defaults'; }
+    if (cmd === 'CAL') return 'OK calibrated';
+    return tok.length ? 'ERR unknown-cmd' : 'ERR empty';
+  }
+  const tick = setInterval(() => {
+    up++;
+    emit('[STATUS] Rate: 100 Hz | Stat: ' + (up % 3 ? 1 : 0) + ' | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.33 | Up: ' + up + 's | Frz: 0 | Heal: 0 | Err: 0 | Rec: 0 | Rst: 1');
+  }, 1000);
+  timers.push(tick);
+  setTimeout(() => emit('[SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.'), 300);
+  return {
+    write(text) { for (const l of text.split('\n')) if (l.trim()) setTimeout(() => emit('@' + handle(l)), 60); },
+    event(line) { emit(line); },
+    press(which) {
+      const act = ACTION_ID_NAME[cfg[{ LEFT: 'btn_left', RIGHT: 'btn_right', MODE: 'btn_mode' }[which]]];
+      emit('[BTN] ' + which + ' down -> ' + act);
+      setTimeout(() => emit('[BTN] ' + which + ' up -> ' + act), 120);
+    },
+    close() { timers.forEach(clearInterval); },
+    peek() { return { cfg: Object.assign({}, cfg), saved }; },
+  };
+}
+async function connectDemo() {
+  const board = makeDemoBoard(onBoardLine);
+  window.__demoBoard = board;
+  state.transport = { write: t => board.write(t), close: async () => board.close() };
+  state.mode = 'demo'; state.connected = true;
+  showConnected();
+  addEvent('(chế độ thử: board giả lập, không có board thật)');
+  $('demoButtons').classList.remove('hidden');
+  document.querySelectorAll('#demoButtons button').forEach(b => { b.onclick = () => board.press(b.dataset.sim); });
+  await readConfig(true);
+  setConn('on', 'Chế độ thử (board giả lập, firmware cấu hình v' + state.ver + ')');
+  say('Đang dùng board giả lập: mọi thao tác chỉ diễn ra trong trang này.', 'warn');
+}
+
+// ---------------------------------------------------------------- presets (kept in the browser; export/import as JSON)
+const PRESET_KEY = 'airmouse_presets_v1';
+const presetStore = { list: [], persistent: true, selected: 'builtin-default' };
+
+function builtinDefault() {
+  const values = {}; for (const f of FIELDS) values[f.key] = f.def;
+  return { id: 'builtin-default', name: 'Mặc định của firmware', builtin: true, values, cfgVersion: EXPECTED_VERSION };
+}
+function allPresets() { return [builtinDefault(), ...presetStore.list]; }
+function findPreset(id) { return allPresets().find(p => p.id === id); }
+function cleanValues(values) {                // keep only known keys with finite numbers inside the allowed range
+  const out = {};
+  if (!values || typeof values !== 'object') return out;
+  for (const f of FIELDS) {
+    if (!(f.key in values)) continue;
+    const v = Number(values[f.key]);
+    if (!Number.isFinite(v)) continue;
+    const [lo, hi] = rangeOf(f);
+    if (v < lo || v > hi) continue;
+    out[f.key] = (f.type === 'flag' || f.type === 'select') ? Math.round(v) : snap(f, v);
+  }
+  return out;
+}
+function validPreset(p) {
+  return p && typeof p.name === 'string' && p.name.trim() && typeof p.id === 'string' && p.values && typeof p.values === 'object';
+}
+function loadPresets() {
+  try {
+    const raw = localStorage.getItem(PRESET_KEY);
+    if (raw) {
+      const d = JSON.parse(raw);
+      if (d && Array.isArray(d.presets)) presetStore.list = d.presets.filter(validPreset).map(p => ({ ...p, values: cleanValues(p.values), builtin: false }));
+    }
+    presetStore.persistent = true;
+  } catch (e) { presetStore.persistent = false; }
+}
+function savePresets() {
+  try { localStorage.setItem(PRESET_KEY, JSON.stringify({ version: 1, presets: presetStore.list })); presetStore.persistent = true; }
+  catch (e) { presetStore.persistent = false; }
+  renderPresets();
+}
+function newId() { return 'p' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6); }
+function currentValues() {
+  const v = {};
+  for (const f of FIELDS) if (f.key in state.edit) v[f.key] = state.edit[f.key];
+  return cleanValues(v);
+}
+function uniqueName(base) {
+  const names = new Set(allPresets().map(p => p.name.toLowerCase()));
+  if (!names.has(base.toLowerCase())) return base;
+  for (let i = 2; i < 100; i++) { const n = base + ' (' + i + ')'; if (!names.has(n.toLowerCase())) return n; }
+  return base + ' ' + Date.now();
+}
+function samePresetValues(values, current) {
+  const keys = Object.keys(values);
+  if (!keys.length) return false;
+  for (const k of keys) { const f = BY_KEY[k]; if (!(k in current) || !same(f, values[k], current[k])) return false; }
+  return true;
+}
+function presetSummary(p) {
+  const v = p.values, bits = [];
+  if ('gain_x' in v) bits.push('con trỏ ' + fmt(BY_KEY.gain_x, v.gain_x) + (('gain_y' in v && v.gain_y !== v.gain_x) ? '/' + fmt(BY_KEY.gain_y, v.gain_y) : ''));
+  if ('scroll_sens' in v) bits.push('cuộn ' + fmt(BY_KEY.scroll_sens, v.scroll_sens) + ', chết ' + fmt(BY_KEY.scroll_dead, v.scroll_dead ?? 0) + '°');
+  if ('btn_left' in v && (v.btn_left !== 1 || v.btn_right !== 2 || v.btn_mode !== 6)) bits.push('nút ' + [v.btn_left, v.btn_right, v.btn_mode].map(a => ({ 0: '–', 1: 'T', 2: 'P', 3: 'G', 4: 'Bk', 5: 'Fw', 6: 'M' }[a])).join('/'));
+  if ('flick_dps' in v) bits.push('lắc ' + Math.round(v.flick_dps) + '°/s' + (v.flick_enable === 0 ? ' (tắt)' : ''));
+  return bits.join(' · ') || (Object.keys(v).length + ' thông số');
+}
+
+function renderPresets() {
+  const ul = $('presetList'); ul.textContent = '';
+  const onBoard = state.connected && Object.keys(state.device).length ? state.device : null;
+  for (const p of allPresets()) {
+    const li = document.createElement('li');
+    li.className = p.id === presetStore.selected ? 'sel' : '';
+    li.dataset.id = p.id;
+    const b = document.createElement('b');
+    const name = document.createElement('span'); name.textContent = p.name; b.append(name);
+    if (onBoard && samePresetValues(p.values, onBoard)) { const t = document.createElement('span'); t.className = 'tag'; t.textContent = 'đang dùng trên board'; b.append(t); }
+    else if (p.builtin) { const t = document.createElement('span'); t.className = 'tag builtin'; t.textContent = 'có sẵn'; b.append(t); }
+    const small = document.createElement('small'); small.textContent = presetSummary(p);
+    li.append(b, small);
+    li.addEventListener('click', () => { presetStore.selected = p.id; renderPresets(); });
+    ul.append(li);
+  }
+  const sel = findPreset(presetStore.selected) || builtinDefault();
+  const cur = currentValues();
+  const diff = Object.keys(sel.values).filter(k => k in cur && !same(BY_KEY[k], sel.values[k], cur[k]));
+  $('presetDiff').textContent = !state.connected ? 'Nối board (hoặc Chế độ thử) để áp dụng preset.'
+    : diff.length ? `Preset "${sel.name}" khác trang hiện tại ở ${diff.length} mục: ` + diff.map(k => BY_KEY[k].label.toLowerCase() + ' (' + fmt(BY_KEY[k], cur[k]) + ' → ' + fmt(BY_KEY[k], sel.values[k]) + ')').join(', ')
+    : `Preset "${sel.name}" trùng với các giá trị đang hiển thị.`;
+  const on = state.connected, custom = !sel.builtin;
+  $('pApply').disabled = !on;
+  $('pNew').disabled = !on;
+  $('pUpdate').disabled = !(on && custom);
+  $('pRename').disabled = !custom;
+  $('pDelete').disabled = !custom;
+  const w = $('presetWarn');
+  w.classList.toggle('hidden', presetStore.persistent);
+  w.textContent = presetStore.persistent ? '' : 'Trình duyệt không cho lưu lâu dài ở đây (chế độ riêng tư, hoặc mở bằng liên kết không hỗ trợ): preset chỉ giữ trong lúc trang đang mở. Dùng "Xuất file" để giữ lại.';
+}
+
+async function presetApply() {
+  const p = findPreset(presetStore.selected); if (!p) return;
+  const vals = cleanValues(p.values);
+  const missing = FIELDS.filter(f => f.key in state.device && !(f.key in vals)).length;
+  for (const [k, v] of Object.entries(vals)) if (k in state.device) state.edit[k] = v;
+  render();
+  if (!dirtyKeys().length) { say(`Board đã đang dùng đúng các giá trị của "${p.name}".`, 'ok'); renderPresets(); return; }
+  const ok = await apply();
+  if (ok) say(`Đã áp dụng preset "${p.name}"` + (missing ? ` (${missing} mục không có trong preset nên giữ nguyên)` : '') + '. Chưa lưu vào board.', 'ok');
+  renderPresets();
+}
+function presetNew() {
+  const name = (prompt('Tên preset mới:', uniqueName('Preset ' + (presetStore.list.length + 1))) || '').trim();
+  if (!name) return;
+  if (name.length > 40) { say('Tên preset tối đa 40 ký tự.', 'bad'); return; }
+  if (allPresets().some(p => p.name.toLowerCase() === name.toLowerCase())) { say('Đã có preset tên "' + name + '". Chọn tên khác hoặc dùng "Cập nhật preset này".', 'bad'); return; }
+  const p = { id: newId(), name, values: currentValues(), cfgVersion: EXPECTED_VERSION, created: new Date().toISOString() };
+  presetStore.list.push(p);
+  presetStore.selected = p.id;
+  savePresets();
+  say('Đã lưu preset "' + name + '" (' + Object.keys(p.values).length + ' thông số).', 'ok');
+}
+function presetUpdate() {
+  const p = presetStore.list.find(x => x.id === presetStore.selected); if (!p) return;
+  if (!confirm('Ghi đè preset "' + p.name + '" bằng các giá trị đang hiển thị trên trang?')) return;
+  p.values = currentValues(); p.cfgVersion = EXPECTED_VERSION; p.updated = new Date().toISOString();
+  savePresets();
+  say('Đã cập nhật preset "' + p.name + '".', 'ok');
+}
+function presetRename() {
+  const p = presetStore.list.find(x => x.id === presetStore.selected); if (!p) return;
+  const name = (prompt('Tên mới:', p.name) || '').trim();
+  if (!name || name === p.name) return;
+  if (name.length > 40) { say('Tên preset tối đa 40 ký tự.', 'bad'); return; }
+  if (allPresets().some(x => x.id !== p.id && x.name.toLowerCase() === name.toLowerCase())) { say('Đã có preset tên "' + name + '".', 'bad'); return; }
+  p.name = name; savePresets(); say('Đã đổi tên.', 'ok');
+}
+function presetDelete() {
+  const p = presetStore.list.find(x => x.id === presetStore.selected); if (!p) return;
+  if (!confirm('Xóa preset "' + p.name + '"? Không hoàn lại được (trừ khi bạn đã xuất file).')) return;
+  presetStore.list = presetStore.list.filter(x => x.id !== p.id);
+  presetStore.selected = 'builtin-default';
+  savePresets(); say('Đã xóa preset "' + p.name + '".', '');
+}
+function presetExport() {
+  if (!presetStore.list.length) { say('Chưa có preset nào của bạn để xuất.', 'warn'); return; }
+  const data = { app: 'air-mouse-config', format: 1, cfgVersion: EXPECTED_VERSION, exported: new Date().toISOString(), presets: presetStore.list.map(p => ({ name: p.name, values: p.values })) };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'air_mouse_presets.json';
+  document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  say('Đã xuất ' + presetStore.list.length + ' preset ra air_mouse_presets.json.', 'ok');
+}
+function presetImportText(text) {
+  let d;
+  try { d = JSON.parse(text); } catch (e) { say('File không phải JSON hợp lệ.', 'bad'); return 0; }
+  if (!d || d.app !== 'air-mouse-config' || !Array.isArray(d.presets)) { say('File này không phải file preset của Air Mouse.', 'bad'); return 0; }
+  let n = 0, skipped = 0;
+  for (const p of d.presets.slice(0, 200)) {
+    if (!p || typeof p.name !== 'string' || !p.name.trim()) { skipped++; continue; }
+    const values = cleanValues(p.values);
+    if (!Object.keys(values).length) { skipped++; continue; }
+    presetStore.list.push({ id: newId(), name: uniqueName(p.name.trim().slice(0, 40)), values, cfgVersion: d.cfgVersion || null, created: new Date().toISOString() });
+    n++;
+  }
+  savePresets();
+  const older = d.cfgVersion && d.cfgVersion !== EXPECTED_VERSION ? ` Lưu ý: file tạo cho cấu hình phiên bản ${d.cfgVersion}, trang này là ${EXPECTED_VERSION}; mục nào không còn hợp lệ đã bị bỏ.` : '';
+  say(`Đã nhập ${n} preset` + (skipped ? `, bỏ ${skipped} mục lỗi` : '') + '.' + older, n ? 'ok' : 'warn');
+  return n;
+}
+
+// ---------------------------------------------------------------- wiring
+build();
+$('btnConnect').addEventListener('click', connectSerial);
+$('btnDemo').addEventListener('click', connectDemo);
+$('btnDisconnect').addEventListener('click', disconnect);
+$('btnApply').addEventListener('click', apply);
+$('btnSave').addEventListener('click', save);
+$('btnRevert').addEventListener('click', revert);
+$('btnDefaults').addEventListener('click', defaults);
+$('btnCal').addEventListener('click', calibrate);
+$('btnRead').addEventListener('click', () => readConfig(false).catch(e => say(e.message, 'bad')));
+if (!('serial' in navigator)) { $('banner').textContent = 'Trình duyệt này không có Web Serial: dùng Chrome hoặc Edge trên máy tính để nối board thật. "Chế độ thử" vẫn dùng được.'; $('banner').classList.remove('hidden'); }
+for (const f of FIELDS) { state.edit[f.key] = f.def; controls[f.key].set(f.def); }
+loadPresets();
+$('barHelp').addEventListener('click', () => { const b = document.querySelector('.bar'); const open = b.classList.toggle('help-open'); $('barHelp').textContent = open ? 'ℹ Ẩn giải thích các nút' : 'ℹ Hiện giải thích các nút'; });
+$('pApply').addEventListener('click', presetApply);
+$('pNew').addEventListener('click', presetNew);
+$('pUpdate').addEventListener('click', presetUpdate);
+$('pRename').addEventListener('click', presetRename);
+$('pDelete').addEventListener('click', presetDelete);
+$('pExport').addEventListener('click', presetExport);
+$('pImport').addEventListener('click', () => $('pFile').click());
+$('pFile').addEventListener('change', async () => {
+  const f = $('pFile').files[0]; $('pFile').value = '';
+  if (f) presetImportText(await f.text());
+});
+render();
+</script>
+</body>
+</html>

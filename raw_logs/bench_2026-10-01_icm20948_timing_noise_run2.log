@@ -1,0 +1,32 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,?ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+
+[BENCH] Air Mouse bench measurements 2026-10-01 (ESP32 + WCMCU-20948 only)
+[BENCH] CPU 240 MHz, APB 80000000 Hz
+[B1] imu_init=PASS WHO_AM_I=0xEA PWR_MGMT_1=0x01 GYRO_CONFIG_1=0x1B ACCEL_CONFIG=0x1B GYRO_DIV=10 ACCEL_DIV=10
+[B2] I2C 400000 Hz | N=1000 | burst12 us: min=431 avg=438.3 max=505 | fails=0
+[B2] I2C 100000 Hz | N=1000 | burst12 us: min=1470 avg=1471.0 max=1502 | fails=0
+[B3] Keep the board still on the table ...
+[B3] static noise | N=1000 | fails=0 | ACCEL +/-4g (8192 LSB/g), GYRO +/-500dps (65.5 LSB/dps)
+[B3] AX mean=   +125.8 LSB (+0.0154 g) sd= 15.04 LSB (0.0018 g) min=81 max=177
+[B3] AY mean=    -48.1 LSB (-0.0059 g) sd= 17.51 LSB (0.0021 g) min=-97 max=3
+[B3] AZ mean=  +8095.8 LSB (+0.9883 g) sd= 17.73 LSB (0.0022 g) min=8040 max=8153
+[B3] GX mean=    -36.8 LSB (-0.5613 dps) sd=  5.69 LSB (0.0869 dps) min=-57 max=-19
+[B3] GY mean=    -96.0 LSB (-1.4649 dps) sd=  5.62 LSB (0.0858 dps) min=-113 max=-77
+[B3] GZ mean=    +21.0 LSB (+0.3209 dps) sd=  6.28 LSB (0.0958 dps) min=1 max=39
+[B3] |A| mean=8097.0 LSB -> 0.9884 g (expected ~8192 LSB = 1 g at rest)
+[B4] TEMP_OUT raw=4528 -> 34.56 degC (die temperature, not ambient)
+[B5] 10ms polling loop | N=500 | period us: min=10000 avg=10000.0 max=10000 | >10.1ms: 0
+[BENCH] DONE

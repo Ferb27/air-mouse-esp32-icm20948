@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="794" height="1123" viewBox="0 0 794 1123" role="img">
+<title>ESP32: danh sách chân dùng</title>
+<defs><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M-2,2 L2,-2 M0,10 L10,0 M8,12 L12,8" stroke="#d49b38" stroke-width="1.5"/></pattern></defs>
+<style>text{font-family:Arial,"Segoe UI",sans-serif;fill:#183044} .muted{fill:#4c6475}</style>
+<rect x="0.00" y="0.00" width="794.00" height="1123.00" rx="5" fill="#fff" stroke="none" stroke-width="0" />
+<text x="28.00" y="37.00" font-size="23" text-anchor="start" style="fill:#183044" font-weight="700">ESP32: danh sách chân dùng</text>
+<text x="28.00" y="64.00" font-size="13" text-anchor="start" style="fill:#183044">Danh sách chân, KHÔNG suy vị trí vật lý từ bo 38 chân tương tự.</text>
+<text x="766.00" y="87.00" font-size="12" text-anchor="end" style="fill:#be2832">đề xuất, chưa đo thực tế</text>
+<line x1="28.00" y1="101.00" x2="766.00" y2="101.00" stroke="#cbd5df" stroke-width="1"/>
+<rect x="30.00" y="122.00" width="734.00" height="95.00" rx="5" fill="#fff1e6" stroke="#c27d45" stroke-width="1.2" />
+<text x="45.00" y="148.00" font-size="17" text-anchor="start" style="fill:#183044" font-weight="700">CHƯA ĐỦ CĂN CỨ vẽ vị trí chân ESP32. Đối chiếu chữ in trên đúng bo; số</text>
+<text x="45.00" y="170.95" font-size="17" text-anchor="start" style="fill:#183044" font-weight="700">dưới đây chỉ theo netlist, không phải cách đếm lỗ carrier.</text>
+<text x="45.00" y="255.00" font-size="16" text-anchor="start" style="fill:#183044" font-weight="700">Nhãn trên bo</text>
+<text x="255.00" y="255.00" font-size="16" text-anchor="start" style="fill:#183044" font-weight="700">Số netlist</text>
+<text x="425.00" y="255.00" font-size="16" text-anchor="start" style="fill:#183044" font-weight="700">Nối tới</text>
+<rect x="30.00" y="270.00" width="734.00" height="60.00" rx="5" fill="#edf3f7" stroke="none" stroke-width="0" />
+<text x="45.00" y="301.00" font-size="18" text-anchor="start" style="fill:#183044" font-weight="700">3V3</text>
+<text x="255.00" y="301.00" font-size="16" text-anchor="start" style="fill:#183044">1</text>
+<text x="425.00" y="295.00" font-size="14" text-anchor="start" style="fill:#183044">U2 VCC/NCS; TP3</text>
+<rect x="30.00" y="333.00" width="734.00" height="60.00" rx="5" fill="#fff" stroke="none" stroke-width="0" />
+<text x="45.00" y="364.00" font-size="18" text-anchor="start" style="fill:#183044" font-weight="700">VIN/5V</text>
+<text x="255.00" y="364.00" font-size="16" text-anchor="start" style="fill:#183044">19</text>
+<text x="425.00" y="358.00" font-size="14" text-anchor="start" style="fill:#183044">Từ J5V.1 cái</text>
+<rect x="30.00" y="396.00" width="734.00" height="60.00" rx="5" fill="#edf3f7" stroke="none" stroke-width="0" />
+<text x="45.00" y="427.00" font-size="18" text-anchor="start" style="fill:#183044" font-weight="700">GND</text>
+<text x="255.00" y="427.00" font-size="16" text-anchor="start" style="fill:#183044">14, 32, 38</text>
+<text x="425.00" y="421.00" font-size="14" text-anchor="start" style="fill:#183044">G* và J5V.2 cái</text>
+<rect x="30.00" y="459.00" width="734.00" height="60.00" rx="5" fill="#fff" stroke="none" stroke-width="0" />
+<text x="45.00" y="490.00" font-size="18" text-anchor="start" style="fill:#183044" font-weight="700">GPIO21</text>
+<text x="255.00" y="490.00" font-size="16" text-anchor="start" style="fill:#183044">33</text>
+<text x="425.00" y="484.00" font-size="14" text-anchor="start" style="fill:#183044">IMU SDA, TP2</text>
+<rect x="30.00" y="522.00" width="734.00" height="60.00" rx="5" fill="#edf3f7" stroke="none" stroke-width="0" />
+<text x="45.00" y="553.00" font-size="18" text-anchor="start" style="fill:#183044" font-weight="700">GPIO22</text>
+<text x="255.00" y="553.00" font-size="16" text-anchor="start" style="fill:#183044">36</text>
+<text x="425.00" y="547.00" font-size="14" text-anchor="start" style="fill:#183044">IMU SCL, TP1</text>
+<rect x="30.00" y="585.00" width="734.00" height="60.00" rx="5" fill="#fff" stroke="none" stroke-width="0" />
+<text x="45.00" y="616.00" font-size="18" text-anchor="start" style="fill:#183044" font-weight="700">GPIO25</text>
+<text x="255.00" y="616.00" font-size="16" text-anchor="start" style="fill:#183044">9</text>
+<text x="425.00" y="610.00" font-size="14" text-anchor="start" style="fill:#183044">SW2 nhóm A</text>
+<rect x="30.00" y="648.00" width="734.00" height="60.00" rx="5" fill="#edf3f7" stroke="none" stroke-width="0" />
+<text x="45.00" y="679.00" font-size="18" text-anchor="start" style="fill:#183044" font-weight="700">GPIO26</text>
+<text x="255.00" y="679.00" font-size="16" text-anchor="start" style="fill:#183044">10</text>
+<text x="425.00" y="673.00" font-size="14" text-anchor="start" style="fill:#183044">SW3 nhóm A</text>
+<rect x="30.00" y="711.00" width="734.00" height="60.00" rx="5" fill="#fff" stroke="none" stroke-width="0" />
+<text x="45.00" y="742.00" font-size="18" text-anchor="start" style="fill:#183044" font-weight="700">GPIO27</text>
+<text x="255.00" y="742.00" font-size="16" text-anchor="start" style="fill:#183044">11</text>
+<text x="425.00" y="736.00" font-size="14" text-anchor="start" style="fill:#183044">SW4 nhóm A</text>
+<rect x="30.00" y="774.00" width="734.00" height="60.00" rx="5" fill="#edf3f7" stroke="none" stroke-width="0" />
+<text x="45.00" y="805.00" font-size="18" text-anchor="start" style="fill:#183044" font-weight="700">GPIO32</text>
+<text x="255.00" y="805.00" font-size="16" text-anchor="start" style="fill:#183044">7</text>
+<text x="425.00" y="799.00" font-size="14" text-anchor="start" style="fill:#183044">R1.1 → D1 A</text>
+<rect x="30.00" y="837.00" width="734.00" height="60.00" rx="5" fill="#fff" stroke="none" stroke-width="0" />
+<text x="45.00" y="868.00" font-size="18" text-anchor="start" style="fill:#183044" font-weight="700">GPIO34</text>
+<text x="255.00" y="868.00" font-size="16" text-anchor="start" style="fill:#183044">5</text>
+<text x="425.00" y="862.00" font-size="14" text-anchor="start" style="fill:#183044">BAT_SENSE; không nối trực tiếp pin/5V</text>
+<text x="40.00" y="978.00" font-size="15" text-anchor="start" style="fill:#be2832" font-weight="700">GPIO34 chỉ BAT_SENSE, không 5V hay V_SYS trực tiếp. Socket U38…U57 và AE38…AE57 (hoặc</text>
+<text x="40.00" y="998.25" font-size="15" text-anchor="start" style="fill:#be2832" font-weight="700">AD sau đo); không tự gán GPIO theo hàng 38…57.</text>
+<line x1="28.00" y1="1069.00" x2="766.00" y2="1069.00" stroke="#cbd5df" stroke-width="1"/>
+<text x="28.00" y="1090.00" font-size="12" text-anchor="start" style="fill:#183044">Nguồn: bảng GPIO/netlist và V2 §3.7. Pin thật và khoảng hai hàng: CẦN ĐO THỰC TẾ.</text>
+</svg>

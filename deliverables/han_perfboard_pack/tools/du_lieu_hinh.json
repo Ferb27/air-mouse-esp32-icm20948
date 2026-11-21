@@ -1,0 +1,1309 @@
+{
+  "version": 1,
+  "date": "2026-10-16",
+  "board": {
+    "width": 90,
+    "height": 150,
+    "pitch": 2.54,
+    "origin": [
+      3,
+      3
+    ],
+    "cols": 33,
+    "rows": 57,
+    "keepout": [
+      "B21",
+      "Z37"
+    ],
+    "socket_alt": [
+      "U38",
+      "AD57"
+    ]
+  },
+  "components": [
+    {
+      "ref": "SW2",
+      "title": "Nút trái",
+      "kind": "button",
+      "holes": [
+        "H5"
+      ],
+      "region": null,
+      "source_row": "| SW2 trái / SW4 mode / SW3 phải | Tâm H5 / R5 / AB5; vùng dự kiến hàng 2…8 | Tim cách 25.4 mm (10 pitch); đo bốn chân/cap, ghi lỗ thật ____ |",
+      "color": "#fde6b3"
+    },
+    {
+      "ref": "SW4",
+      "title": "Nút mode",
+      "kind": "button",
+      "holes": [
+        "R5"
+      ],
+      "region": null,
+      "source_row": "| SW2 trái / SW4 mode / SW3 phải | Tâm H5 / R5 / AB5; vùng dự kiến hàng 2…8 | Tim cách 25.4 mm (10 pitch); đo bốn chân/cap, ghi lỗ thật ____ |",
+      "color": "#fde6b3"
+    },
+    {
+      "ref": "SW3",
+      "title": "Nút phải",
+      "kind": "button",
+      "holes": [
+        "AB5"
+      ],
+      "region": null,
+      "source_row": "| SW2 trái / SW4 mode / SW3 phải | Tâm H5 / R5 / AB5; vùng dự kiến hàng 2…8 | Tim cách 25.4 mm (10 pitch); đo bốn chân/cap, ghi lỗ thật ____ |",
+      "color": "#fde6b3"
+    },
+    {
+      "ref": "R1",
+      "title": "1 kΩ",
+      "kind": "resistor",
+      "holes": [
+        "D19",
+        "H19"
+      ],
+      "region": null,
+      "source_row": "| R1, D1 | R1 D19/H19; D1 A tại K19, K tại L19 | Đo giá trị/cực, nối dây theo §3.7 |",
+      "color": "#f6d7b8"
+    },
+    {
+      "ref": "D1",
+      "title": "LED xanh",
+      "kind": "led",
+      "holes": [
+        "K19",
+        "L19"
+      ],
+      "region": null,
+      "source_row": "| R1, D1 | R1 D19/H19; D1 A tại K19, K tại L19 | Đo giá trị/cực, nối dây theo §3.7 |",
+      "color": "#bfe8c1"
+    },
+    {
+      "ref": "MOD1",
+      "title": "TP4056",
+      "kind": "module",
+      "holes": [],
+      "region": [
+        "A9",
+        "L17"
+      ],
+      "source_row": "| TP4056 | Thân A9…L17, cổng hướng mép trái | Khung 27.94×20.32 mm tính từ lưới; thân tham chiếu 26×17 mm [M] §1.2; đo/gá thật |",
+      "color": "#bde4da"
+    },
+    {
+      "ref": "MOD2",
+      "title": "MT3608",
+      "kind": "module",
+      "holes": [],
+      "region": [
+        "N10",
+        "AC17"
+      ],
+      "source_row": "| MT3608 | Thân N10…AC17, biến trở hướng lên | Khung 38.10×17.78 mm; thân tham chiếu 36×17 mm [M] §1.2; đo thật |",
+      "color": "#cfe0f9"
+    },
+    {
+      "ref": "SW1",
+      "title": "Công tắc nguồn",
+      "kind": "module",
+      "holes": [],
+      "region": [
+        "AA19",
+        "AG22"
+      ],
+      "source_row": "| SW1 | Gá mép phải AA19…AG22, chân nối dây | Khung 15.24×7.62 mm; thân/chân **CẦN ĐO THỰC TẾ**, không ép pitch |",
+      "color": "#fde6b3"
+    },
+    {
+      "ref": "J1",
+      "title": "Giắc pin PH2.0",
+      "kind": "flying",
+      "holes": [],
+      "region": null,
+      "source_row": "| J1 | PH2.0 đực trên dây, gá mép trước/trái ngoài B21…Z37 | Nhãn +/− ở mặt cắm, không tì lên pin |",
+      "color": "#e2cef1"
+    },
+    {
+      "ref": "R2",
+      "title": "100 kΩ",
+      "kind": "resistor",
+      "holes": [
+        "AA25",
+        "AA29"
+      ],
+      "region": null,
+      "source_row": "| R2 / R3 / C1 | R2 AA25/AA29; R3 AA29/AA33; C1 AC29/AC31 | AA29=BAT_SENSE; C1.1 AC29→AA29, C1.2 AC31→GND |",
+      "color": "#f6d7b8"
+    },
+    {
+      "ref": "R3",
+      "title": "100 kΩ",
+      "kind": "resistor",
+      "holes": [
+        "AA29",
+        "AA33"
+      ],
+      "region": null,
+      "source_row": "| R2 / R3 / C1 | R2 AA25/AA29; R3 AA29/AA33; C1 AC29/AC31 | AA29=BAT_SENSE; C1.1 AC29→AA29, C1.2 AC31→GND |",
+      "color": "#f6d7b8"
+    },
+    {
+      "ref": "C1",
+      "title": "100 nF",
+      "kind": "capacitor",
+      "holes": [
+        "AC29",
+        "AC31"
+      ],
+      "region": null,
+      "source_row": "| R2 / R3 / C1 | R2 AA25/AA29; R3 AA29/AA33; C1 AC29/AC31 | AA29=BAT_SENSE; C1.1 AC29→AA29, C1.2 AC31→GND |",
+      "color": "#fbe2b8"
+    },
+    {
+      "ref": "J5V",
+      "title": "Đầu 5V tháo rời",
+      "kind": "header",
+      "holes": [
+        "AC34",
+        "AD34"
+      ],
+      "region": null,
+      "source_row": "| J5V | Đực AC34 (+5V), AD34 (GND); cái trên dây VIN/GND | Không dùng shunt chập hai chân; bọc chân, đánh dấu chiều |",
+      "color": "#e2cef1"
+    },
+    {
+      "ref": "C2",
+      "title": "10 µF, có cực",
+      "kind": "capacitor",
+      "holes": [
+        "AE35",
+        "AG35"
+      ],
+      "region": null,
+      "source_row": "| C2 | AE35 (+), AG35 (−) | + phía nguồn J5V.1; − GND; song song trước điểm ngắt |",
+      "color": "#fbe2b8"
+    },
+    {
+      "ref": "U2",
+      "title": "IMU WCMCU-20948",
+      "kind": "module",
+      "holes": [
+        "C42",
+        "D42",
+        "E42",
+        "F42",
+        "G42",
+        "H42",
+        "I42",
+        "J42",
+        "K42",
+        "L42"
+      ],
+      "region": [
+        "B41",
+        "M47"
+      ],
+      "source_row": "| IMU | Thân B41…M47; socket C42…L42 | Khung 27.94×15.24 mm; thân tham chiếu 26.7×15.3 mm [M] §1.2; đo độ tràn mép/gá chắc |",
+      "color": "#bfe8c1"
+    },
+    {
+      "ref": "U1",
+      "title": "ESP32 + 2 socket",
+      "kind": "socket",
+      "holes": [],
+      "region": [
+        "U38",
+        "AE57"
+      ],
+      "source_row": "| ESP32 | Socket U38…U57 và AE38…AE57 | Dịch phải 3 cột từ R/AB. Cách 25.4 mm; nếu đo 22.86 mm đổi AE→AD. Dự kiến dùng hàng 39…57, thừa hàng 38 phía USB. **Người dùng đã ướm khô ESP32 lên lỗ board (16/10/2026): khớp lưới 25.4 mm**; ESP32 chỉ cắm vào socket, không hàn chết |",
+      "color": "#d3dbe5"
+    },
+    {
+      "ref": "G*",
+      "title": "Điểm chia mass",
+      "kind": "point",
+      "holes": [
+        "P39"
+      ],
+      "region": null,
+      "source_row": "| G* | Điểm chia mass có bọc tại P39, giữa hai cụm module | Không nối vào B-; thử lắp để không chạm socket/thân module |",
+      "color": "#cbd5e1"
+    },
+    {
+      "ref": "TP1",
+      "title": "SCL",
+      "kind": "test",
+      "holes": [
+        "B50"
+      ],
+      "region": null,
+      "source_row": "| Test point | B50 SCL, B51 SDA, B52 3V3, B53 GND | Header 1×4, TP1/TP2/TP3/TP4 [N] §2 |",
+      "color": "#e0e7ef"
+    },
+    {
+      "ref": "TP2",
+      "title": "SDA",
+      "kind": "test",
+      "holes": [
+        "B51"
+      ],
+      "region": null,
+      "source_row": "| Test point | B50 SCL, B51 SDA, B52 3V3, B53 GND | Header 1×4, TP1/TP2/TP3/TP4 [N] §2 |",
+      "color": "#e0e7ef"
+    },
+    {
+      "ref": "TP3",
+      "title": "3V3",
+      "kind": "test",
+      "holes": [
+        "B52"
+      ],
+      "region": null,
+      "source_row": "| Test point | B50 SCL, B51 SDA, B52 3V3, B53 GND | Header 1×4, TP1/TP2/TP3/TP4 [N] §2 |",
+      "color": "#e0e7ef"
+    },
+    {
+      "ref": "TP4",
+      "title": "GND",
+      "kind": "test",
+      "holes": [
+        "B53"
+      ],
+      "region": null,
+      "source_row": "| Test point | B50 SCL, B51 SDA, B52 3V3, B53 GND | Header 1×4, TP1/TP2/TP3/TP4 [N] §2 |",
+      "color": "#e0e7ef"
+    },
+    {
+      "ref": "BAT1",
+      "title": "Pin 1S PCM, chưa chọn",
+      "kind": "external",
+      "holes": [],
+      "region": null,
+      "source_row": "| Vùng pin, cả hình chiếu hai mặt | Hình chữ nhật kín B21…Z37 | 60.96×40.64 mm từ 24×16 khoảng lỗ; không chân/dây/vít/pad hàn nổi |",
+      "color": "#e2cef1"
+    }
+  ],
+  "wires": [
+    {
+      "id": "01",
+      "net": "VBAT",
+      "from": "BAT1 dây + đã đo",
+      "to": "J1 cực + qua đầu ghép",
+      "type": "Dây pin sẵn/P phần nối dài",
+      "color": "Đỏ",
+      "length": "3–6",
+      "done": "□",
+      "checked": "□",
+      "source": "1; [P] §2"
+    },
+    {
+      "id": "02",
+      "net": "GND_BAT_CELL",
+      "from": "BAT1 dây − đã đo",
+      "to": "J1 cực − qua đầu ghép",
+      "type": "Dây pin sẵn/P phần nối dài",
+      "color": "Đen, nhãn CELL−",
+      "length": "3–6",
+      "done": "□",
+      "checked": "□",
+      "source": "2; [P] §2"
+    },
+    {
+      "id": "03",
+      "net": "VBAT",
+      "from": "J1 +",
+      "to": "MOD1 B+",
+      "type": "P",
+      "color": "Đỏ",
+      "length": "3–6",
+      "done": "□",
+      "checked": "□",
+      "source": "3"
+    },
+    {
+      "id": "04",
+      "net": "GND_BAT_CELL",
+      "from": "J1 −",
+      "to": "MOD1 B-",
+      "type": "P",
+      "color": "Đen, nhãn B−",
+      "length": "3–6",
+      "done": "□",
+      "checked": "□",
+      "source": "4"
+    },
+    {
+      "id": "05",
+      "net": "V_SW_IN",
+      "from": "MOD1 OUT+",
+      "to": "SW1 tiếp điểm ON",
+      "type": "P",
+      "color": "Đỏ, nhãn OUT+",
+      "length": "3–6",
+      "done": "□",
+      "checked": "□",
+      "source": "5"
+    },
+    {
+      "id": "06",
+      "net": "GND",
+      "from": "MOD1 OUT-",
+      "to": "G*",
+      "type": "P",
+      "color": "Đen",
+      "length": "8–13",
+      "done": "□",
+      "checked": "□",
+      "source": "6"
+    },
+    {
+      "id": "07",
+      "net": "V_SYS",
+      "from": "SW1 COM",
+      "to": "MOD2 VIN+",
+      "type": "P",
+      "color": "Đỏ, nhãn SYS",
+      "length": "6–10",
+      "done": "□",
+      "checked": "□",
+      "source": "7"
+    },
+    {
+      "id": "08",
+      "net": "V_SYS",
+      "from": "SW1 COM",
+      "to": "R2.1",
+      "type": "S",
+      "color": "Đỏ, nhãn đo SYS",
+      "length": "4–8",
+      "done": "□",
+      "checked": "□",
+      "source": "8"
+    },
+    {
+      "id": "09",
+      "net": "GND",
+      "from": "G*",
+      "to": "MOD2 VIN-",
+      "type": "P",
+      "color": "Đen",
+      "length": "9–14",
+      "done": "□",
+      "checked": "□",
+      "source": "9"
+    },
+    {
+      "id": "10",
+      "net": "GND",
+      "from": "G*",
+      "to": "MOD2 VOUT-",
+      "type": "P",
+      "color": "Đen",
+      "length": "9–14",
+      "done": "□",
+      "checked": "□",
+      "source": "10"
+    },
+    {
+      "id": "11",
+      "net": "5V",
+      "from": "MOD2 VOUT+ → J5V.1 đực AC34",
+      "to": "J5V.1 cái → U1 VIN/5V",
+      "type": "P, qua cặp tiếp điểm",
+      "color": "Đỏ, nhãn 5V",
+      "length": "Tổng 7–12",
+      "done": "□",
+      "checked": "□",
+      "source": "11; [P2] §2.2"
+    },
+    {
+      "id": "12",
+      "net": "5V",
+      "from": "Phía nguồn J5V.1, cùng VOUT+",
+      "to": "C2 + tại AE35",
+      "type": "P/pad",
+      "color": "Đỏ",
+      "length": "1–3",
+      "done": "□",
+      "checked": "□",
+      "source": "12"
+    },
+    {
+      "id": "13",
+      "net": "GND",
+      "from": "C2 −",
+      "to": "G*",
+      "type": "P",
+      "color": "Đen",
+      "length": "3–8",
+      "done": "□",
+      "checked": "□",
+      "source": "13"
+    },
+    {
+      "id": "14",
+      "net": "3V3",
+      "from": "U1 3V3",
+      "to": "U2 VCC (1)",
+      "type": "P",
+      "color": "Đỏ, nhãn 3V3",
+      "length": "3–7",
+      "done": "□",
+      "checked": "□",
+      "source": "14; [F] I2C"
+    },
+    {
+      "id": "15",
+      "net": "3V3",
+      "from": "U2 VCC cùng net U1 3V3",
+      "to": "U2 NCS (5)",
+      "type": "S",
+      "color": "Đỏ, nhãn NCS",
+      "length": "1–3",
+      "done": "□",
+      "checked": "□",
+      "source": "15"
+    },
+    {
+      "id": "16",
+      "net": "3V3",
+      "from": "U1 3V3",
+      "to": "TP3",
+      "type": "S",
+      "color": "Đỏ, nhãn TP3",
+      "length": "3–8",
+      "done": "□",
+      "checked": "□",
+      "source": "17"
+    },
+    {
+      "id": "17",
+      "net": "IMU_SDA",
+      "from": "U1 GPIO21",
+      "to": "U2 SDA (4)",
+      "type": "S",
+      "color": "Xanh lá",
+      "length": "7–12",
+      "done": "□",
+      "checked": "□",
+      "source": "18; [F] PIN_I2C_SDA"
+    },
+    {
+      "id": "18",
+      "net": "IMU_SDA",
+      "from": "U2 SDA cùng net GPIO21",
+      "to": "TP2",
+      "type": "S",
+      "color": "Xanh lá",
+      "length": "2–5",
+      "done": "□",
+      "checked": "□",
+      "source": "20"
+    },
+    {
+      "id": "19",
+      "net": "IMU_SCL",
+      "from": "U1 GPIO22",
+      "to": "U2 SCL (3)",
+      "type": "S",
+      "color": "Vàng",
+      "length": "7–12",
+      "done": "□",
+      "checked": "□",
+      "source": "21; [F] PIN_I2C_SCL"
+    },
+    {
+      "id": "20",
+      "net": "IMU_SCL",
+      "from": "U2 SCL cùng net GPIO22",
+      "to": "TP1",
+      "type": "S",
+      "color": "Vàng",
+      "length": "2–5",
+      "done": "□",
+      "checked": "□",
+      "source": "23"
+    },
+    {
+      "id": "21",
+      "net": "GND",
+      "from": "U2 GND (2)",
+      "to": "G*",
+      "type": "P",
+      "color": "Đen",
+      "length": "4–8",
+      "done": "□",
+      "checked": "□",
+      "source": "24"
+    },
+    {
+      "id": "22",
+      "net": "GND",
+      "from": "U2 AD0 (6)",
+      "to": "U2 GND cùng net G*",
+      "type": "S",
+      "color": "Đen, nhãn AD0",
+      "length": "1–3",
+      "done": "□",
+      "checked": "□",
+      "source": "25"
+    },
+    {
+      "id": "23",
+      "net": "GND",
+      "from": "U2 FSY (8)",
+      "to": "U2 GND cùng net G*",
+      "type": "S",
+      "color": "Đen, nhãn FSY",
+      "length": "1–3",
+      "done": "□",
+      "checked": "□",
+      "source": "26"
+    },
+    {
+      "id": "24",
+      "net": "BTN_LEFT",
+      "from": "U1 GPIO25",
+      "to": "SW2 nhóm A",
+      "type": "S",
+      "color": "Xanh dương",
+      "length": "17–22",
+      "done": "□",
+      "checked": "□",
+      "source": "27; [F] PIN_BTN_LEFT"
+    },
+    {
+      "id": "25",
+      "net": "GND",
+      "from": "SW2 nhóm B",
+      "to": "G*",
+      "type": "S",
+      "color": "Đen",
+      "length": "16–21",
+      "done": "□",
+      "checked": "□",
+      "source": "28"
+    },
+    {
+      "id": "26",
+      "net": "BTN_RIGHT",
+      "from": "U1 GPIO26",
+      "to": "SW3 nhóm A",
+      "type": "S",
+      "color": "Trắng",
+      "length": "13–18",
+      "done": "□",
+      "checked": "□",
+      "source": "29; [F] PIN_BTN_RIGHT"
+    },
+    {
+      "id": "27",
+      "net": "GND",
+      "from": "SW3 nhóm B",
+      "to": "G*",
+      "type": "S",
+      "color": "Đen",
+      "length": "11–16",
+      "done": "□",
+      "checked": "□",
+      "source": "30"
+    },
+    {
+      "id": "28",
+      "net": "BTN_MODE",
+      "from": "U1 GPIO27",
+      "to": "SW4 nhóm A",
+      "type": "S",
+      "color": "Tím",
+      "length": "15–20",
+      "done": "□",
+      "checked": "□",
+      "source": "31; [F] PIN_BTN_MODE"
+    },
+    {
+      "id": "29",
+      "net": "GND",
+      "from": "SW4 nhóm B",
+      "to": "G*",
+      "type": "S",
+      "color": "Đen",
+      "length": "14–19",
+      "done": "□",
+      "checked": "□",
+      "source": "32"
+    },
+    {
+      "id": "30",
+      "net": "LED_STATUS",
+      "from": "U1 GPIO32",
+      "to": "R1.1 (1 kΩ)",
+      "type": "S",
+      "color": "Cam",
+      "length": "15–20",
+      "done": "□",
+      "checked": "□",
+      "source": "33; [F] PIN_LED_STATUS"
+    },
+    {
+      "id": "31",
+      "net": "LED_ANODE",
+      "from": "R1.2",
+      "to": "D1 anode A",
+      "type": "S",
+      "color": "Cam, nhãn A",
+      "length": "1–3",
+      "done": "□",
+      "checked": "□",
+      "source": "34"
+    },
+    {
+      "id": "32",
+      "net": "GND",
+      "from": "D1 cathode K",
+      "to": "G*",
+      "type": "S",
+      "color": "Đen",
+      "length": "13–18",
+      "done": "□",
+      "checked": "□",
+      "source": "35"
+    },
+    {
+      "id": "33",
+      "net": "BAT_SENSE",
+      "from": "R2.2/R3.1 tại AA29",
+      "to": "U1 GPIO34",
+      "type": "S",
+      "color": "Xám",
+      "length": "3–7",
+      "done": "□",
+      "checked": "□",
+      "source": "36; [F] PIN_BAT_SENSE"
+    },
+    {
+      "id": "34",
+      "net": "BAT_SENSE",
+      "from": "R2.2",
+      "to": "R3.1",
+      "type": "pad",
+      "color": "Nhãn SENSE",
+      "length": "0",
+      "done": "□",
+      "checked": "□",
+      "source": "37"
+    },
+    {
+      "id": "35",
+      "net": "BAT_SENSE",
+      "from": "R2.2/R3.1",
+      "to": "C1.1",
+      "type": "S",
+      "color": "Xám",
+      "length": "1–2",
+      "done": "□",
+      "checked": "□",
+      "source": "38"
+    },
+    {
+      "id": "36",
+      "net": "GND",
+      "from": "R3.2",
+      "to": "G*",
+      "type": "S",
+      "color": "Đen",
+      "length": "2–6",
+      "done": "□",
+      "checked": "□",
+      "source": "39"
+    },
+    {
+      "id": "37",
+      "net": "GND",
+      "from": "C1.2",
+      "to": "G*",
+      "type": "S",
+      "color": "Đen",
+      "length": "2–6",
+      "done": "□",
+      "checked": "□",
+      "source": "40"
+    },
+    {
+      "id": "38",
+      "net": "GND",
+      "from": "U1 GND nhãn thật, tương ứng N chân 14",
+      "to": "G*",
+      "type": "P",
+      "color": "Đen",
+      "length": "3–8",
+      "done": "□",
+      "checked": "□",
+      "source": "41"
+    },
+    {
+      "id": "39",
+      "net": "GND",
+      "from": "U1 GND nhãn thật, tương ứng N chân 32",
+      "to": "G*",
+      "type": "P",
+      "color": "Đen",
+      "length": "3–8",
+      "done": "□",
+      "checked": "□",
+      "source": "42"
+    },
+    {
+      "id": "40",
+      "net": "GND",
+      "from": "U1 GND nhãn thật, tương ứng N chân 38",
+      "to": "G*",
+      "type": "P",
+      "color": "Đen",
+      "length": "3–8",
+      "done": "□",
+      "checked": "□",
+      "source": "43"
+    },
+    {
+      "id": "41",
+      "net": "GND",
+      "from": "TP4",
+      "to": "G*",
+      "type": "S",
+      "color": "Đen",
+      "length": "4–8",
+      "done": "□",
+      "checked": "□",
+      "source": "45"
+    },
+    {
+      "id": "42",
+      "net": "GND",
+      "from": "G*",
+      "to": "J5V.2 đực AD34",
+      "type": "P",
+      "color": "Đen",
+      "length": "2–5",
+      "done": "□",
+      "checked": "□",
+      "source": "§3.1; [P2] §2.2"
+    },
+    {
+      "id": "43",
+      "net": "GND",
+      "from": "J5V.2 cái",
+      "to": "U1 GND theo nhãn thật",
+      "type": "P",
+      "color": "Đen",
+      "length": "2–5",
+      "done": "□",
+      "checked": "□",
+      "source": "§3.1; [P2] §2.2"
+    }
+  ],
+  "net_colors": {
+    "GND": "#20252b",
+    "GND_BAT_CELL": "#7c3aed",
+    "VBAT": "#b91c1c",
+    "V_SW_IN": "#dc2626",
+    "V_SYS": "#e54b2c",
+    "5V": "#ef4444",
+    "3V3": "#a61b29",
+    "BAT_SENSE": "#64748b",
+    "IMU_SDA": "#15803d",
+    "IMU_SCL": "#a17a00",
+    "BTN_LEFT": "#2563eb",
+    "BTN_RIGHT": "#778696",
+    "BTN_MODE": "#9333ea",
+    "LED_STATUS": "#d97706",
+    "LED_ANODE": "#b45309"
+  },
+  "net_names": [
+    "3V3",
+    "5V",
+    "BAT_SENSE",
+    "BTN_LEFT",
+    "BTN_MODE",
+    "BTN_RIGHT",
+    "GND",
+    "GND_BAT_CELL",
+    "IMU_SCL",
+    "IMU_SDA",
+    "LED_ANODE",
+    "LED_STATUS",
+    "VBAT",
+    "V_SW_IN",
+    "V_SYS"
+  ],
+  "gpio": [
+    [
+      "3V3",
+      "1",
+      "U2 VCC/NCS; TP3"
+    ],
+    [
+      "VIN/5V",
+      "19",
+      "Từ J5V.1 cái"
+    ],
+    [
+      "GND",
+      "14, 32, 38",
+      "G* và J5V.2 cái"
+    ],
+    [
+      "GPIO21",
+      "33",
+      "IMU SDA, TP2"
+    ],
+    [
+      "GPIO22",
+      "36",
+      "IMU SCL, TP1"
+    ],
+    [
+      "GPIO25",
+      "9",
+      "SW2 nhóm A"
+    ],
+    [
+      "GPIO26",
+      "10",
+      "SW3 nhóm A"
+    ],
+    [
+      "GPIO27",
+      "11",
+      "SW4 nhóm A"
+    ],
+    [
+      "GPIO32",
+      "7",
+      "R1.1 → D1 A"
+    ],
+    [
+      "GPIO34",
+      "5",
+      "BAT_SENSE; không nối trực tiếp pin/5V"
+    ]
+  ],
+  "gpio_constants": {
+    "PIN_I2C_SDA": 21,
+    "PIN_I2C_SCL": 22,
+    "PIN_BTN_LEFT": 25,
+    "PIN_BTN_RIGHT": 26,
+    "PIN_BTN_MODE": 27,
+    "PIN_LED_STATUS": 32,
+    "PIN_BAT_SENSE": 34,
+    "ICM20948_I2C_ADDR": 104
+  },
+  "imu": [
+    {
+      "n": 1,
+      "name": "VCC",
+      "hole": "C42",
+      "target": "3V3"
+    },
+    {
+      "n": 2,
+      "name": "GND",
+      "hole": "D42",
+      "target": "GND"
+    },
+    {
+      "n": 3,
+      "name": "SCL",
+      "hole": "E42",
+      "target": "GPIO22"
+    },
+    {
+      "n": 4,
+      "name": "SDA",
+      "hole": "F42",
+      "target": "GPIO21"
+    },
+    {
+      "n": 5,
+      "name": "NCS",
+      "hole": "G42",
+      "target": "3V3"
+    },
+    {
+      "n": 6,
+      "name": "AD0",
+      "hole": "H42",
+      "target": "GND"
+    },
+    {
+      "n": 7,
+      "name": "INT",
+      "hole": "I42",
+      "target": "ĐỂ HỞ"
+    },
+    {
+      "n": 8,
+      "name": "FSY",
+      "hole": "J42",
+      "target": "GND"
+    },
+    {
+      "n": 9,
+      "name": "ACL",
+      "hole": "K42",
+      "target": "ĐỂ HỞ"
+    },
+    {
+      "n": 10,
+      "name": "ADA",
+      "hole": "L42",
+      "target": "ĐỂ HỞ"
+    }
+  ],
+  "measurements": [
+    {
+      "label": "Pin/B+",
+      "minus": "B-",
+      "expected": "3.0–4.2V; pin 1S đúng quy cách",
+      "source_rows": [
+        [
+          "B+ so B-",
+          "Pack nối đúng, chưa sạc",
+          "Danh định 3.7V; dải thiết kế 3.0–4.2V",
+          "[P2] §2.1, [N] §1; pin thật còn đối chiếu quy cách",
+          "____"
+        ],
+        [
+          "B+ so B-, cuối sạc",
+          "Khi có pin thật, theo nhánh §3.9.2",
+          "Danh định 4.2V; đối chiếu giới hạn pack và bảng VFLOAT của [T]",
+          "[T] trang 5; không dùng giá trị tối đa của charger làm giới hạn an toàn pin",
+          "____"
+        ]
+      ],
+      "wire_ids": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "label": "Sau bảo vệ",
+      "minus": "OUT-",
+      "expected": "Gần điện áp pin; chênh áp CẦN ĐO THỰC TẾ",
+      "source_rows": [
+        [
+          "OUT+ so OUT-",
+          "Bảo vệ cho phép xuất điện",
+          "Gần điện áp pack; chênh lệch do bảo vệ/dây",
+          "[N] §§1, 4.4; dung sai chênh áp **CẦN ĐO THỰC TẾ**",
+          "____"
+        ]
+      ],
+      "wire_ids": [
+        5,
+        6
+      ]
+    },
+    {
+      "label": "V_SYS",
+      "minus": "OUT- / GND",
+      "expected": "SW1 ON: 3.0–4.2V; OFF: gần 0V sau tụ xả",
+      "source_rows": [
+        [
+          "V_SYS so GND",
+          "SW1 ON, chạy pin",
+          "3.0–4.2V theo thiết kế, có sụt áp tải",
+          "[N] §1 net V_SYS",
+          "____"
+        ],
+        [
+          "V_SYS so GND",
+          "OFF, không USB/nguồn ngoài",
+          "Gần 0V sau khi tụ xả",
+          "Suy luận từ [N] §2 dòng 7–8; đo dư do tụ/đường hồi không dùng để kết luận ngay",
+          "____"
+        ]
+      ],
+      "wire_ids": [
+        7,
+        8
+      ]
+    },
+    {
+      "label": "5V tại VIN",
+      "minus": "GND",
+      "expected": "4.9–5.1V, J5V cắm đúng, USB ESP32 rút",
+      "source_rows": [
+        [
+          "VIN ESP32 so GND",
+          "Chạy từ boost, USB rút",
+          "4.9–5.1V tại chân bo",
+          "[N] §1 net 5V; so với VOUT để phát hiện sụt dây",
+          "____"
+        ]
+      ],
+      "wire_ids": [
+        11
+      ]
+    },
+    {
+      "label": "3V3",
+      "minus": "GND",
+      "expected": "3.25–3.35V; mục tiêu 3.3V",
+      "source_rows": [
+        [
+          "3V3/TP3, U2 VCC",
+          "Chỉ một nguồn cho ESP32",
+          "Mục tiêu 3.3V, khoảng thiết kế 3.25–3.35V",
+          "[N] §1 net 3V3; đây là tiêu chí dự án, không khẳng định mọi LDO đều có dung sai đó",
+          "____"
+        ]
+      ],
+      "wire_ids": [
+        14,
+        16
+      ]
+    },
+    {
+      "label": "BAT_SENSE",
+      "minus": "GND",
+      "expected": "≈0.5×V_SYS; khoảng 1.5–2.1V danh định",
+      "source_rows": [
+        [
+          "BAT_SENSE, GPIO34",
+          "V_SYS đang có nguồn",
+          "Khoảng 0.5×V_SYS; 1.5–2.1V danh định theo dải thiết kế",
+          "[N] §§1/3.7; R2/R3 1% [B] cho tỷ số 0.495–0.505 (tính toán), cộng sai số đo",
+          "____"
+        ]
+      ],
+      "wire_ids": [
+        33,
+        34,
+        35
+      ]
+    }
+  ],
+  "battery_steps": [
+    {
+      "n": 1,
+      "title": "Đo pin khi tách khỏi mạch",
+      "body": "**Đo pin khi tách khỏi mạch:** DC tại giắc pin, khoảng 3.0–4.2V. Ngoài dải, 0V hoặc pack hỏng/phồng → dừng; không kích/bypass bảo vệ."
+    },
+    {
+      "n": 2,
+      "title": "Xác nhận cực tại mặt giắc",
+      "body": "**Xác nhận cực tại mặt giắc:** que đỏ ở hốc ghép J1+, đen hốc J1− phải hiện điện áp dương bằng bước 1. Đảo/không rõ/giắc sai → dừng, xử lý §3.13.3."
+    },
+    {
+      "n": 3,
+      "title": "Đặt trạng thái trước ghép",
+      "body": "**Đặt trạng thái trước ghép:** SW1 OFF, J5V cắm đúng +/−; với mạch không điện, đo SW1 hở OUT+–COM và kiểm không chập 5V–GND như §3.8. Còn nguồn khác hoặc không ngắt được → dừng."
+    },
+    {
+      "n": 4,
+      "title": "Ghép pin",
+      "body": "**Ghép pin:** sau ghép đo B+–B- bằng pin bước 1, đúng dấu; lệch rõ, nóng/mùi hoặc tia lửa bất thường → ngắt nếu an toàn và dừng."
+    },
+    {
+      "n": 5,
+      "title": "Đo OUT+–OUT-",
+      "body": "**Đo OUT+–OUT-:** gần bằng B+–B- khi chưa tải; đo V_SYS gần 0V sau tụ xả. OUT=0, áp sai dấu, sụt bất thường → dừng kiểm bảo vệ, không bypass."
+    },
+    {
+      "n": 6,
+      "title": "Bật SW1",
+      "body": "**Bật SW1:** đo V_SYS so OUT- gần OUT, trong dải thiết kế 3.0–4.2V; sụt/reset/nóng → OFF và dừng. Không thử xả thêm pin yếu để đạt phép này."
+    },
+    {
+      "n": 7,
+      "title": "Đo VIN ESP32",
+      "body": "**Đo VIN ESP32:** 4.9–5.1V [A] §5.1/[N] §1; ngoài khoảng/dao động rõ → OFF, không chỉnh bừa khi tải đang có lỗi."
+    },
+    {
+      "n": 8,
+      "title": "Đo 3V3 tại ESP32/TP3 và IMU VCC",
+      "body": "**Đo 3V3 tại ESP32/TP3 và IMU VCC:** 3.25–3.35V theo tiêu chí [N] §1; sai/chạm que nguy hiểm → OFF, kiểm lại."
+    },
+    {
+      "n": 9,
+      "title": "Đo BAT_SENSE tại GPIO34",
+      "body": "**Đo BAT_SENSE tại GPIO34:** khoảng 0.5×V_SYS; tỷ số 0.495–0.505 từ R2/R3 1% [B], cộng sai số đo. Sai tỷ số/tiến gần điện áp pin thô → OFF, không tiếp tục để bảo vệ ADC."
+    },
+    {
+      "n": 10,
+      "title": "Quan sát khởi động và nhiệt",
+      "body": "**Quan sát khởi động và nhiệt:** kiểm LED/hành vi chương trình thử đã biết; ưu tiên nhiệt kế đo TP4056, MT3608 và vỏ pin, ghi số thật. Chỉ chạm nhẹ phần vỏ còn nguyên/không dẫn điện khi không có nhiệt kế; tay không cho giá trị °C. Reset/nóng bất thường/phồng/mùi → OFF, không cắm USB để xem log khi J5V còn ghép."
+    },
+    {
+      "n": 11,
+      "title": "Chạy đầu 5 phút có người theo dõi",
+      "body": "**Chạy đầu 5 phút có người theo dõi:** đo lại VIN/3V3/V_SYS và nhiệt đầu/cuối, ghi reset/sụt áp. Mốc 5 phút là đề xuất [P2] §3.13.4, chưa chứng minh thời lượng/độ bền; lỗi → OFF và dừng."
+    },
+    {
+      "n": 12,
+      "title": "Thử sạc riêng sau khi đọc §3.9.2",
+      "body": "**Thử sạc riêng sau khi đọc §3.9.2:** SW1 OFF, J5V rút, USB ESP32 rút; đo dòng pin nối tiếp và B+–B- theo §3.4.4, hướng đến 4.2V danh định [T] trong giới hạn pack. Theo dõi sát 5–10 phút đầu và suốt lần sạc; nóng/phồng/mùi/áp hoặc dòng vượt mức đã biết → rút USB sạc và xử lý §3.2."
+    }
+  ],
+  "solder_groups": [
+    [
+      "Điện trở",
+      [
+        "R1",
+        "R2",
+        "R3"
+      ]
+    ],
+    [
+      "Tụ",
+      [
+        "C1",
+        "C2"
+      ]
+    ],
+    [
+      "LED",
+      [
+        "D1"
+      ]
+    ],
+    [
+      "Socket / test",
+      [
+        "U1",
+        "U2",
+        "TP1",
+        "TP2",
+        "TP3",
+        "TP4"
+      ]
+    ],
+    [
+      "Nút",
+      [
+        "SW2",
+        "SW4",
+        "SW3"
+      ]
+    ],
+    [
+      "SW1",
+      [
+        "SW1"
+      ]
+    ],
+    [
+      "J1 / J5V",
+      [
+        "J1",
+        "J5V"
+      ]
+    ],
+    [
+      "Dây nối / đo",
+      [
+        "G*",
+        "MOD1",
+        "MOD2"
+      ]
+    ]
+  ],
+  "resistors": [
+    {
+      "ref": "R1",
+      "ohm": 1000,
+      "bands": [
+        "nâu",
+        "đen",
+        "đen",
+        "nâu",
+        "nâu"
+      ]
+    },
+    {
+      "ref": "R2/R3",
+      "ohm": 100000,
+      "bands": [
+        "nâu",
+        "đen",
+        "đen",
+        "cam",
+        "nâu"
+      ]
+    }
+  ],
+  "source_sha256": {
+    "02_guide_original": "833ae1fa2b131ca5326c326ad5adcd4b9244804f353754f4da36c23eeacd5400",
+    "03_bom": "031ded5e0320814019581329443f6cddb38a86d37fc29ff2fbe38c87a1e47452"
+  },
+  "figures": [
+    [
+      "01_top",
+      "TOP — bố cục board chính",
+      "board_top"
+    ],
+    [
+      "02_bottom",
+      "BOTTOM — mặt hàn đối xứng",
+      "board_bottom"
+    ],
+    [
+      "03_nguon",
+      "Sơ đồ khối nguồn",
+      "power"
+    ],
+    [
+      "04a_day_nguon",
+      "Nối dây 01–13, 42–43: nguồn",
+      "wires_power"
+    ],
+    [
+      "04b_day_tin_hieu",
+      "Nối dây 14–41: tín hiệu và mass",
+      "wires_signal"
+    ],
+    [
+      "05_imu",
+      "IMU WCMCU-20948: 10 chân",
+      "imu"
+    ],
+    [
+      "06_gpio",
+      "ESP32: danh sách chân dùng",
+      "gpio"
+    ],
+    [
+      "07_nhan_biet",
+      "Nút, LED, điện trở và tụ",
+      "parts"
+    ],
+    [
+      "08_thu_tu_han",
+      "Thứ tự hàn từ thấp lên cao",
+      "solder"
+    ],
+    [
+      "09_diem_do",
+      "Điểm đo và giá trị đối chiếu",
+      "measure"
+    ],
+    [
+      "10_j5v",
+      "Hai trạng thái J5V",
+      "j5v"
+    ],
+    [
+      "11_ngay_pin_ve",
+      "Ngày pin về: 12 bước và điểm dừng",
+      "battery"
+    ]
+  ],
+  "checks": {
+    "wire_count": 43,
+    "expected_nets": 15,
+    "unknown": "CẦN ĐO THỰC TẾ",
+    "figure_label": "đề xuất, chưa đo thực tế"
+  }
+}

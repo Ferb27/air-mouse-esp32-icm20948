@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="794" height="1123" viewBox="0 0 794 1123" role="img">
+<title>Thứ tự hàn từ thấp lên cao</title>
+<defs><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M-2,2 L2,-2 M0,10 L10,0 M8,12 L12,8" stroke="#d49b38" stroke-width="1.5"/></pattern></defs>
+<style>text{font-family:Arial,"Segoe UI",sans-serif;fill:#183044} .muted{fill:#4c6475}</style>
+<rect x="0.00" y="0.00" width="794.00" height="1123.00" rx="5" fill="#fff" stroke="none" stroke-width="0" />
+<text x="28.00" y="37.00" font-size="23" text-anchor="start" style="fill:#183044" font-weight="700">Thứ tự hàn từ thấp lên cao</text>
+<text x="28.00" y="64.00" font-size="13" text-anchor="start" style="fill:#183044">Tám bước; rút mọi nguồn và rút module khỏi socket khi hàn tiếp.</text>
+<text x="766.00" y="87.00" font-size="12" text-anchor="end" style="fill:#be2832">đề xuất, chưa đo thực tế</text>
+<line x1="28.00" y1="101.00" x2="766.00" y2="101.00" stroke="#cbd5df" stroke-width="1"/>
+<rect x="30.00" y="125.00" width="350.00" height="200.00" rx="5" fill="#f5f8fa" stroke="#a8b9c6" stroke-width="1.2" />
+<text x="42.00" y="150.00" font-size="17" text-anchor="start" style="fill:#183044" font-weight="700">1. Điện trở</text>
+<rect x="45.00" y="167.00" width="74.70" height="124.50" rx="0" fill="#f8fafb" stroke="#334f63" stroke-width="1.7" />
+<rect x="49.60" y="211.65" width="50.60" height="33.73" rx="0" fill="#fff4dd" stroke="#b77917" stroke-width="1.5" />
+<rect x="49.60" y="211.65" width="50.60" height="33.73" rx="0" fill="url(#hatch)" stroke="none" stroke-width="0" />
+<g data-ref="R1">
+<line x1="53.81" y1="207.44" x2="62.25" y2="207.44" stroke="#9a6d38" stroke-width="1.5"/>
+<circle cx="53.81" cy="207.44" r="1" stroke="#203d51" fill="#f6d7b8" />
+<circle cx="62.25" cy="207.44" r="1" stroke="#203d51" fill="#f6d7b8" />
+</g>
+<g data-ref="R2">
+<line x1="102.30" y1="220.09" x2="102.30" y2="228.52" stroke="#9a6d38" stroke-width="1.5"/>
+<circle cx="102.30" cy="220.09" r="1" stroke="#203d51" fill="#f6d7b8" />
+<circle cx="102.30" cy="228.52" r="1" stroke="#203d51" fill="#f6d7b8" />
+</g>
+<g data-ref="R3">
+<line x1="102.30" y1="228.52" x2="102.30" y2="236.95" stroke="#9a6d38" stroke-width="1.5"/>
+<circle cx="102.30" cy="228.52" r="1" stroke="#203d51" fill="#f6d7b8" />
+<circle cx="102.30" cy="236.95" r="1" stroke="#203d51" fill="#f6d7b8" />
+</g>
+<text x="136.00" y="180.00" font-size="12" text-anchor="start" style="fill:#183044">R1 D19/H19</text>
+<text x="136.00" y="196.20" font-size="12" text-anchor="start" style="fill:#183044">R2 AA25/AA29</text>
+<text x="136.00" y="212.40" font-size="12" text-anchor="start" style="fill:#183044">R3 AA29/AA33</text>
+<text x="136.00" y="300.00" font-size="12" text-anchor="start" style="fill:#183044" font-weight="700">Hàn → soi → đo → mới tiếp</text>
+<rect x="415.00" y="125.00" width="350.00" height="200.00" rx="5" fill="#f5f8fa" stroke="#a8b9c6" stroke-width="1.2" />
+<text x="427.00" y="150.00" font-size="17" text-anchor="start" style="fill:#183044" font-weight="700">2. Tụ</text>
+<rect x="430.00" y="167.00" width="74.70" height="124.50" rx="0" fill="#f8fafb" stroke="#334f63" stroke-width="1.7" />
+<rect x="434.60" y="211.65" width="50.60" height="33.73" rx="0" fill="#fff4dd" stroke="#b77917" stroke-width="1.5" />
+<rect x="434.60" y="211.65" width="50.60" height="33.73" rx="0" fill="url(#hatch)" stroke="none" stroke-width="0" />
+<g data-ref="C1">
+<line x1="491.52" y1="228.52" x2="491.52" y2="232.74" stroke="#596d7b" stroke-width="1.5"/>
+<circle cx="491.52" cy="228.52" r="1" stroke="#203d51" fill="#fbe2b8" />
+<circle cx="491.52" cy="232.74" r="1" stroke="#203d51" fill="#fbe2b8" />
+</g>
+<g data-ref="C2">
+<line x1="495.74" y1="241.17" x2="499.95" y2="241.17" stroke="#596d7b" stroke-width="1.5"/>
+<circle cx="495.74" cy="241.17" r="1" stroke="#203d51" fill="#fbe2b8" />
+<circle cx="499.95" cy="241.17" r="1" stroke="#203d51" fill="#fbe2b8" />
+</g>
+<text x="521.00" y="180.00" font-size="12" text-anchor="start" style="fill:#183044">C1 AC29/AC31</text>
+<text x="521.00" y="196.20" font-size="12" text-anchor="start" style="fill:#183044">C2 AE35/AG35</text>
+<text x="521.00" y="300.00" font-size="12" text-anchor="start" style="fill:#183044" font-weight="700">Hàn → soi → đo → mới tiếp</text>
+<rect x="30.00" y="343.00" width="350.00" height="200.00" rx="5" fill="#f5f8fa" stroke="#a8b9c6" stroke-width="1.2" />
+<text x="42.00" y="368.00" font-size="17" text-anchor="start" style="fill:#183044" font-weight="700">3. LED</text>
+<rect x="45.00" y="385.00" width="74.70" height="124.50" rx="0" fill="#f8fafb" stroke="#334f63" stroke-width="1.7" />
+<rect x="49.60" y="429.65" width="50.60" height="33.73" rx="0" fill="#fff4dd" stroke="#b77917" stroke-width="1.5" />
+<rect x="49.60" y="429.65" width="50.60" height="33.73" rx="0" fill="url(#hatch)" stroke="none" stroke-width="0" />
+<g data-ref="D1">
+<line x1="68.57" y1="425.44" x2="70.68" y2="425.44" stroke="#596d7b" stroke-width="1.5"/>
+<circle cx="68.57" cy="425.44" r="1" stroke="#203d51" fill="#bfe8c1" />
+<circle cx="70.68" cy="425.44" r="1" stroke="#203d51" fill="#bfe8c1" />
+</g>
+<text x="136.00" y="398.00" font-size="12" text-anchor="start" style="fill:#183044">D1 K19/L19</text>
+<text x="136.00" y="518.00" font-size="12" text-anchor="start" style="fill:#183044" font-weight="700">Hàn → soi → đo → mới tiếp</text>
+<rect x="415.00" y="343.00" width="350.00" height="200.00" rx="5" fill="#f5f8fa" stroke="#a8b9c6" stroke-width="1.2" />
+<text x="427.00" y="368.00" font-size="17" text-anchor="start" style="fill:#183044" font-weight="700">4. Socket / test</text>
+<rect x="430.00" y="385.00" width="74.70" height="124.50" rx="0" fill="#f8fafb" stroke="#334f63" stroke-width="1.7" />
+<rect x="434.60" y="429.65" width="50.60" height="33.73" rx="0" fill="#fff4dd" stroke="#b77917" stroke-width="1.5" />
+<rect x="434.60" y="429.65" width="50.60" height="33.73" rx="0" fill="url(#hatch)" stroke="none" stroke-width="0" />
+<g data-ref="U2">
+<rect x="434.60" y="471.82" width="23.19" height="12.65" rx="0" fill="#bfe8c1" stroke="#3f6074" stroke-width="1" />
+</g>
+<g data-ref="U1">
+<rect x="474.65" y="465.49" width="21.08" height="40.06" rx="0" fill="#d3dbe5" stroke="#3f6074" stroke-width="1" opacity="0.65"/>
+<rect x="474.22" y="465.06" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="467.17" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="469.28" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="471.39" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="473.49" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="475.60" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="477.71" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="479.82" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="481.93" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="484.04" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="486.14" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="488.25" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="490.36" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="492.47" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="494.58" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="496.68" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="498.79" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="500.90" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="503.01" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="474.22" y="505.12" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="465.06" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="467.17" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="469.28" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="471.39" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="473.49" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="475.60" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="477.71" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="479.82" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="481.93" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="484.04" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="486.14" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="488.25" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="490.36" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="492.47" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="494.58" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="496.68" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="498.79" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="500.90" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="503.01" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+<rect x="495.30" y="505.12" width="0.86" height="0.86" rx="0" fill="#344957" stroke="none" stroke-width="0" />
+</g>
+<g data-ref="TP1">
+<circle cx="434.60" cy="490.79" r="1" stroke="#203d51" fill="#e0e7ef" />
+</g>
+<g data-ref="TP2">
+<circle cx="434.60" cy="492.90" r="1" stroke="#203d51" fill="#e0e7ef" />
+</g>
+<g data-ref="TP3">
+<circle cx="434.60" cy="495.01" r="1" stroke="#203d51" fill="#e0e7ef" />
+</g>
+<g data-ref="TP4">
+<circle cx="434.60" cy="497.12" r="1" stroke="#203d51" fill="#e0e7ef" />
+</g>
+<text x="521.00" y="398.00" font-size="12" text-anchor="start" style="fill:#183044">U1 U38…AE57</text>
+<text x="521.00" y="414.20" font-size="12" text-anchor="start" style="fill:#183044">U2 B41…M47</text>
+<text x="521.00" y="430.40" font-size="12" text-anchor="start" style="fill:#183044">TP1 B50</text>
+<text x="521.00" y="446.60" font-size="12" text-anchor="start" style="fill:#183044">TP2 B51</text>
+<text x="521.00" y="462.80" font-size="12" text-anchor="start" style="fill:#183044">TP3 B52</text>
+<text x="521.00" y="479.00" font-size="12" text-anchor="start" style="fill:#183044">TP4 B53</text>
+<text x="521.00" y="518.00" font-size="12" text-anchor="start" style="fill:#183044" font-weight="700">Hàn → soi → đo → mới tiếp</text>
+<rect x="30.00" y="561.00" width="350.00" height="200.00" rx="5" fill="#f5f8fa" stroke="#a8b9c6" stroke-width="1.2" />
+<text x="42.00" y="586.00" font-size="17" text-anchor="start" style="fill:#183044" font-weight="700">5. Nút</text>
+<rect x="45.00" y="603.00" width="74.70" height="124.50" rx="0" fill="#f8fafb" stroke="#334f63" stroke-width="1.7" />
+<rect x="49.60" y="647.65" width="50.60" height="33.73" rx="0" fill="#fff4dd" stroke="#b77917" stroke-width="1.5" />
+<rect x="49.60" y="647.65" width="50.60" height="33.73" rx="0" fill="url(#hatch)" stroke="none" stroke-width="0" />
+<g data-ref="SW2">
+<rect x="57.27" y="608.94" width="9.96" height="9.96" rx="2" fill="#fde6b3" stroke="#765c2b" stroke-width="1" />
+</g>
+<g data-ref="SW4">
+<rect x="78.35" y="608.94" width="9.96" height="9.96" rx="2" fill="#fde6b3" stroke="#765c2b" stroke-width="1" />
+</g>
+<g data-ref="SW3">
+<rect x="99.43" y="608.94" width="9.96" height="9.96" rx="2" fill="#fde6b3" stroke="#765c2b" stroke-width="1" />
+</g>
+<text x="136.00" y="616.00" font-size="12" text-anchor="start" style="fill:#183044">SW2 H5</text>
+<text x="136.00" y="632.20" font-size="12" text-anchor="start" style="fill:#183044">SW4 R5</text>
+<text x="136.00" y="648.40" font-size="12" text-anchor="start" style="fill:#183044">SW3 AB5</text>
+<text x="136.00" y="736.00" font-size="12" text-anchor="start" style="fill:#183044" font-weight="700">Hàn → soi → đo → mới tiếp</text>
+<rect x="415.00" y="561.00" width="350.00" height="200.00" rx="5" fill="#f5f8fa" stroke="#a8b9c6" stroke-width="1.2" />
+<text x="427.00" y="586.00" font-size="17" text-anchor="start" style="fill:#183044" font-weight="700">6. SW1</text>
+<rect x="430.00" y="603.00" width="74.70" height="124.50" rx="0" fill="#f8fafb" stroke="#334f63" stroke-width="1.7" />
+<rect x="434.60" y="647.65" width="50.60" height="33.73" rx="0" fill="#fff4dd" stroke="#b77917" stroke-width="1.5" />
+<rect x="434.60" y="647.65" width="50.60" height="33.73" rx="0" fill="url(#hatch)" stroke="none" stroke-width="0" />
+<g data-ref="SW1">
+<rect x="487.30" y="643.44" width="12.65" height="6.32" rx="0" fill="#fde6b3" stroke="#3f6074" stroke-width="1" />
+</g>
+<text x="521.00" y="616.00" font-size="12" text-anchor="start" style="fill:#183044">SW1 AA19…AG22</text>
+<text x="521.00" y="736.00" font-size="12" text-anchor="start" style="fill:#183044" font-weight="700">Hàn → soi → đo → mới tiếp</text>
+<rect x="30.00" y="779.00" width="350.00" height="200.00" rx="5" fill="#f5f8fa" stroke="#a8b9c6" stroke-width="1.2" />
+<text x="42.00" y="804.00" font-size="17" text-anchor="start" style="fill:#183044" font-weight="700">7. J1 / J5V</text>
+<rect x="45.00" y="821.00" width="74.70" height="124.50" rx="0" fill="#f8fafb" stroke="#334f63" stroke-width="1.7" />
+<rect x="49.60" y="865.65" width="50.60" height="33.73" rx="0" fill="#fff4dd" stroke="#b77917" stroke-width="1.5" />
+<rect x="49.60" y="865.65" width="50.60" height="33.73" rx="0" fill="url(#hatch)" stroke="none" stroke-width="0" />
+<g data-ref="J1">
+</g>
+<g data-ref="J5V">
+<line x1="106.52" y1="893.06" x2="108.63" y2="893.06" stroke="#596d7b" stroke-width="1.5"/>
+<circle cx="106.52" cy="893.06" r="1" stroke="#203d51" fill="#e2cef1" />
+<circle cx="108.63" cy="893.06" r="1" stroke="#203d51" fill="#e2cef1" />
+</g>
+<text x="136.00" y="834.00" font-size="12" text-anchor="start" style="fill:#183044">J1 gá rời</text>
+<text x="136.00" y="850.20" font-size="12" text-anchor="start" style="fill:#183044">J5V AC34/AD34</text>
+<text x="136.00" y="954.00" font-size="12" text-anchor="start" style="fill:#183044" font-weight="700">Hàn → soi → đo → mới tiếp</text>
+<rect x="415.00" y="779.00" width="350.00" height="200.00" rx="5" fill="#f5f8fa" stroke="#a8b9c6" stroke-width="1.2" />
+<text x="427.00" y="804.00" font-size="17" text-anchor="start" style="fill:#183044" font-weight="700">8. Dây nối / đo</text>
+<rect x="430.00" y="821.00" width="74.70" height="124.50" rx="0" fill="#f8fafb" stroke="#334f63" stroke-width="1.7" />
+<rect x="434.60" y="865.65" width="50.60" height="33.73" rx="0" fill="#fff4dd" stroke="#b77917" stroke-width="1.5" />
+<rect x="434.60" y="865.65" width="50.60" height="33.73" rx="0" fill="url(#hatch)" stroke="none" stroke-width="0" />
+<g data-ref="MOD1">
+<rect x="432.49" y="840.36" width="23.19" height="16.87" rx="0" fill="#bde4da" stroke="#3f6074" stroke-width="1" />
+</g>
+<g data-ref="MOD2">
+<rect x="459.90" y="842.46" width="31.62" height="14.76" rx="0" fill="#cfe0f9" stroke="#3f6074" stroke-width="1" />
+</g>
+<g data-ref="G*">
+<circle cx="464.11" cy="903.60" r="1" stroke="#203d51" fill="#cbd5e1" />
+</g>
+<text x="521.00" y="834.00" font-size="12" text-anchor="start" style="fill:#183044">G* P39</text>
+<text x="521.00" y="850.20" font-size="12" text-anchor="start" style="fill:#183044">MOD1 A9…L17</text>
+<text x="521.00" y="866.40" font-size="12" text-anchor="start" style="fill:#183044">MOD2 N10…AC17</text>
+<text x="521.00" y="954.00" font-size="12" text-anchor="start" style="fill:#183044" font-weight="700">Hàn → soi → đo → mới tiếp</text>
+<text x="35.00" y="1030.00" font-size="13" text-anchor="start" style="fill:#183044">Làm cụm logic trước trên cùng board; bước nguồn bổ sung sau. J1/J5V và module nguồn gá trên đệm cách</text>
+<text x="35.00" y="1047.55" font-size="13" text-anchor="start" style="fill:#183044">điện. Mọi hình nhỏ dùng cùng tọa độ với hình TOP.</text>
+<line x1="28.00" y1="1069.00" x2="766.00" y2="1069.00" stroke="#cbd5df" stroke-width="1"/>
+<text x="28.00" y="1090.00" font-size="12" text-anchor="start" style="fill:#183044">Nguồn: V2 §3.6. Không hàn cố định ESP32/IMU vào carrier; chỉ cắm socket.</text>
+</svg>

@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="794" height="1123" viewBox="0 0 794 1123" role="img">
+<title>Ngày pin về: 12 bước và điểm dừng</title>
+<defs><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M-2,2 L2,-2 M0,10 L10,0 M8,12 L12,8" stroke="#d49b38" stroke-width="1.5"/></pattern></defs>
+<style>text{font-family:Arial,"Segoe UI",sans-serif;fill:#183044} .muted{fill:#4c6475}</style>
+<rect x="0.00" y="0.00" width="794.00" height="1123.00" rx="5" fill="#fff" stroke="none" stroke-width="0" />
+<text x="28.00" y="37.00" font-size="23" text-anchor="start" style="fill:#183044" font-weight="700">Ngày pin về: 12 bước và điểm dừng</text>
+<text x="28.00" y="64.00" font-size="13" text-anchor="start" style="fill:#183044">Chỉ khi có pin thật đúng quy cách. Không đạt phép đo → dừng, ngắt nếu an toàn.</text>
+<text x="766.00" y="87.00" font-size="12" text-anchor="end" style="fill:#be2832">đề xuất, chưa đo thực tế</text>
+<line x1="28.00" y1="101.00" x2="766.00" y2="101.00" stroke="#cbd5df" stroke-width="1"/>
+<circle cx="49.00" cy="147.00" r="17" stroke="#146c7e" fill="#e2f1f4" />
+<text x="49.00" y="153.00" font-size="16" text-anchor="middle" style="fill:#183044" font-weight="700">1</text>
+<line x1="49.00" y1="165.00" x2="49.00" y2="183.00" stroke="#6a8394" stroke-width="2.5"/>
+<line x1="45.00" y1="176.00" x2="49.00" y2="183.00" stroke="#6a8394" stroke-width="2"/>
+<line x1="53.00" y1="176.00" x2="49.00" y2="183.00" stroke="#6a8394" stroke-width="2"/>
+<rect x="80.00" y="124.00" width="680.00" height="66.00" rx="5" fill="#f4f7f9" stroke="#b9c9d3" stroke-width="1.2" />
+<text x="92.00" y="146.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">Đo pin khi tách khỏi mạch</text>
+<text x="92.00" y="167.00" font-size="11" text-anchor="start" style="fill:#183044">DC tại giắc pin, khoảng 3.0–4.2V. Ngoài dải, 0V hoặc pack hỏng/phồng</text>
+<circle cx="49.00" cy="221.00" r="17" stroke="#146c7e" fill="#e2f1f4" />
+<text x="49.00" y="227.00" font-size="16" text-anchor="middle" style="fill:#183044" font-weight="700">2</text>
+<line x1="49.00" y1="239.00" x2="49.00" y2="257.00" stroke="#6a8394" stroke-width="2.5"/>
+<line x1="45.00" y1="250.00" x2="49.00" y2="257.00" stroke="#6a8394" stroke-width="2"/>
+<line x1="53.00" y1="250.00" x2="49.00" y2="257.00" stroke="#6a8394" stroke-width="2"/>
+<rect x="80.00" y="198.00" width="680.00" height="66.00" rx="5" fill="#f4f7f9" stroke="#b9c9d3" stroke-width="1.2" />
+<text x="92.00" y="220.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">Xác nhận cực tại mặt giắc</text>
+<text x="92.00" y="241.00" font-size="11" text-anchor="start" style="fill:#183044">que đỏ ở hốc ghép J1+, đen hốc J1− phải hiện điện áp dương bằng bước 1. Đảo/không rõ/giắc sai</text>
+<circle cx="49.00" cy="295.00" r="17" stroke="#146c7e" fill="#e2f1f4" />
+<text x="49.00" y="301.00" font-size="16" text-anchor="middle" style="fill:#183044" font-weight="700">3</text>
+<line x1="49.00" y1="313.00" x2="49.00" y2="331.00" stroke="#6a8394" stroke-width="2.5"/>
+<line x1="45.00" y1="324.00" x2="49.00" y2="331.00" stroke="#6a8394" stroke-width="2"/>
+<line x1="53.00" y1="324.00" x2="49.00" y2="331.00" stroke="#6a8394" stroke-width="2"/>
+<rect x="80.00" y="272.00" width="680.00" height="66.00" rx="5" fill="#f4f7f9" stroke="#b9c9d3" stroke-width="1.2" />
+<text x="92.00" y="294.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">Đặt trạng thái trước ghép</text>
+<text x="92.00" y="315.00" font-size="11" text-anchor="start" style="fill:#183044">SW1 OFF, J5V cắm đúng +/−; với mạch không điện, đo SW1 hở OUT+–COM và kiểm không chập 5V–GND như §3.8. Còn</text>
+<text x="92.00" y="328.00" font-size="11" text-anchor="start" style="fill:#183044">nguồn khác hoặc không ngắt được</text>
+<circle cx="49.00" cy="369.00" r="17" stroke="#146c7e" fill="#e2f1f4" />
+<text x="49.00" y="375.00" font-size="16" text-anchor="middle" style="fill:#183044" font-weight="700">4</text>
+<line x1="49.00" y1="387.00" x2="49.00" y2="405.00" stroke="#6a8394" stroke-width="2.5"/>
+<line x1="45.00" y1="398.00" x2="49.00" y2="405.00" stroke="#6a8394" stroke-width="2"/>
+<line x1="53.00" y1="398.00" x2="49.00" y2="405.00" stroke="#6a8394" stroke-width="2"/>
+<rect x="80.00" y="346.00" width="680.00" height="66.00" rx="5" fill="#f4f7f9" stroke="#b9c9d3" stroke-width="1.2" />
+<text x="92.00" y="368.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">Ghép pin</text>
+<text x="92.00" y="389.00" font-size="11" text-anchor="start" style="fill:#183044">sau ghép đo B+–B- bằng pin bước 1, đúng dấu; lệch rõ, nóng/mùi hoặc tia lửa bất thường</text>
+<circle cx="49.00" cy="443.00" r="17" stroke="#146c7e" fill="#e2f1f4" />
+<text x="49.00" y="449.00" font-size="16" text-anchor="middle" style="fill:#183044" font-weight="700">5</text>
+<line x1="49.00" y1="461.00" x2="49.00" y2="479.00" stroke="#6a8394" stroke-width="2.5"/>
+<line x1="45.00" y1="472.00" x2="49.00" y2="479.00" stroke="#6a8394" stroke-width="2"/>
+<line x1="53.00" y1="472.00" x2="49.00" y2="479.00" stroke="#6a8394" stroke-width="2"/>
+<rect x="80.00" y="420.00" width="680.00" height="66.00" rx="5" fill="#f4f7f9" stroke="#b9c9d3" stroke-width="1.2" />
+<text x="92.00" y="442.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">Đo OUT+–OUT-</text>
+<text x="92.00" y="463.00" font-size="11" text-anchor="start" style="fill:#183044">gần bằng B+–B- khi chưa tải; đo V_SYS gần 0V sau tụ xả. OUT=0, áp sai dấu, sụt bất thường</text>
+<circle cx="49.00" cy="517.00" r="17" stroke="#146c7e" fill="#e2f1f4" />
+<text x="49.00" y="523.00" font-size="16" text-anchor="middle" style="fill:#183044" font-weight="700">6</text>
+<line x1="49.00" y1="535.00" x2="49.00" y2="553.00" stroke="#6a8394" stroke-width="2.5"/>
+<line x1="45.00" y1="546.00" x2="49.00" y2="553.00" stroke="#6a8394" stroke-width="2"/>
+<line x1="53.00" y1="546.00" x2="49.00" y2="553.00" stroke="#6a8394" stroke-width="2"/>
+<rect x="80.00" y="494.00" width="680.00" height="66.00" rx="5" fill="#f4f7f9" stroke="#b9c9d3" stroke-width="1.2" />
+<text x="92.00" y="516.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">Bật SW1</text>
+<text x="92.00" y="537.00" font-size="11" text-anchor="start" style="fill:#183044">đo V_SYS so OUT- gần OUT, trong dải thiết kế 3.0–4.2V; sụt/reset/nóng</text>
+<circle cx="49.00" cy="591.00" r="17" stroke="#146c7e" fill="#e2f1f4" />
+<text x="49.00" y="597.00" font-size="16" text-anchor="middle" style="fill:#183044" font-weight="700">7</text>
+<line x1="49.00" y1="609.00" x2="49.00" y2="627.00" stroke="#6a8394" stroke-width="2.5"/>
+<line x1="45.00" y1="620.00" x2="49.00" y2="627.00" stroke="#6a8394" stroke-width="2"/>
+<line x1="53.00" y1="620.00" x2="49.00" y2="627.00" stroke="#6a8394" stroke-width="2"/>
+<rect x="80.00" y="568.00" width="680.00" height="66.00" rx="5" fill="#f4f7f9" stroke="#b9c9d3" stroke-width="1.2" />
+<text x="92.00" y="590.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">Đo VIN ESP32</text>
+<text x="92.00" y="611.00" font-size="11" text-anchor="start" style="fill:#183044">4.9–5.1V [A] §5.1/[N] §1; ngoài khoảng/dao động rõ</text>
+<circle cx="49.00" cy="665.00" r="17" stroke="#146c7e" fill="#e2f1f4" />
+<text x="49.00" y="671.00" font-size="16" text-anchor="middle" style="fill:#183044" font-weight="700">8</text>
+<line x1="49.00" y1="683.00" x2="49.00" y2="701.00" stroke="#6a8394" stroke-width="2.5"/>
+<line x1="45.00" y1="694.00" x2="49.00" y2="701.00" stroke="#6a8394" stroke-width="2"/>
+<line x1="53.00" y1="694.00" x2="49.00" y2="701.00" stroke="#6a8394" stroke-width="2"/>
+<rect x="80.00" y="642.00" width="680.00" height="66.00" rx="5" fill="#f4f7f9" stroke="#b9c9d3" stroke-width="1.2" />
+<text x="92.00" y="664.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">Đo 3V3 tại ESP32/TP3 và IMU VCC</text>
+<text x="92.00" y="685.00" font-size="11" text-anchor="start" style="fill:#183044">3.25–3.35V theo tiêu chí [N] §1; sai/chạm que nguy hiểm</text>
+<circle cx="49.00" cy="739.00" r="17" stroke="#146c7e" fill="#e2f1f4" />
+<text x="49.00" y="745.00" font-size="16" text-anchor="middle" style="fill:#183044" font-weight="700">9</text>
+<line x1="49.00" y1="757.00" x2="49.00" y2="775.00" stroke="#6a8394" stroke-width="2.5"/>
+<line x1="45.00" y1="768.00" x2="49.00" y2="775.00" stroke="#6a8394" stroke-width="2"/>
+<line x1="53.00" y1="768.00" x2="49.00" y2="775.00" stroke="#6a8394" stroke-width="2"/>
+<rect x="80.00" y="716.00" width="680.00" height="66.00" rx="5" fill="#f4f7f9" stroke="#b9c9d3" stroke-width="1.2" />
+<text x="92.00" y="738.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">Đo BAT_SENSE tại GPIO34</text>
+<text x="92.00" y="759.00" font-size="11" text-anchor="start" style="fill:#183044">khoảng 0.5×V_SYS; tỷ số 0.495–0.505 từ R2/R3 1% [B], cộng sai số đo. Sai tỷ số/tiến gần điện áp pin thô</text>
+<circle cx="49.00" cy="813.00" r="17" stroke="#146c7e" fill="#e2f1f4" />
+<text x="49.00" y="819.00" font-size="16" text-anchor="middle" style="fill:#183044" font-weight="700">10</text>
+<line x1="49.00" y1="831.00" x2="49.00" y2="849.00" stroke="#6a8394" stroke-width="2.5"/>
+<line x1="45.00" y1="842.00" x2="49.00" y2="849.00" stroke="#6a8394" stroke-width="2"/>
+<line x1="53.00" y1="842.00" x2="49.00" y2="849.00" stroke="#6a8394" stroke-width="2"/>
+<rect x="80.00" y="790.00" width="680.00" height="66.00" rx="5" fill="#f4f7f9" stroke="#b9c9d3" stroke-width="1.2" />
+<text x="92.00" y="812.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">Quan sát khởi động và nhiệt</text>
+<text x="92.00" y="833.00" font-size="11" text-anchor="start" style="fill:#183044">kiểm LED/hành vi chương trình thử đã biết; ưu tiên nhiệt kế đo TP4056, MT3608 và vỏ pin, ghi số thật. Chỉ</text>
+<text x="92.00" y="846.00" font-size="11" text-anchor="start" style="fill:#183044">chạm nhẹ phần vỏ còn nguyên/không dẫn điện khi không có nhiệt…</text>
+<circle cx="49.00" cy="887.00" r="17" stroke="#146c7e" fill="#e2f1f4" />
+<text x="49.00" y="893.00" font-size="16" text-anchor="middle" style="fill:#183044" font-weight="700">11</text>
+<line x1="49.00" y1="905.00" x2="49.00" y2="923.00" stroke="#6a8394" stroke-width="2.5"/>
+<line x1="45.00" y1="916.00" x2="49.00" y2="923.00" stroke="#6a8394" stroke-width="2"/>
+<line x1="53.00" y1="916.00" x2="49.00" y2="923.00" stroke="#6a8394" stroke-width="2"/>
+<rect x="80.00" y="864.00" width="680.00" height="66.00" rx="5" fill="#f4f7f9" stroke="#b9c9d3" stroke-width="1.2" />
+<text x="92.00" y="886.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">Chạy đầu 5 phút có người theo dõi</text>
+<text x="92.00" y="907.00" font-size="11" text-anchor="start" style="fill:#183044">đo lại VIN/3V3/V_SYS và nhiệt đầu/cuối, ghi reset/sụt áp. Mốc 5 phút là đề xuất [P2] §3.13.4, chưa chứng</text>
+<text x="92.00" y="920.00" font-size="11" text-anchor="start" style="fill:#183044">minh thời lượng/độ bền; lỗi</text>
+<circle cx="49.00" cy="961.00" r="17" stroke="#146c7e" fill="#e2f1f4" />
+<text x="49.00" y="967.00" font-size="16" text-anchor="middle" style="fill:#183044" font-weight="700">12</text>
+<rect x="80.00" y="938.00" width="680.00" height="66.00" rx="5" fill="#f4f7f9" stroke="#b9c9d3" stroke-width="1.2" />
+<text x="92.00" y="960.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">Thử sạc riêng sau khi đọc §3.9.2</text>
+<text x="92.00" y="981.00" font-size="11" text-anchor="start" style="fill:#183044">SW1 OFF, J5V rút, USB ESP32 rút; đo dòng pin nối tiếp và B+–B- theo §3.4.4, hướng đến 4.2V danh định [T]</text>
+<text x="92.00" y="994.00" font-size="11" text-anchor="start" style="fill:#183044">trong giới hạn pack. Theo dõi sát 5–10 phút đầu và suốt lần sạc;…</text>
+<text x="35.00" y="1030.00" font-size="14" text-anchor="start" style="fill:#be2832" font-weight="700">✗ Sai cực/áp, sụt/reset, nóng/phồng/mùi → DỪNG. Mọi ngưỡng và đầy đủ 12 bước: V2 §3.13.4 và mô</text>
+<text x="35.00" y="1048.90" font-size="14" text-anchor="start" style="fill:#be2832" font-weight="700">tả chữ đi kèm.</text>
+<line x1="28.00" y1="1069.00" x2="766.00" y2="1069.00" stroke="#cbd5df" stroke-width="1"/>
+<text x="28.00" y="1090.00" font-size="12" text-anchor="start" style="fill:#183044">Nguồn: V2 §3.13.4. Sạc riêng sau đọc rủi ro §3.9.2; không sạc nguồn bàn thay pin.</text>
+</svg>

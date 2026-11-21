@@ -1,0 +1,64 @@
+# ===== Air Mouse - .gitignore (tao 2026-11-21 cho dot dua len GitHub) =====
+
+# --- Build / cache ---
+.pio/
+**/.pio/
+.vscode/
+**/.vscode/
+.wrangler/
+__pycache__/
+*.pyc
+node_modules/
+*.tmp
+*.bak
+~$*
+Thumbs.db
+desktop.ini
+
+# --- Bi mat / moi truong (khong bao gio commit) ---
+.env
+.env.*
+*.pem
+*.key
+.dev.vars
+
+# --- Cong cu AI noi bo (khong thuoc san pham) ---
+.agents/
+.claude/
+AGENTS.md
+skills-lock.json
+scripts/ai-scout/
+scripts/ai-context/
+scripts/cleanup_*.ps1
+
+# --- Lich su lam viec / rac ---
+_to_delete/
+backups/
+preprare4T/
+transcript.docx
+*.zip
+
+# --- Bai tap mon khac, slide cua giang vien (ban quyen) ---
+exercise/
+
+# --- Goi nop bai ca nhan (co ten + MSSV) va ban sao trung lap ---
+Pham_*/
+file_bao_cao/
+# Log nap/cau noi chua ten user Windows va IP Tailscale
+raw_logs/flash_*.log
+raw_logs/rfc2217_check_*.log
+raw_logs/split_boot_*.log
+raw_logs/split_handtest_*.log
+
+# --- Nhat ky phien AI & huong dan nap qua laptop (chua IP Tailscale, ten may) ---
+docs/HANDOFF_*
+docs/PROMPT_ANTI_*
+docs/FLASH_LOCAL_LAPTOP_*
+docs/archive/
+
+# --- Ban phat hanh cu: chi giu ban chot ---
+release/*
+!release/2026-10-23_chot/
+
+# --- File gop/trung lap trong deliverables ---
+deliverables/AIR_MOUSE_FIRMWARE_GOP_1_FILE.txt

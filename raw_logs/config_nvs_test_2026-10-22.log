@@ -1,0 +1,204 @@
+# cfg_session rfc2217 test, PC clock
+[18:49:09.342] # --- session 1 first boot after flash: opened, waiting for boot ---
+[18:49:09.439] ets Jul 29 2019 12:21:46
+[18:49:09.439] 
+[18:49:09.439] rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[18:49:09.439] configsip: 0, SPIWP:0xee
+[18:49:09.439] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[18:49:09.439] mode:DIO, clock div:2
+[18:49:09.439] load:0x3fff0030,len:1184
+[18:49:09.641] load:0x40078000,len:13232
+[18:49:09.641] load:0x40080400,len:3028
+[18:49:09.641] entry 0x400805e4
+[18:49:10.467] 
+[18:49:10.467] ==================================================
+[18:49:10.467]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[18:49:10.467]    Course: He Thong Nhung (Embedded Systems)
+[18:49:10.467] ==================================================
+[18:49:10.514] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[18:49:10.514] [   557][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[18:49:10.514] [DIAGNOSTICS] Register Readback Verification:
+[18:49:10.514]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[18:49:10.536]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[18:49:10.536]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[18:49:10.536]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[18:49:10.536]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[18:49:10.558]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[18:49:10.558] [   623][E][Preferences.cpp:503] getBytesLength(): nvs_get_blob len fail: cfg NOT_FOUND
+[18:49:10.558] [CONFIG] nothing stored yet -> defaults
+[18:49:10.771] [CONFIG] in use: ver=1 gain_x=0.300 gain_y=0.300 flick_dps=150.0 flick_enable=1 click_guard_ms=40 recenter_ms=150
+[18:49:10.771] 
+[18:49:10.771] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[18:49:10.771] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[18:49:13.001] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, |a| = 0.988 g, sd = 0.15/0.11/0.08 dps, half-mean diff = 0.01/0.02/0.01 dps -> ACCEPTED
+[18:49:13.001] [CALIBRATION] Zero-Rate Bias: X =  -1.35 dps | Y =  +0.50 dps | Z =  +0.36 dps
+[18:49:13.001] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[18:49:13.001] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[18:49:13.607] [  3630][I][BLEDevice.cpp:577] getAdvertising(): create advertising
+[18:49:14.013] [STATUS] Rate: 93 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.36 | Up: 3s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:14.217] [  4181][I][BLEDevice.cpp:253] gapEventHandler(): ESP_GAP_BLE_AUTH_CMPL_EVT
+[18:49:14.623] >>> @GET
+[18:49:14.825] @CFG ver=1 gain_x=0.300 gain_y=0.300 flick_dps=150.0 flick_enable=1 click_guard_ms=40 recenter_ms=150
+[18:49:14.825] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.36 | Up: 4s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:15.642] >>> @SET gain_x=0.45 gain_y=0.45 flick_dps=180
+[18:49:15.855] @OK gain_x=0.450 gain_y=0.450 flick_dps=180.0
+[18:49:15.855] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.36 | Up: 5s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:16.671] >>> @GET
+[18:49:16.887] @CFG ver=1 gain_x=0.450 gain_y=0.450 flick_dps=180.0 flick_enable=1 click_guard_ms=40 recenter_ms=150
+[18:49:16.887] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.36 | Up: 6s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:17.721] >>> @SAVE
+[18:49:17.922] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.36 | Up: 7s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:17.922] @OK saved
+[18:49:21.033] # --- session 2 after reset: opened, waiting for boot ---
+[18:49:21.133] ets Jul 29 2019 12:21:46
+[18:49:21.133] 
+[18:49:21.133] rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[18:49:21.133] configsip: 0, SPIWP:0xee
+[18:49:21.133] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[18:49:21.133] mode:DIO, clock div:2
+[18:49:21.133] load:0x3fff0030,len:1184
+[18:49:21.338] load:0x40078000,len:13232
+[18:49:21.338] load:0x40080400,len:3028
+[18:49:21.338] entry 0x400805e4
+[18:49:22.147] 
+[18:49:22.147] ==================================================
+[18:49:22.168]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[18:49:22.168]    Course: He Thong Nhung (Embedded Systems)
+[18:49:22.168] ==================================================
+[18:49:22.168] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[18:49:22.214] [   558][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[18:49:22.214] [DIAGNOSTICS] Register Readback Verification:
+[18:49:22.214]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[18:49:22.214]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[18:49:22.237]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[18:49:22.237]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[18:49:22.237]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[18:49:22.237]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[18:49:22.259] [CONFIG] loaded the saved settings from flash
+[18:49:22.259] [CONFIG] in use: ver=1 gain_x=0.450 gain_y=0.450 flick_dps=180.0 flick_enable=1 click_guard_ms=40 recenter_ms=150
+[18:49:22.259] 
+[18:49:22.259] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[18:49:22.474] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[18:49:24.480] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, |a| = 0.988 g, sd = 0.11/0.10/0.08 dps, half-mean diff = 0.01/0.02/0.00 dps -> ACCEPTED
+[18:49:24.480] [CALIBRATION] Zero-Rate Bias: X =  -1.34 dps | Y =  +0.48 dps | Z =  +0.36 dps
+[18:49:24.686] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[18:49:24.686] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[18:49:25.292] [  3631][I][BLEDevice.cpp:577] getAdvertising(): create advertising
+[18:49:25.493] [STATUS] Rate: 92 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.36 | Up: 3s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:25.896] [  4219][I][BLEDevice.cpp:253] gapEventHandler(): ESP_GAP_BLE_AUTH_CMPL_EVT
+[18:49:26.299] >>> @GET
+[18:49:26.500] @CFG ver=1 gain_x=0.450 gain_y=0.450 flick_dps=180.0 flick_enable=1 click_guard_ms=40 recenter_ms=150
+[18:49:26.500] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.36 | Up: 4s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:27.315] >>> @SET gain_x=9
+[18:49:27.517] @ERR range gain_x
+[18:49:27.517] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.36 | Up: 5s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:27.929] >>> @SET volume=1
+[18:49:28.131] @ERR unknown-key volume
+[18:49:28.537] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.36 | Up: 6s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:28.537] >>> @FOO
+[18:49:28.740] @ERR unknown-cmd
+[18:49:29.152] >>> @SET gain_x=0.3x
+[18:49:29.356] @ERR format gain_x
+[18:49:29.558] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.36 | Up: 7s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:29.763] >>> @SET gain_y=0.5 gain_x=9
+[18:49:29.964] @ERR range gain_x
+[18:49:30.368] >>> @SET flick_enable=2
+[18:49:30.569] @ERR range flick_enable
+[18:49:30.569] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.36 | Up: 8s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:30.979] >>> @SET click_guard_ms=45
+[18:49:31.180] @OK click_guard_ms=50
+[18:49:31.596] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.36 | Up: 9s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:31.596] >>> @SET
+[18:49:31.800] @ERR format
+[18:49:32.203] >>> @
+[18:49:32.405] @ERR empty
+[18:49:32.610] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35 | Up: 10s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:32.810] >>> @aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+[18:49:33.013] @ERR too-long
+[18:49:33.427] >>> @GET
+[18:49:33.629] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35 | Up: 11s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:33.629] @CFG ver=1 gain_x=0.450 gain_y=0.450 flick_dps=180.0 flick_enable=1 click_guard_ms=50 recenter_ms=150
+[18:49:34.652] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35 | Up: 12s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:34.652] [GAIN] x=0.540 y=0.540 (~54 counts per degree)
+[18:49:35.266] >>> @GET
+[18:49:35.482] @CFG ver=1 gain_x=0.540 gain_y=0.540 flick_dps=180.0 flick_enable=1 click_guard_ms=50 recenter_ms=150
+[18:49:35.683] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35 | Up: 13s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:38.898] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35 | Up: 14s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:38.898] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35 | Up: 15s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:38.898] @ERR timeout
+[18:49:39.102] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34 | Up: 16s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:39.727] asZ: +0.34 | Up: 17s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:39.727] [GAIN] x=0.540 y=0.540 (~54 counts per degree)
+[18:49:40.551] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34 | Up: 18s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:40.551] >>> @DEFAULTS
+[18:49:40.755] @OK defaults
+[18:49:41.575] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34 | Up: 19s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:41.575] >>> @GET
+[18:49:41.777] @CFG ver=1 gain_x=0.300 gain_y=0.300 flick_dps=150.0 flick_enable=1 click_guard_ms=40 recenter_ms=150
+[18:49:42.592] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34 | Up: 20s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:42.592] >>> @SAVE
+[18:49:42.807] @OK saved
+[18:49:43.627] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34 | Up: 21s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:43.627] >>> @SAVE
+[18:49:43.828] @OK saved
+[18:49:44.637] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.34 | Up: 22s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:46.914] # --- session 3 after saving defaults: opened, waiting for boot ---
+[18:49:47.012] ets Jul 29 2019 12:21:46
+[18:49:47.012] 
+[18:49:47.012] rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[18:49:47.012] configsip: 0, SPIWP:0xee
+[18:49:47.012] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[18:49:47.012] mode:DIO, clock div:2
+[18:49:47.012] load:0x3fff0030,len:1184
+[18:49:47.213] load:0x40078000,len:13232
+[18:49:47.213] load:0x40080400,len:3028
+[18:49:47.213] entry 0x400805e4
+[18:49:48.023] 
+[18:49:48.050] ==================================================
+[18:49:48.050]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[18:49:48.050]    Course: He Thong Nhung (Embedded Systems)
+[18:49:48.050] ==================================================
+[18:49:48.050] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[18:49:48.093] [   558][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[18:49:48.093] [DIAGNOSTICS] Register Readback Verification:
+[18:49:48.093]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[18:49:48.093]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[18:49:48.115]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[18:49:48.115]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[18:49:48.115]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[18:49:48.136]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[18:49:48.136] [CONFIG] loaded the saved settings from flash
+[18:49:48.136] [CONFIG] in use: ver=1 gain_x=0.300 gain_y=0.300 flick_dps=150.0 flick_enable=1 click_guard_ms=40 recenter_ms=150
+[18:49:48.136] 
+[18:49:48.136] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[18:49:48.348] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[18:49:50.380] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, |a| = 0.988 g, sd = 0.11/0.12/0.08 dps, half-mean diff = 0.02/0.01/0.01 dps -> ACCEPTED
+[18:49:50.583] [CALIBRATION] Zero-Rate Bias: X =  -1.37 dps | Y =  +0.50 dps | Z =  +0.36 dps
+[18:49:50.583] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[18:49:50.583] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[18:49:51.217] [  3630][I][BLEDevice.cpp:577] getAdvertising(): create advertising
+[18:49:51.432] [STATUS] Rate: 93 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.36 | Up: 3s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:51.647] [  4079][I][BLEDevice.cpp:253] gapEventHandler(): ESP_GAP_BLE_AUTH_CMPL_EVT
+[18:49:52.254] >>> @GET
+[18:49:52.455] @CFG ver=1 gain_x=0.300 gain_y=0.300 flick_dps=150.0 flick_enable=1 click_guard_ms=40 recenter_ms=150
+[18:49:52.455] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.36 | Up: 4s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:53.263] >>> @CAL
+[18:49:53.468] 
+[18:49:53.468] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[18:49:53.468] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[18:49:55.713] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, |a| = 0.988 g, sd = 0.09/0.09/0.09 dps, half-mean diff = 0.01/0.02/0.01 dps -> ACCEPTED
+[18:49:55.713] [CALIBRATION] Zero-Rate Bias: X =  -1.36 dps | Y =  +0.51 dps | Z =  +0.38 dps
+[18:49:55.713] @OK calibrated
+[18:49:56.745] [STATUS] Rate: 196 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 9s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:57.773] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 10s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:58.584] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 11s | Frz: 0 | Heal: 0 | Rst: 1
+[18:49:59.607] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 12s | Frz: 0 | Heal: 0 | Rst: 1
+[18:50:00.616] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 13s | Frz: 0 | Heal: 0 | Rst: 1
+[18:50:01.641] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.36 | Up: 14s | Frz: 0 | Heal: 0 | Rst: 1
+[18:50:02.664] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.36 | Up: 15s | Frz: 0 | Heal: 0 | Rst: 1
+[18:50:03.675] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35 | Up: 16s | Frz: 0 | Heal: 0 | Rst: 1
+[18:50:04.693] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35 | Up: 17s | Frz: 0 | Heal: 0 | Rst: 1
+[18:50:05.711] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35 | Up: 18s | Frz: 0 | Heal: 0 | Rst: 1
+[18:50:06.743] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35 | Up: 19s | Frz: 0 | Heal: 0 | Rst: 1
+[18:50:07.774] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.35 | Up: 20s | Frz: 0 | Heal: 0 | Rst: 1
+# end

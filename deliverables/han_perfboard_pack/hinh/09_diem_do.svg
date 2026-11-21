@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="794" height="1123" viewBox="0 0 794 1123" role="img">
+<title>Điểm đo và giá trị đối chiếu</title>
+<defs><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M-2,2 L2,-2 M0,10 L10,0 M8,12 L12,8" stroke="#d49b38" stroke-width="1.5"/></pattern></defs>
+<style>text{font-family:Arial,"Segoe UI",sans-serif;fill:#183044} .muted{fill:#4c6475}</style>
+<rect x="0.00" y="0.00" width="794.00" height="1123.00" rx="5" fill="#fff" stroke="none" stroke-width="0" />
+<text x="28.00" y="37.00" font-size="23" text-anchor="start" style="fill:#183044" font-weight="700">Điểm đo và giá trị đối chiếu</text>
+<text x="28.00" y="64.00" font-size="13" text-anchor="start" style="fill:#183044">Sơ đồ điểm đo logic; que đen phải đúng điểm âm, không luôn lấy B− làm GND.</text>
+<text x="766.00" y="87.00" font-size="12" text-anchor="end" style="fill:#be2832">đề xuất, chưa đo thực tế</text>
+<line x1="28.00" y1="101.00" x2="766.00" y2="101.00" stroke="#cbd5df" stroke-width="1"/>
+<circle cx="70.00" cy="175.00" r="22" stroke="#146c7e" fill="#def0f3" />
+<text x="70.00" y="182.00" font-size="20" text-anchor="middle" style="fill:#183044" font-weight="700">1</text>
+<line x1="70.00" y1="198.00" x2="70.00" y2="261.00" stroke="#6b8798" stroke-width="2.5"/>
+<line x1="66.00" y1="254.00" x2="70.00" y2="261.00" stroke="#6b8798" stroke-width="2"/>
+<line x1="74.00" y1="254.00" x2="70.00" y2="261.00" stroke="#6b8798" stroke-width="2"/>
+<rect x="115.00" y="145.00" width="630.00" height="115.00" rx="5" fill="#f4f8fa" stroke="#b0c1cd" stroke-width="1.2" />
+<text x="131.00" y="170.00" font-size="20" text-anchor="start" style="fill:#183044" font-weight="700">Pin/B+</text>
+<text x="131.00" y="197.00" font-size="16" text-anchor="start" style="fill:#183044">3.0–4.2V; pin 1S đúng quy cách</text>
+<text x="131.00" y="240.00" font-size="14" text-anchor="start" style="fill:#be2832" font-weight="700">Que đen: B-</text>
+<circle cx="70.00" cy="315.00" r="22" stroke="#146c7e" fill="#def0f3" />
+<text x="70.00" y="322.00" font-size="20" text-anchor="middle" style="fill:#183044" font-weight="700">2</text>
+<line x1="70.00" y1="338.00" x2="70.00" y2="401.00" stroke="#6b8798" stroke-width="2.5"/>
+<line x1="66.00" y1="394.00" x2="70.00" y2="401.00" stroke="#6b8798" stroke-width="2"/>
+<line x1="74.00" y1="394.00" x2="70.00" y2="401.00" stroke="#6b8798" stroke-width="2"/>
+<rect x="115.00" y="285.00" width="630.00" height="115.00" rx="5" fill="#f4f8fa" stroke="#b0c1cd" stroke-width="1.2" />
+<text x="131.00" y="310.00" font-size="20" text-anchor="start" style="fill:#183044" font-weight="700">Sau bảo vệ</text>
+<text x="131.00" y="337.00" font-size="16" text-anchor="start" style="fill:#183044">Gần điện áp pin; chênh áp CẦN ĐO THỰC TẾ</text>
+<text x="131.00" y="380.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">Que đen: OUT-</text>
+<circle cx="70.00" cy="455.00" r="22" stroke="#146c7e" fill="#def0f3" />
+<text x="70.00" y="462.00" font-size="20" text-anchor="middle" style="fill:#183044" font-weight="700">3</text>
+<line x1="70.00" y1="478.00" x2="70.00" y2="541.00" stroke="#6b8798" stroke-width="2.5"/>
+<line x1="66.00" y1="534.00" x2="70.00" y2="541.00" stroke="#6b8798" stroke-width="2"/>
+<line x1="74.00" y1="534.00" x2="70.00" y2="541.00" stroke="#6b8798" stroke-width="2"/>
+<rect x="115.00" y="425.00" width="630.00" height="115.00" rx="5" fill="#f4f8fa" stroke="#b0c1cd" stroke-width="1.2" />
+<text x="131.00" y="450.00" font-size="20" text-anchor="start" style="fill:#183044" font-weight="700">V_SYS</text>
+<text x="131.00" y="477.00" font-size="16" text-anchor="start" style="fill:#183044">SW1 ON: 3.0–4.2V; OFF: gần 0V sau tụ xả</text>
+<text x="131.00" y="520.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">Que đen: OUT- / GND</text>
+<circle cx="70.00" cy="595.00" r="22" stroke="#146c7e" fill="#def0f3" />
+<text x="70.00" y="602.00" font-size="20" text-anchor="middle" style="fill:#183044" font-weight="700">4</text>
+<line x1="70.00" y1="618.00" x2="70.00" y2="681.00" stroke="#6b8798" stroke-width="2.5"/>
+<line x1="66.00" y1="674.00" x2="70.00" y2="681.00" stroke="#6b8798" stroke-width="2"/>
+<line x1="74.00" y1="674.00" x2="70.00" y2="681.00" stroke="#6b8798" stroke-width="2"/>
+<rect x="115.00" y="565.00" width="630.00" height="115.00" rx="5" fill="#f4f8fa" stroke="#b0c1cd" stroke-width="1.2" />
+<text x="131.00" y="590.00" font-size="20" text-anchor="start" style="fill:#183044" font-weight="700">5V tại VIN</text>
+<text x="131.00" y="617.00" font-size="16" text-anchor="start" style="fill:#183044">4.9–5.1V, J5V cắm đúng, USB ESP32 rút</text>
+<text x="131.00" y="660.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">Que đen: GND</text>
+<circle cx="70.00" cy="735.00" r="22" stroke="#146c7e" fill="#def0f3" />
+<text x="70.00" y="742.00" font-size="20" text-anchor="middle" style="fill:#183044" font-weight="700">5</text>
+<line x1="70.00" y1="758.00" x2="70.00" y2="821.00" stroke="#6b8798" stroke-width="2.5"/>
+<line x1="66.00" y1="814.00" x2="70.00" y2="821.00" stroke="#6b8798" stroke-width="2"/>
+<line x1="74.00" y1="814.00" x2="70.00" y2="821.00" stroke="#6b8798" stroke-width="2"/>
+<rect x="115.00" y="705.00" width="630.00" height="115.00" rx="5" fill="#f4f8fa" stroke="#b0c1cd" stroke-width="1.2" />
+<text x="131.00" y="730.00" font-size="20" text-anchor="start" style="fill:#183044" font-weight="700">3V3</text>
+<text x="131.00" y="757.00" font-size="16" text-anchor="start" style="fill:#183044">3.25–3.35V; mục tiêu 3.3V</text>
+<text x="131.00" y="800.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">Que đen: GND</text>
+<circle cx="70.00" cy="875.00" r="22" stroke="#146c7e" fill="#def0f3" />
+<text x="70.00" y="882.00" font-size="20" text-anchor="middle" style="fill:#183044" font-weight="700">6</text>
+<rect x="115.00" y="845.00" width="630.00" height="115.00" rx="5" fill="#f4f8fa" stroke="#b0c1cd" stroke-width="1.2" />
+<text x="131.00" y="870.00" font-size="20" text-anchor="start" style="fill:#183044" font-weight="700">BAT_SENSE</text>
+<text x="131.00" y="897.00" font-size="16" text-anchor="start" style="fill:#183044">≈0.5×V_SYS; khoảng 1.5–2.1V danh định</text>
+<text x="131.00" y="940.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">Que đen: GND</text>
+<text x="40.00" y="1016.00" font-size="14" text-anchor="start" style="fill:#183044">Điện áp dải thiết kế không chứng nhận mọi pin. Tắt nguồn trước đổi dây/đo ohm. ADC và I2C</text>
+<text x="40.00" y="1034.90" font-size="14" text-anchor="start" style="fill:#183044">cần phần mềm, để chủ dự án làm.</text>
+<line x1="28.00" y1="1069.00" x2="766.00" y2="1069.00" stroke="#cbd5df" stroke-width="1"/>
+<text x="28.00" y="1090.00" font-size="12" text-anchor="start" style="fill:#183044">Nguồn: V2 bảng 3.8.2. Chưa có số đo phần cứng; ghi vào nhật ký, không tick từ hình.</text>
+</svg>

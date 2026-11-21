@@ -1,0 +1,55 @@
+{
+  "png_count": 12,
+  "html_svg_count": 12,
+  "remote_requests": 0,
+  "checks": [
+    {
+      "name": "01_top",
+      "outside": []
+    },
+    {
+      "name": "02_bottom",
+      "outside": []
+    },
+    {
+      "name": "03_nguon",
+      "outside": []
+    },
+    {
+      "name": "04a_day_nguon",
+      "outside": []
+    },
+    {
+      "name": "04b_day_tin_hieu",
+      "outside": []
+    },
+    {
+      "name": "05_imu",
+      "outside": []
+    },
+    {
+      "name": "06_gpio",
+      "outside": []
+    },
+    {
+      "name": "07_nhan_biet",
+      "outside": []
+    },
+    {
+      "name": "08_thu_tu_han",
+      "outside": []
+    },
+    {
+      "name": "09_diem_do",
+      "outside": []
+    },
+    {
+      "name": "10_j5v",
+      "outside": []
+    },
+    {
+      "name": "11_ngay_pin_ve",
+      "outside": []
+    }
+  ]
+}

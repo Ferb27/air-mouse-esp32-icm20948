@@ -1,0 +1,80 @@
+# capture_serial.py port=rfc2217://<LAPTOP_IP>:4000?ign_set_control baud=115200 reset=True seconds=40.0 start=2026-10-17 11:54:04
+[11:54:04.748] ets Jul 29 2019 12:21:46
+[11:54:04.748] 
+[11:54:04.749] rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[11:54:04.749] configsip: 0, SPIWP:0xee
+[11:54:04.749] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[11:54:04.749] mode:DIO, clock div:2
+[11:54:04.749] load:0x3fff0030,len:1184
+[11:54:04.749] load:0x40078000,len:13232
+[11:54:04.749] load:0x40080400,len:3028
+[11:54:04.749] entry 0x400805e4
+[11:54:04.776] ets Jul 29 2019 12:21:46
+[11:54:04.776] 
+[11:54:04.777] rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[11:54:04.778] configsip: 0, SPIWP:0xee
+[11:54:04.784] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[11:54:04.785] mode:DIO, clock div:2
+[11:54:04.788] load:0x3fff0030,len:1184
+[11:54:04.788] load:0x40078000,len:13232
+[11:54:04.790] load:0x40080400,len:3028
+[11:54:04.794] entry 0x400805e4
+[11:54:05.799] 
+[11:54:05.799] ==================================================
+[11:54:05.800]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[11:54:05.801]    Course: He Thong Nhung (Embedded Systems)
+[11:54:05.809] ==================================================
+[11:54:05.809] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[11:54:05.821] [   555][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[11:54:05.850] [DIAGNOSTICS] Register Readback Verification:
+[11:54:05.852]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[11:54:05.857]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[11:54:05.866]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[11:54:05.872]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[11:54:05.878]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[11:54:05.886]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[11:54:05.886] 
+[11:54:05.892] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[11:54:05.900] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[11:54:08.113] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, |a| = 0.988 g, sd = 0.65/0.28/0.10 dps, half-mean diff = 0.14/0.02/0.00 dps -> REJECTED (board not still), retrying
+[11:54:10.324] [CALIBRATION] Attempt 2: 2200 ms, 200 polls, |a| = 0.987 g, sd = 1.94/1.30/0.13 dps, half-mean diff = 0.69/0.44/0.01 dps -> REJECTED (board not still), retrying
+[11:54:12.534] [CALIBRATION] Attempt 3: 2200 ms, 200 polls, |a| = 0.988 g, sd = 0.08/0.09/0.09 dps, half-mean diff = 0.01/0.01/0.00 dps -> ACCEPTED
+[11:54:12.539] [CALIBRATION] Zero-Rate Bias: X =  -1.41 dps | Y =  +0.57 dps | Z =  +0.38 dps
+[11:54:12.543] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[11:54:12.551] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[11:54:12.551] 
+[11:54:13.286] [  8023][I][BLEDevice.cpp:577] getAdvertising(): create advertising
+[11:54:13.559] [STATUS] Rate: 93 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 8s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:14.059] [  8797][I][BLEDevice.cpp:253] gapEventHandler(): ESP_GAP_BLE_AUTH_CMPL_EVT
+[11:54:14.558] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 9s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:15.558] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 10s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:16.556] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 11s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:17.560] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 12s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:18.561] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 13s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:19.557] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 14s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:20.559] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 15s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:21.559] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 16s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:22.561] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 17s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:23.558] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 18s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:24.559] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 19s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:25.632] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 20s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:26.561] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 21s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:27.581] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 22s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:28.563] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +1 | BiasZ: +0.38 | Up: 23s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:29.563] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 24s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:30.566] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 25s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:31.561] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 26s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:32.563] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 27s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:33.576] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 28s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:34.566] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 29s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:35.561] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 30s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:36.564] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 31s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:37.565] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 32s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:38.568] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 33s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:39.565] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 34s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:40.563] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 35s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:41.565] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 36s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:42.567] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 37s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:43.581] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.39 | Up: 38s | Frz: 0 | Heal: 0 | Rst: 1
+[11:54:44.563] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.39 | Up: 39s | Frz: 0 | Heal: 0 | Rst: 1
+# end elapsed_s=40.3 lines=78 bytes=6169 stopped_by=timeout

@@ -1,0 +1,960 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>E:\documents\dien_tu\embedded_sys\hardware\air_mouse.kicad_sch</source>
+    <date>2026-09-16T22:51:56+0700</date>
+    <tool>Eeschema 9.0.7</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>air_mouse.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="C" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>01c49ea8-f08e-4c3e-ad8e-42d90bfa13d6</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>10uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.00mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">Capacitor_THT:CP_Radial_D5.0mm_P2.00mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="C" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5bea5c48-77a7-41e2-a56e-9e06b7a3a70a</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>10uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.00mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">Capacitor_THT:CP_Radial_D5.0mm_P2.00mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="C" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6a324b12-5df7-4934-9c67-8cf790957530</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>100nF</value>
+      <footprint>Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="C" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>436f0b6d-3404-4c96-9436-d4055be18d88</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>LED_Green_3mm</value>
+      <footprint>LED_THT:LED_D3.0mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">LED_THT:LED_D3.0mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="LED" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>71396d7e-5c36-481c-a22c-d64ebb142bd5</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>LiPo_1S_JST_PH</value>
+      <footprint>Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="Conn_01x02" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>70be9c1a-3382-4503-aa6d-a55e2221ba88</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>I2C_Expansion_3V3</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="Conn_01x04" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5c94933c-d048-4f9c-96c5-bfe5440598f2</tstamps>
+    </comp>
+    <comp ref="MOD1">
+      <value>TP4056_TypeC</value>
+      <footprint>air_mouse:TP4056_TypeC_Module</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">air_mouse:TP4056_TypeC_Module</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="TP4056_Module" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>96dbbda7-39ae-473a-a85d-1959476d67ba</tstamps>
+    </comp>
+    <comp ref="MOD2">
+      <value>MT3608_Boost_5V</value>
+      <footprint>air_mouse:MT3608_Boost_Module</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">air_mouse:MT3608_Boost_Module</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="MT3608_Module" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>669deb6c-4134-4845-9cc6-6295fd04f7ec</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>1k_1%</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7fea1f65-677e-4a4b-9d8c-b8e212ae70cb</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>100k_1%</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cd515138-cf59-4548-9413-b0c54291e3f4</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>100k_1%</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bdf03a1a-8fad-4b6b-a981-df20ad7a378e</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>SS12D00_SPDT</value>
+      <footprint>Button_Switch_THT:SW_Slide_SPDT_Straight_CK_OS102011MS2Q</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">Button_Switch_THT:SW_Slide_SPDT_Straight_CK_OS102011MS2Q</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="SW_SPDT" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d4cd13ab-edbc-4f6c-b75e-a5dd3b047515</tstamps>
+    </comp>
+    <comp ref="SW2">
+      <value>Tactile_12x12_Left</value>
+      <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">Button_Switch_THT:SW_PUSH_6mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="SW_Push" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ccdbc9f3-f333-4ad2-8fe5-31f365f764ca</tstamps>
+    </comp>
+    <comp ref="SW3">
+      <value>Tactile_12x12_Right</value>
+      <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">Button_Switch_THT:SW_PUSH_6mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="SW_Push" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3b69d873-e5d7-4fc8-99e0-2a1f465e16eb</tstamps>
+    </comp>
+    <comp ref="SW4">
+      <value>Tactile_12x12_Mode</value>
+      <footprint>Button_Switch_THT:SW_PUSH_6mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">Button_Switch_THT:SW_PUSH_6mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="SW_Push" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c7c7e9b6-b7d9-4c17-a6c6-de250eba5297</tstamps>
+    </comp>
+    <comp ref="TP1">
+      <value>TP_IMU_SCL_3V3</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="TestPoint" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8a4d9b82-d8bd-4c33-985d-3766cf04ea02</tstamps>
+    </comp>
+    <comp ref="TP2">
+      <value>TP_IMU_SDA_3V3</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="TestPoint" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c156c4b4-3a4f-458e-b3e9-35753574ba82</tstamps>
+    </comp>
+    <comp ref="TP3">
+      <value>TP_IMU_SCL_1V8</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="TestPoint" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bd27ee4b-c73a-4c24-ac13-c43380099023</tstamps>
+    </comp>
+    <comp ref="TP4">
+      <value>TP_IMU_SDA_1V8</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="TestPoint" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d03a4627-2d97-41cc-b990-3d881fad2a7e</tstamps>
+    </comp>
+    <comp ref="TP5">
+      <value>TP_IMU_INT_1V8</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="TestPoint" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b11f150d-bd93-42dc-99f9-ff61b6feb50b</tstamps>
+    </comp>
+    <comp ref="TP6">
+      <value>TP_1V8</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="TestPoint" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a537e1dc-9c19-482d-8f9e-3a1aedebe868</tstamps>
+    </comp>
+    <comp ref="TP7">
+      <value>TP_GND</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="TestPoint" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e01c8111-9fd2-4bcd-b95d-d95abdd071d0</tstamps>
+    </comp>
+    <comp ref="TP8">
+      <value>TP_VBAT</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="TestPoint" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d02854ef-86f5-40c4-a459-3f1f958bf1a2</tstamps>
+    </comp>
+    <comp ref="TP9">
+      <value>TP_VSYS</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="TestPoint" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f3d04cce-5385-4e48-9bf0-70ae9875970f</tstamps>
+    </comp>
+    <comp ref="TP10">
+      <value>TP_5V</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="TestPoint" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>42c22c21-be5e-4ecf-afb4-8eeb091b58a3</tstamps>
+    </comp>
+    <comp ref="TP11">
+      <value>TP_3V3</value>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="TestPoint" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8dafc382-1168-41e1-a6ca-9889e7156e24</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>ESP32_DevKit_V1_38Pin</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_2x19_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">Connector_PinSocket_2.54mm:PinSocket_2x19_P2.54mm_Vertical</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="ESP32_DevKit_V1_38Pin" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9deb6132-a0c7-492c-b8e3-b7e71816cac5</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>WCMCU-20948</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="WCMCU_20948" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1f837b8c-6519-4add-adca-85757accce65</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>BSS138_LevelShifter</value>
+      <footprint>air_mouse:BSS138_LevelShifter_Module</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">air_mouse:BSS138_LevelShifter_Module</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="BSS138_LevelShifter_Module" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ebcba9f3-dbc2-4263-a073-07c3cfc9e760</tstamps>
+    </comp>
+    <comp ref="U4">
+      <value>AMS1117-1.8V</value>
+      <footprint>Package_TO_SOT_SMD:SOT-223-3_TabPin2</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-223-3_TabPin2</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="" part="AMS1117_1V8_Module" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="air_mouse.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>83b35712-2185-48c9-862b-46f83abbef62</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="" part="AMS1117_1V8_Module">
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AMS1117_1V8_Module</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-223-3_TabPin2</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="VOUT" type="power_out"/>
+        <pin num="3" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="BSS138_LevelShifter_Module">
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BSS138_LevelShifter_Module</field>
+        <field name="Footprint">air_mouse:BSS138_LevelShifter_Module</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="HV" type="power_in"/>
+        <pin num="2" name="GND_H" type="power_in"/>
+        <pin num="3" name="HV1_SDA" type="bidirectional"/>
+        <pin num="4" name="HV2_SCL" type="bidirectional"/>
+        <pin num="5" name="LV" type="power_in"/>
+        <pin num="6" name="GND_L" type="power_in"/>
+        <pin num="7" name="LV1_SDA" type="bidirectional"/>
+        <pin num="8" name="LV2_SCL" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="C">
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint">Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="Conn_01x02">
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Footprint">Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="Conn_01x04">
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="ESP32_DevKit_V1_38Pin">
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ESP32_DevKit_V1_38Pin</field>
+        <field name="Footprint">Connector_PinSocket_2.54mm:PinSocket_2x19_P2.54mm_Vertical</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3" type="power_out"/>
+        <pin num="2" name="EN" type="input"/>
+        <pin num="3" name="SENSOR_VP" type="input"/>
+        <pin num="4" name="SENSOR_VN" type="input"/>
+        <pin num="5" name="GPIO34" type="input"/>
+        <pin num="6" name="GPIO35" type="input"/>
+        <pin num="7" name="GPIO32" type="bidirectional"/>
+        <pin num="8" name="GPIO33" type="bidirectional"/>
+        <pin num="9" name="GPIO25" type="bidirectional"/>
+        <pin num="10" name="GPIO26" type="bidirectional"/>
+        <pin num="11" name="GPIO27" type="bidirectional"/>
+        <pin num="12" name="GPIO14" type="bidirectional"/>
+        <pin num="13" name="GPIO12" type="bidirectional"/>
+        <pin num="14" name="GND" type="power_in"/>
+        <pin num="15" name="GPIO13" type="bidirectional"/>
+        <pin num="16" name="SD2" type="bidirectional"/>
+        <pin num="17" name="SD3" type="bidirectional"/>
+        <pin num="18" name="CMD" type="bidirectional"/>
+        <pin num="19" name="5V" type="power_in"/>
+        <pin num="20" name="CLK" type="bidirectional"/>
+        <pin num="21" name="SD0" type="bidirectional"/>
+        <pin num="22" name="SD1" type="bidirectional"/>
+        <pin num="23" name="GPIO15" type="bidirectional"/>
+        <pin num="24" name="GPIO2" type="bidirectional"/>
+        <pin num="25" name="GPIO0" type="bidirectional"/>
+        <pin num="26" name="GPIO4" type="bidirectional"/>
+        <pin num="27" name="GPIO16" type="bidirectional"/>
+        <pin num="28" name="GPIO17" type="bidirectional"/>
+        <pin num="29" name="GPIO5" type="bidirectional"/>
+        <pin num="30" name="GPIO18" type="bidirectional"/>
+        <pin num="31" name="GPIO19" type="bidirectional"/>
+        <pin num="32" name="GND" type="power_in"/>
+        <pin num="33" name="GPIO21" type="bidirectional"/>
+        <pin num="34" name="RXD0" type="input"/>
+        <pin num="35" name="TXD0" type="output"/>
+        <pin num="36" name="GPIO22" type="bidirectional"/>
+        <pin num="37" name="GPIO23" type="bidirectional"/>
+        <pin num="38" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="LED">
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Footprint">LED_THT:LED_D3.0mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="MT3608_Module">
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">MOD</field>
+        <field name="Value">MT3608_Module</field>
+        <field name="Footprint">air_mouse:MT3608_Boost_Module</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN+" type="power_in"/>
+        <pin num="2" name="VIN-" type="power_in"/>
+        <pin num="3" name="VOUT+" type="power_out"/>
+        <pin num="4" name="VOUT-" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="R">
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint">Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="SW_Push">
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+        <field name="Footprint">Button_Switch_THT:SW_PUSH_6mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="SW_SPDT">
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_SPDT</field>
+        <field name="Footprint">Button_Switch_THT:SW_Slide_SPDT_Straight_CK_OS102011MS2Q</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="TP4056_Module">
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">MOD</field>
+        <field name="Value">TP4056_Module</field>
+        <field name="Footprint">air_mouse:TP4056_TypeC_Module</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="B+" type="passive"/>
+        <pin num="2" name="B-" type="passive"/>
+        <pin num="3" name="OUT+" type="power_out"/>
+        <pin num="4" name="OUT-" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="TestPoint">
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D2.0mm</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="WCMCU_20948">
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">WCMCU_20948</field>
+        <field name="Footprint">Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical</field>
+        <field name="Datasheet">~</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VCC" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="SCL" type="input"/>
+        <pin num="4" name="SDA" type="bidirectional"/>
+        <pin num="5" name="NCS" type="input"/>
+        <pin num="6" name="AD0" type="input"/>
+        <pin num="7" name="INT" type="output"/>
+        <pin num="8" name="FSY" type="input"/>
+        <pin num="9" name="ACL" type="output"/>
+        <pin num="10" name="ADA" type="bidirectional"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries/>
+  <nets>
+    <net code="1" name="/1V8" class="Default">
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="TP6" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U2" pin="5" pinfunction="NCS" pintype="input"/>
+      <node ref="U3" pin="5" pinfunction="LV" pintype="power_in"/>
+      <node ref="U4" pin="2" pinfunction="VOUT" pintype="power_out"/>
+    </net>
+    <net code="2" name="/3V3" class="Default">
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="TP11" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="3V3" pintype="power_out"/>
+      <node ref="U3" pin="1" pinfunction="HV" pintype="power_in"/>
+      <node ref="U4" pin="3" pinfunction="VIN" pintype="power_in"/>
+    </net>
+    <net code="3" name="/5V" class="Default">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="MOD2" pin="3" pinfunction="VOUT+" pintype="power_out"/>
+      <node ref="TP10" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="19" pinfunction="5V" pintype="power_in"/>
+    </net>
+    <net code="4" name="/BAT_SENSE" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="GPIO34" pintype="input"/>
+    </net>
+    <net code="5" name="/BTN_LEFT" class="Default">
+      <node ref="SW2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="GPIO25" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="/BTN_MODE" class="Default">
+      <node ref="SW4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="GPIO27" pintype="bidirectional"/>
+    </net>
+    <net code="7" name="/BTN_RIGHT" class="Default">
+      <node ref="SW3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="GPIO26" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="/GND" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="MOD1" pin="2" pinfunction="B-" pintype="passive"/>
+      <node ref="MOD1" pin="4" pinfunction="OUT-" pintype="power_in"/>
+      <node ref="MOD2" pin="2" pinfunction="VIN-" pintype="power_in"/>
+      <node ref="MOD2" pin="4" pinfunction="VOUT-" pintype="power_in"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="SW4" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="TP7" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="32" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="38" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="8" pinfunction="FSY" pintype="input"/>
+      <node ref="U3" pin="2" pinfunction="GND_H" pintype="power_in"/>
+      <node ref="U3" pin="6" pinfunction="GND_L" pintype="power_in"/>
+    </net>
+    <net code="9" name="/IMU_INT_1V8" class="Default">
+      <node ref="TP5" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="7" pinfunction="INT" pintype="output"/>
+    </net>
+    <net code="10" name="/IMU_SCL_1V8" class="Default">
+      <node ref="TP3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="SCL" pintype="input"/>
+      <node ref="U3" pin="8" pinfunction="LV2_SCL" pintype="bidirectional"/>
+    </net>
+    <net code="11" name="/IMU_SCL_3V3" class="Default">
+      <node ref="J2" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="36" pinfunction="GPIO22" pintype="bidirectional"/>
+      <node ref="U3" pin="4" pinfunction="HV2_SCL" pintype="bidirectional"/>
+    </net>
+    <net code="12" name="/IMU_SDA_1V8" class="Default">
+      <node ref="TP4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="SDA" pintype="bidirectional"/>
+      <node ref="U3" pin="7" pinfunction="LV1_SDA" pintype="bidirectional"/>
+    </net>
+    <net code="13" name="/IMU_SDA_3V3" class="Default">
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U1" pin="33" pinfunction="GPIO21" pintype="bidirectional"/>
+      <node ref="U3" pin="3" pinfunction="HV1_SDA" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="/LED_ANODE" class="Default">
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+    </net>
+    <net code="15" name="/LED_STATUS" class="Default">
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="GPIO32" pintype="bidirectional"/>
+    </net>
+    <net code="16" name="/VBAT" class="Default">
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="MOD1" pin="1" pinfunction="B+" pintype="passive"/>
+      <node ref="TP8" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="17" name="/V_SW_IN" class="Default">
+      <node ref="MOD1" pin="3" pinfunction="OUT+" pintype="power_out"/>
+      <node ref="SW1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="18" name="/V_SYS" class="Default">
+      <node ref="MOD2" pin="1" pinfunction="VIN+" pintype="power_in"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="TP9" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="19" name="Net-(SW2-Pad2)" class="Default">
+      <node ref="SW2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="SW3" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(U2-AD0)" class="Default">
+      <node ref="U2" pin="2" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="6" pinfunction="AD0" pintype="input"/>
+    </net>
+    <net code="21" name="Net-(U4-GND)" class="Default">
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="U4" pin="1" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="22" name="unconnected-(SW1-Pad3)" class="Default">
+      <node ref="SW1" pin="3" pinfunction="3" pintype="passive+no_connect"/>
+    </net>
+    <net code="23" name="unconnected-(U1-CLK-Pad20)" class="Default">
+      <node ref="U1" pin="20" pinfunction="CLK" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="24" name="unconnected-(U1-CMD-Pad18)" class="Default">
+      <node ref="U1" pin="18" pinfunction="CMD" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="25" name="unconnected-(U1-EN-Pad2)" class="Default">
+      <node ref="U1" pin="2" pinfunction="EN" pintype="input+no_connect"/>
+    </net>
+    <net code="26" name="unconnected-(U1-GPIO0-Pad25)" class="Default">
+      <node ref="U1" pin="25" pinfunction="GPIO0" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="27" name="unconnected-(U1-GPIO2-Pad24)" class="Default">
+      <node ref="U1" pin="24" pinfunction="GPIO2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="28" name="unconnected-(U1-GPIO4-Pad26)" class="Default">
+      <node ref="U1" pin="26" pinfunction="GPIO4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="29" name="unconnected-(U1-GPIO5-Pad29)" class="Default">
+      <node ref="U1" pin="29" pinfunction="GPIO5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="30" name="unconnected-(U1-GPIO12-Pad13)" class="Default">
+      <node ref="U1" pin="13" pinfunction="GPIO12" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="31" name="unconnected-(U1-GPIO13-Pad15)" class="Default">
+      <node ref="U1" pin="15" pinfunction="GPIO13" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="32" name="unconnected-(U1-GPIO14-Pad12)" class="Default">
+      <node ref="U1" pin="12" pinfunction="GPIO14" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(U1-GPIO15-Pad23)" class="Default">
+      <node ref="U1" pin="23" pinfunction="GPIO15" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(U1-GPIO16-Pad27)" class="Default">
+      <node ref="U1" pin="27" pinfunction="GPIO16" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(U1-GPIO17-Pad28)" class="Default">
+      <node ref="U1" pin="28" pinfunction="GPIO17" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="36" name="unconnected-(U1-GPIO18-Pad30)" class="Default">
+      <node ref="U1" pin="30" pinfunction="GPIO18" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="37" name="unconnected-(U1-GPIO19-Pad31)" class="Default">
+      <node ref="U1" pin="31" pinfunction="GPIO19" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="38" name="unconnected-(U1-GPIO23-Pad37)" class="Default">
+      <node ref="U1" pin="37" pinfunction="GPIO23" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(U1-GPIO33-Pad8)" class="Default">
+      <node ref="U1" pin="8" pinfunction="GPIO33" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(U1-GPIO35-Pad6)" class="Default">
+      <node ref="U1" pin="6" pinfunction="GPIO35" pintype="input+no_connect"/>
+    </net>
+    <net code="41" name="unconnected-(U1-RXD0-Pad34)" class="Default">
+      <node ref="U1" pin="34" pinfunction="RXD0" pintype="input+no_connect"/>
+    </net>
+    <net code="42" name="unconnected-(U1-SD0-Pad21)" class="Default">
+      <node ref="U1" pin="21" pinfunction="SD0" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="43" name="unconnected-(U1-SD1-Pad22)" class="Default">
+      <node ref="U1" pin="22" pinfunction="SD1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="44" name="unconnected-(U1-SD2-Pad16)" class="Default">
+      <node ref="U1" pin="16" pinfunction="SD2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="45" name="unconnected-(U1-SD3-Pad17)" class="Default">
+      <node ref="U1" pin="17" pinfunction="SD3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="46" name="unconnected-(U1-SENSOR_VN-Pad4)" class="Default">
+      <node ref="U1" pin="4" pinfunction="SENSOR_VN" pintype="input+no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(U1-SENSOR_VP-Pad3)" class="Default">
+      <node ref="U1" pin="3" pinfunction="SENSOR_VP" pintype="input+no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(U1-TXD0-Pad35)" class="Default">
+      <node ref="U1" pin="35" pinfunction="TXD0" pintype="output+no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(U2-ACL-Pad9)" class="Default">
+      <node ref="U2" pin="9" pinfunction="ACL" pintype="output+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(U2-ADA-Pad10)" class="Default">
+      <node ref="U2" pin="10" pinfunction="ADA" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>

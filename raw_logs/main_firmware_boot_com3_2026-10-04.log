@@ -1,0 +1,62 @@
+# capture_serial.py port=rfc2217://<LAPTOP_IP>:4000?ign_set_control baud=115200 reset=True seconds=20.0 start=2026-10-08 15:04:11
+[15:04:11.691] ets Jul 29 2019 12:21:46
+[15:04:11.691] 
+[15:04:11.691] rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[15:04:11.691] configsip: 0, SPIWP:0xee
+[15:04:11.692] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[15:04:11.692] mode:DIO, clock div:2
+[15:04:11.692] load:0x3fff0030,len:1184
+[15:04:11.692] load:0x40078000,len:13232
+[15:04:11.692] load:0x40080400,len:3028
+[15:04:11.692] entry 0x400805e4
+[15:04:11.701] ets Jul 29 2019 12:21:46
+[15:04:11.701] 
+[15:04:11.708] rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[15:04:11.711] configsip: 0, SPIWP:0xee
+[15:04:11.715] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[15:04:11.715] mode:DIO, clock div:2
+[15:04:11.721] load:0x3fff0030,len:1184
+[15:04:11.722] load:0x40078000,len:13232
+[15:04:11.722] load:0x40080400,len:3028
+[15:04:11.724] entry 0x400805e4
+[15:04:12.718] 
+[15:04:12.721] ==================================================
+[15:04:12.728]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[15:04:12.731]    Course: He Thong Nhung (Embedded Systems)
+[15:04:12.735] ==================================================
+[15:04:12.741] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[15:04:12.749] [   554][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[15:04:12.778] [DIAGNOSTICS] Register Readback Verification:
+[15:04:12.781]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[15:04:12.788]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[15:04:12.796]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[15:04:12.802]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[15:04:12.808]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[15:04:12.814]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[15:04:12.814] 
+[15:04:12.822] [CALIBRATION] Commencing 2-second Startup Gyro Bias Calibration...
+[15:04:12.828] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[15:04:15.034] [CALIBRATION] Completed in 2200 ms with 200 successful polls (nominal ODR ~102.27 Hz).
+[15:04:15.041] [CALIBRATION] Zero-Rate Bias: X =  -0.60 dps | Y =  -1.49 dps | Z =  +0.38 dps
+[15:04:15.045] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[15:04:15.123] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[15:04:15.123] 
+[15:04:15.776] [  3585][I][BLEDevice.cpp:577] getAdvertising(): create advertising
+[15:04:16.044] [STATUS] Rate: 92 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38
+[15:04:17.047] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38
+[15:04:18.045] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38
+[15:04:19.046] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38
+[15:04:20.044] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38
+[15:04:21.046] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38
+[15:04:22.045] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38
+[15:04:23.047] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38
+[15:04:24.044] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38
+[15:04:25.045] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38
+[15:04:26.046] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38
+[15:04:27.048] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38
+[15:04:28.045] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38
+[15:04:29.045] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38
+[15:04:30.045] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38
+[15:04:31.044] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38
+[15:04:32.045] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38
+# end elapsed_s=20.4 lines=60 bytes=3309 stopped_by=timeout

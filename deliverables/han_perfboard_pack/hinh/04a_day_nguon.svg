@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="794" height="1123" viewBox="0 0 794 1123" role="img">
+<title>Nối dây 01–13, 42–43: nguồn</title>
+<defs><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M-2,2 L2,-2 M0,10 L10,0 M8,12 L12,8" stroke="#d49b38" stroke-width="1.5"/></pattern></defs>
+<style>text{font-family:Arial,"Segoe UI",sans-serif;fill:#183044} .muted{fill:#4c6475}</style>
+<rect x="0.00" y="0.00" width="794.00" height="1123.00" rx="5" fill="#fff" stroke="none" stroke-width="0" />
+<text x="28.00" y="37.00" font-size="23" text-anchor="start" style="fill:#183044" font-weight="700">Nối dây 01–13, 42–43: nguồn</text>
+<text x="28.00" y="64.00" font-size="13" text-anchor="start" style="fill:#183044">Sơ đồ từng liên kết theo net; số dòng khớp bảng 3.7. Không phải đường đi vật lý.</text>
+<text x="766.00" y="87.00" font-size="12" text-anchor="end" style="fill:#be2832">đề xuất, chưa đo thực tế</text>
+<line x1="28.00" y1="101.00" x2="766.00" y2="101.00" stroke="#cbd5df" stroke-width="1"/>
+<rect x="28.00" y="114.00" width="738.00" height="28.00" rx="0" fill="#f3f6f9" stroke="none" stroke-width="0" />
+<text x="38.00" y="133.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">01</text>
+<text x="77.00" y="130.00" font-size="11" text-anchor="start" style="fill:#b91c1c" font-weight="700">VBAT</text>
+<text x="207.00" y="126.00" font-size="11" text-anchor="start" style="fill:#183044">BAT1 dây + đã đo</text>
+<line x1="212.00" y1="140.00" x2="500.00" y2="140.00" stroke="#b91c1c" stroke-width="2.5"/>
+<line x1="493.00" y1="136.00" x2="500.00" y2="140.00" stroke="#b91c1c" stroke-width="2"/>
+<line x1="493.00" y1="144.00" x2="500.00" y2="140.00" stroke="#b91c1c" stroke-width="2"/>
+<text x="512.00" y="134.00" font-size="11" text-anchor="start" style="fill:#183044">J1 cực + qua giắc</text>
+<rect x="28.00" y="144.00" width="738.00" height="28.00" rx="0" fill="#fff" stroke="none" stroke-width="0" />
+<text x="38.00" y="163.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">02</text>
+<text x="77.00" y="160.00" font-size="11" text-anchor="start" style="fill:#7c3aed" font-weight="700">GND_BAT_CELL</text>
+<text x="207.00" y="156.00" font-size="11" text-anchor="start" style="fill:#183044">BAT1 dây − đã đo</text>
+<line x1="212.00" y1="170.00" x2="500.00" y2="170.00" stroke="#7c3aed" stroke-width="2.5"/>
+<line x1="493.00" y1="166.00" x2="500.00" y2="170.00" stroke="#7c3aed" stroke-width="2"/>
+<line x1="493.00" y1="174.00" x2="500.00" y2="170.00" stroke="#7c3aed" stroke-width="2"/>
+<text x="512.00" y="164.00" font-size="11" text-anchor="start" style="fill:#183044">J1 cực − qua giắc</text>
+<rect x="28.00" y="174.00" width="738.00" height="28.00" rx="0" fill="#f3f6f9" stroke="none" stroke-width="0" />
+<text x="38.00" y="193.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">03</text>
+<text x="77.00" y="190.00" font-size="11" text-anchor="start" style="fill:#b91c1c" font-weight="700">VBAT</text>
+<text x="207.00" y="186.00" font-size="11" text-anchor="start" style="fill:#183044">J1 +</text>
+<line x1="212.00" y1="200.00" x2="500.00" y2="200.00" stroke="#b91c1c" stroke-width="2.5"/>
+<line x1="493.00" y1="196.00" x2="500.00" y2="200.00" stroke="#b91c1c" stroke-width="2"/>
+<line x1="493.00" y1="204.00" x2="500.00" y2="200.00" stroke="#b91c1c" stroke-width="2"/>
+<text x="512.00" y="194.00" font-size="11" text-anchor="start" style="fill:#183044">MOD1 B+</text>
+<rect x="28.00" y="204.00" width="738.00" height="28.00" rx="0" fill="#fff" stroke="none" stroke-width="0" />
+<text x="38.00" y="223.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">04</text>
+<text x="77.00" y="220.00" font-size="11" text-anchor="start" style="fill:#7c3aed" font-weight="700">GND_BAT_CELL</text>
+<text x="207.00" y="216.00" font-size="11" text-anchor="start" style="fill:#183044">J1 −</text>
+<line x1="212.00" y1="230.00" x2="500.00" y2="230.00" stroke="#7c3aed" stroke-width="2.5"/>
+<line x1="493.00" y1="226.00" x2="500.00" y2="230.00" stroke="#7c3aed" stroke-width="2"/>
+<line x1="493.00" y1="234.00" x2="500.00" y2="230.00" stroke="#7c3aed" stroke-width="2"/>
+<text x="512.00" y="224.00" font-size="11" text-anchor="start" style="fill:#183044">MOD1 B-</text>
+<rect x="28.00" y="234.00" width="738.00" height="28.00" rx="0" fill="#f3f6f9" stroke="none" stroke-width="0" />
+<text x="38.00" y="253.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">05</text>
+<text x="77.00" y="250.00" font-size="11" text-anchor="start" style="fill:#dc2626" font-weight="700">V_SW_IN</text>
+<text x="207.00" y="246.00" font-size="11" text-anchor="start" style="fill:#183044">MOD1 OUT+</text>
+<line x1="212.00" y1="260.00" x2="500.00" y2="260.00" stroke="#dc2626" stroke-width="2.5"/>
+<line x1="493.00" y1="256.00" x2="500.00" y2="260.00" stroke="#dc2626" stroke-width="2"/>
+<line x1="493.00" y1="264.00" x2="500.00" y2="260.00" stroke="#dc2626" stroke-width="2"/>
+<text x="512.00" y="254.00" font-size="11" text-anchor="start" style="fill:#183044">SW1 tiếp điểm ON</text>
+<rect x="28.00" y="264.00" width="738.00" height="28.00" rx="0" fill="#fff" stroke="none" stroke-width="0" />
+<text x="38.00" y="283.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">06</text>
+<text x="77.00" y="280.00" font-size="11" text-anchor="start" style="fill:#20252b" font-weight="700">GND</text>
+<text x="207.00" y="276.00" font-size="11" text-anchor="start" style="fill:#183044">MOD1 OUT-</text>
+<line x1="212.00" y1="290.00" x2="500.00" y2="290.00" stroke="#20252b" stroke-width="2.5"/>
+<line x1="493.00" y1="286.00" x2="500.00" y2="290.00" stroke="#20252b" stroke-width="2"/>
+<line x1="493.00" y1="294.00" x2="500.00" y2="290.00" stroke="#20252b" stroke-width="2"/>
+<text x="512.00" y="284.00" font-size="11" text-anchor="start" style="fill:#183044">G*</text>
+<rect x="28.00" y="294.00" width="738.00" height="28.00" rx="0" fill="#f3f6f9" stroke="none" stroke-width="0" />
+<text x="38.00" y="313.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">07</text>
+<text x="77.00" y="310.00" font-size="11" text-anchor="start" style="fill:#e54b2c" font-weight="700">V_SYS</text>
+<text x="207.00" y="306.00" font-size="11" text-anchor="start" style="fill:#183044">SW1 COM</text>
+<line x1="212.00" y1="320.00" x2="500.00" y2="320.00" stroke="#e54b2c" stroke-width="2.5"/>
+<line x1="493.00" y1="316.00" x2="500.00" y2="320.00" stroke="#e54b2c" stroke-width="2"/>
+<line x1="493.00" y1="324.00" x2="500.00" y2="320.00" stroke="#e54b2c" stroke-width="2"/>
+<text x="512.00" y="314.00" font-size="11" text-anchor="start" style="fill:#183044">MOD2 VIN+</text>
+<rect x="28.00" y="324.00" width="738.00" height="28.00" rx="0" fill="#fff" stroke="none" stroke-width="0" />
+<text x="38.00" y="343.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">08</text>
+<text x="77.00" y="340.00" font-size="11" text-anchor="start" style="fill:#e54b2c" font-weight="700">V_SYS</text>
+<text x="207.00" y="336.00" font-size="11" text-anchor="start" style="fill:#183044">SW1 COM</text>
+<line x1="212.00" y1="350.00" x2="500.00" y2="350.00" stroke="#e54b2c" stroke-width="2.5"/>
+<line x1="493.00" y1="346.00" x2="500.00" y2="350.00" stroke="#e54b2c" stroke-width="2"/>
+<line x1="493.00" y1="354.00" x2="500.00" y2="350.00" stroke="#e54b2c" stroke-width="2"/>
+<text x="512.00" y="344.00" font-size="11" text-anchor="start" style="fill:#183044">R2.1</text>
+<rect x="28.00" y="354.00" width="738.00" height="28.00" rx="0" fill="#f3f6f9" stroke="none" stroke-width="0" />
+<text x="38.00" y="373.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">09</text>
+<text x="77.00" y="370.00" font-size="11" text-anchor="start" style="fill:#20252b" font-weight="700">GND</text>
+<text x="207.00" y="366.00" font-size="11" text-anchor="start" style="fill:#183044">G*</text>
+<line x1="212.00" y1="380.00" x2="500.00" y2="380.00" stroke="#20252b" stroke-width="2.5"/>
+<line x1="493.00" y1="376.00" x2="500.00" y2="380.00" stroke="#20252b" stroke-width="2"/>
+<line x1="493.00" y1="384.00" x2="500.00" y2="380.00" stroke="#20252b" stroke-width="2"/>
+<text x="512.00" y="374.00" font-size="11" text-anchor="start" style="fill:#183044">MOD2 VIN-</text>
+<rect x="28.00" y="384.00" width="738.00" height="28.00" rx="0" fill="#fff" stroke="none" stroke-width="0" />
+<text x="38.00" y="403.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">10</text>
+<text x="77.00" y="400.00" font-size="11" text-anchor="start" style="fill:#20252b" font-weight="700">GND</text>
+<text x="207.00" y="396.00" font-size="11" text-anchor="start" style="fill:#183044">G*</text>
+<line x1="212.00" y1="410.00" x2="500.00" y2="410.00" stroke="#20252b" stroke-width="2.5"/>
+<line x1="493.00" y1="406.00" x2="500.00" y2="410.00" stroke="#20252b" stroke-width="2"/>
+<line x1="493.00" y1="414.00" x2="500.00" y2="410.00" stroke="#20252b" stroke-width="2"/>
+<text x="512.00" y="404.00" font-size="11" text-anchor="start" style="fill:#183044">MOD2 VOUT-</text>
+<rect x="28.00" y="414.00" width="738.00" height="28.00" rx="0" fill="#f3f6f9" stroke="none" stroke-width="0" />
+<text x="38.00" y="433.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">11</text>
+<text x="77.00" y="430.00" font-size="11" text-anchor="start" style="fill:#ef4444" font-weight="700">5V</text>
+<text x="207.00" y="426.00" font-size="11" text-anchor="start" style="fill:#183044">MOD2 VOUT+ → J5V.1 đực AC34</text>
+<line x1="212.00" y1="440.00" x2="500.00" y2="440.00" stroke="#ef4444" stroke-width="2.5"/>
+<line x1="493.00" y1="436.00" x2="500.00" y2="440.00" stroke="#ef4444" stroke-width="2"/>
+<line x1="493.00" y1="444.00" x2="500.00" y2="440.00" stroke="#ef4444" stroke-width="2"/>
+<text x="512.00" y="434.00" font-size="11" text-anchor="start" style="fill:#183044">J5V.1 cái → U1 VIN/5V</text>
+<rect x="28.00" y="444.00" width="738.00" height="28.00" rx="0" fill="#fff" stroke="none" stroke-width="0" />
+<text x="38.00" y="463.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">12</text>
+<text x="77.00" y="460.00" font-size="11" text-anchor="start" style="fill:#ef4444" font-weight="700">5V</text>
+<text x="207.00" y="456.00" font-size="11" text-anchor="start" style="fill:#183044">Phía nguồn J5V.1, cùng VOUT+</text>
+<line x1="212.00" y1="470.00" x2="500.00" y2="470.00" stroke="#ef4444" stroke-width="2.5"/>
+<line x1="493.00" y1="466.00" x2="500.00" y2="470.00" stroke="#ef4444" stroke-width="2"/>
+<line x1="493.00" y1="474.00" x2="500.00" y2="470.00" stroke="#ef4444" stroke-width="2"/>
+<text x="512.00" y="464.00" font-size="11" text-anchor="start" style="fill:#183044">C2 + tại AE35</text>
+<rect x="28.00" y="474.00" width="738.00" height="28.00" rx="0" fill="#f3f6f9" stroke="none" stroke-width="0" />
+<text x="38.00" y="493.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">13</text>
+<text x="77.00" y="490.00" font-size="11" text-anchor="start" style="fill:#20252b" font-weight="700">GND</text>
+<text x="207.00" y="486.00" font-size="11" text-anchor="start" style="fill:#183044">C2 −</text>
+<line x1="212.00" y1="500.00" x2="500.00" y2="500.00" stroke="#20252b" stroke-width="2.5"/>
+<line x1="493.00" y1="496.00" x2="500.00" y2="500.00" stroke="#20252b" stroke-width="2"/>
+<line x1="493.00" y1="504.00" x2="500.00" y2="500.00" stroke="#20252b" stroke-width="2"/>
+<text x="512.00" y="494.00" font-size="11" text-anchor="start" style="fill:#183044">G*</text>
+<rect x="28.00" y="504.00" width="738.00" height="28.00" rx="0" fill="#fff" stroke="none" stroke-width="0" />
+<text x="38.00" y="523.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">42</text>
+<text x="77.00" y="520.00" font-size="11" text-anchor="start" style="fill:#20252b" font-weight="700">GND</text>
+<text x="207.00" y="516.00" font-size="11" text-anchor="start" style="fill:#183044">G*</text>
+<line x1="212.00" y1="530.00" x2="500.00" y2="530.00" stroke="#20252b" stroke-width="2.5"/>
+<line x1="493.00" y1="526.00" x2="500.00" y2="530.00" stroke="#20252b" stroke-width="2"/>
+<line x1="493.00" y1="534.00" x2="500.00" y2="530.00" stroke="#20252b" stroke-width="2"/>
+<text x="512.00" y="524.00" font-size="11" text-anchor="start" style="fill:#183044">J5V.2 đực AD34</text>
+<rect x="28.00" y="534.00" width="738.00" height="28.00" rx="0" fill="#f3f6f9" stroke="none" stroke-width="0" />
+<text x="38.00" y="553.00" font-size="14" text-anchor="start" style="fill:#183044" font-weight="700">43</text>
+<text x="77.00" y="550.00" font-size="11" text-anchor="start" style="fill:#20252b" font-weight="700">GND</text>
+<text x="207.00" y="546.00" font-size="11" text-anchor="start" style="fill:#183044">J5V.2 cái</text>
+<line x1="212.00" y1="560.00" x2="500.00" y2="560.00" stroke="#20252b" stroke-width="2.5"/>
+<line x1="493.00" y1="556.00" x2="500.00" y2="560.00" stroke="#20252b" stroke-width="2"/>
+<line x1="493.00" y1="564.00" x2="500.00" y2="560.00" stroke="#20252b" stroke-width="2"/>
+<text x="512.00" y="554.00" font-size="11" text-anchor="start" style="fill:#183044">U1 GND theo nhãn thật</text>
+<text x="30.00" y="605.00" font-size="14" text-anchor="start" style="fill:#183044">Màu dương: các sắc đỏ; GND: đen; B−/GND_BAT_CELL: tím trên hình để tách rõ (dây thật đen nhãn</text>
+<text x="30.00" y="623.90" font-size="14" text-anchor="start" style="fill:#183044">B−). SDA xanh lá, SCL vàng, nút xanh dương/trắng có viền/tím, LED cam, SENSE xám. Nhãn net</text>
+<text x="30.00" y="642.80" font-size="14" text-anchor="start" style="fill:#183044">luôn là căn cứ chính.</text>
+<line x1="28.00" y1="1069.00" x2="766.00" y2="1069.00" stroke="#cbd5df" stroke-width="1"/>
+<text x="28.00" y="1090.00" font-size="12" text-anchor="start" style="fill:#183044">Nguồn: V2 §3.7; P = bó 2–3 lõi; S = một lõi. Dây đi vòng vùng pin, không đi theo nét logic này.</text>
+</svg>

@@ -1,0 +1,198 @@
+# capture_serial.py port=rfc2217://<LAPTOP_IP>:4000?ign_set_control baud=115200 reset=True seconds=120.0 start=2026-10-17 11:54:55
+[11:54:55.846] ets Jul 29 2019 12:21:46
+[11:54:55.846] 
+[11:54:55.846] rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[11:54:55.846] configsip: 0, SPIWP:0xee
+[11:54:55.846] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[11:54:55.846] mode:DIO, clock div:2
+[11:54:55.847] load:0x3fff0030,len:1184
+[11:54:55.847] load:0x40078000,len:13232
+[11:54:55.847] load:0x40080400,len:3028
+[11:54:55.847] entry 0x400805e4
+[11:54:55.974] ets Jul 29 2019 12:21:46
+[11:54:55.974] 
+[11:54:55.974] rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+[11:54:55.976] configsip: 0, SPIWP:0xee
+[11:54:55.987] clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+[11:54:55.989] mode:DIO, clock div:2
+[11:54:55.989] load:0x3fff0030,len:1184
+[11:54:55.989] load:0x40078000,len:13232
+[11:54:55.995] load:0x40080400,len:3028
+[11:54:55.995] entry 0x400805e4
+[11:54:56.991] 
+[11:54:56.998] ==================================================
+[11:54:56.999]    HYBRID AIR MOUSE — 6-AXIS FUSION ON ICM-20948
+[11:54:57.000]    Course: He Thong Nhung (Embedded Systems)
+[11:54:57.006] ==================================================
+[11:54:57.009] [INIT] Initializing ICM-20948 Sensor Bus (400 kHz)...
+[11:54:57.021] [   555][I][esp32-hal-i2c.c:75] i2cInit(): Initialising I2C Master: sda=21 scl=22 freq=400000
+[11:54:57.046] [DIAGNOSTICS] Register Readback Verification:
+[11:54:57.052]   -> WHO_AM_I         (Bank 0, 0x00) : 0xEA  [PASS]
+[11:54:57.058]   -> PWR_MGMT_1       (Bank 0, 0x06) : 0x01  [PASS] (CLKSEL=Auto-PLL, SLEEP=0)
+[11:54:57.069]   -> GYRO_CONFIG_1    (Bank 2, 0x01) : 0x1B  [PASS] (FS=500dps, DLPF=51.2Hz)
+[11:54:57.071]   -> ACCEL_CONFIG     (Bank 2, 0x14) : 0x1B  [PASS] (FS=4g, DLPF=50.4Hz [011])
+[11:54:57.077]   -> GYRO_SMPLRT_DIV  (Bank 2, 0x00) : 10     [PASS] (ODR ~ 102.27 Hz)
+[11:54:57.084]   -> ACCEL_SMPLRT_DIV (Bank 2, 0x10-11): 10  [PASS] (ODR ~ 102.27 Hz, synced)
+[11:54:57.086] 
+[11:54:57.093] [CALIBRATION] Commencing Gyro Bias Calibration (2 s per attempt)...
+[11:54:57.100] [CALIBRATION] Please leave the device completely STATIONARY on the table.
+[11:54:59.308] [CALIBRATION] Attempt 1: 2200 ms, 200 polls, |a| = 0.988 g, sd = 0.09/0.08/0.09 dps, half-mean diff = 0.01/0.02/0.00 dps -> ACCEPTED
+[11:54:59.315] [CALIBRATION] Zero-Rate Bias: X =  -1.39 dps | Y =  +0.57 dps | Z =  +0.37 dps
+[11:54:59.320] [BLE] Starting BLE HID Mouse Advertising as 'AirMouse-ESP32'...
+[11:54:59.325] [SYSTEM] Air Mouse System Ready. Entering 100 Hz Main Loop.
+[11:54:59.325] 
+[11:55:00.071] [  3610][I][BLEDevice.cpp:577] getAdvertising(): create advertising
+[11:55:00.337] [STATUS] Rate: 93 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 3s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:00.651] [  4186][I][BLEDevice.cpp:253] gapEventHandler(): ESP_GAP_BLE_AUTH_CMPL_EVT
+[11:55:01.336] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 4s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:02.335] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 5s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:03.337] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 6s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:04.345] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 7s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:05.335] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 8s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:06.348] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 9s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:07.335] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 10s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:08.347] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 11s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:09.338] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 12s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:10.336] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 13s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:11.338] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 14s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:12.354] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 15s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:13.337] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 16s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:14.338] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 17s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:15.339] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 18s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:16.339] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 19s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:17.341] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 20s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:18.351] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 21s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:19.341] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 22s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:20.348] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 23s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:21.350] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 24s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:22.340] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 25s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:23.344] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 26s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:24.349] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 27s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:25.342] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 28s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:26.341] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 29s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:27.343] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 30s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:28.343] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 31s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:29.341] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 32s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:30.345] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 33s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:31.343] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 34s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:32.346] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 35s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:33.343] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 36s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:34.343] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 37s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:35.346] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 38s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:36.346] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 39s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:37.346] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 40s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:38.346] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 41s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:39.343] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 42s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:40.346] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 43s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:41.348] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 44s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:42.348] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 45s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:43.346] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 46s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:43.981] [BTN] RIGHT down
+[11:55:44.156] [BTN] RIGHT up
+[11:55:44.346] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   -2, dY:   +0 | BiasZ: +0.37 | Up: 47s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:44.530] [BTN] RIGHT down
+[11:55:44.692] [BTN] RIGHT up
+[11:55:45.349] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 48s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:46.349] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 49s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:47.346] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 50s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:48.348] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 51s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:49.346] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 52s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:50.349] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 53s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:51.350] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 54s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:52.346] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 55s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:53.348] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 56s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:54.351] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 57s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:55.350] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 58s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:56.351] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 59s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:57.355] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.37 | Up: 60s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:58.351] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 61s | Frz: 0 | Heal: 0 | Rst: 1
+[11:55:59.352] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 62s | Frz: 0 | Heal: 0 | Rst: 1
+[11:56:00.353] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 63s | Frz: 0 | Heal: 0 | Rst: 1
+[11:56:01.350] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 64s | Frz: 0 | Heal: 0 | Rst: 1
+[11:56:02.981] [ 66516][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error 263
+[11:56:02.995] [STATUS] Rate: 64 Hz | Stat: 0 | Clutch: 0 | dX:   +1, dY:   +1 | BiasZ: +0.38 | Up: 66s | Frz: 0 | Heal: 0 | Rst: 1
+[11:56:03.475] [IMU] Sensor frozen/dead (|a| = 0.000 g) -> re-initialising the ICM-20948
+[11:56:03.483] [ 67014][W][Wire.cpp:301] begin(): Bus already started in Master Mode.
+[11:56:03.515] [IMU] imu_init = PASS (old bias kept; no blocking recalibration, 'c' or self-heal can refine it)
+[11:56:04.551] [STATUS] Rate: 149 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 68s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:05.515] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 69s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:06.521] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 70s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:07.522] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 71s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:08.519] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 72s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:09.516] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 73s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:10.518] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 74s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:11.530] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 75s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:12.517] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 76s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:13.522] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 77s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:14.518] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 78s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:15.522] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 79s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:16.521] [STATUS] Rate: 100 Hz | Stat: 1 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 80s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:17.520] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:  +24, dY:   -3 | BiasZ: +0.38 | Up: 81s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:18.524] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +5, dY:   -1 | BiasZ: +0.38 | Up: 82s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:19.524] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 83s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:20.523] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +4, dY:   +0 | BiasZ: +0.38 | Up: 84s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:21.524] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 85s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:22.520] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 86s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:23.533] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 87s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:24.523] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 88s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:25.521] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 89s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:26.041] [ 89576][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[11:56:26.046] [ 89586][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[11:56:26.523] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 90s | Frz: 1 | Heal: 0 | Rst: 1
+[11:56:26.548] [IMU] Sensor frozen/dead (|a| = 0.000 g) -> re-initialising the ICM-20948
+[11:56:26.555] [ 90087][W][Wire.cpp:301] begin(): Bus already started in Master Mode.
+[11:56:26.584] [IMU] imu_init = PASS (old bias kept; no blocking recalibration, 'c' or self-heal can refine it)
+[11:56:27.591] [STATUS] Rate: 103 Hz | Stat: 0 | Clutch: 0 | dX:   -4, dY:   +4 | BiasZ: +0.38 | Up: 91s | Frz: 2 | Heal: 0 | Rst: 1
+[11:56:28.631] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   -1, dY:   -6 | BiasZ: +0.38 | Up: 92s | Frz: 2 | Heal: 0 | Rst: 1
+[11:56:29.590] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +6, dY:   +1 | BiasZ: +0.38 | Up: 93s | Frz: 2 | Heal: 0 | Rst: 1
+[11:56:30.592] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   -3 | BiasZ: +0.38 | Up: 94s | Frz: 2 | Heal: 0 | Rst: 1
+[11:56:31.592] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   -2 | BiasZ: +0.38 | Up: 95s | Frz: 2 | Heal: 0 | Rst: 1
+[11:56:32.590] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 96s | Frz: 2 | Heal: 0 | Rst: 1
+[11:56:33.593] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   -4, dY:  -10 | BiasZ: +0.38 | Up: 97s | Frz: 2 | Heal: 0 | Rst: 1
+[11:56:34.591] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   -2 | BiasZ: +0.38 | Up: 98s | Frz: 2 | Heal: 0 | Rst: 1
+[11:56:34.706] [ 98244][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[11:56:34.718] [ 98254][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[11:56:35.217] [IMU] Sensor frozen/dead (|a| = 0.000 g) -> re-initialising the ICM-20948
+[11:56:35.221] [ 98755][W][Wire.cpp:301] begin(): Bus already started in Master Mode.
+[11:56:35.252] [IMU] imu_init = PASS (old bias kept; no blocking recalibration, 'c' or self-heal can refine it)
+[11:56:35.551] [ 99091][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[11:56:36.260] [STATUS] Rate: 163 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 99s | Frz: 3 | Heal: 0 | Rst: 1
+[11:56:37.257] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 100s | Frz: 3 | Heal: 0 | Rst: 1
+[11:56:38.226] [IMU] Sensor frozen/dead (|a| = 0.000 g) -> re-initialising the ICM-20948
+[11:56:38.231] [101763][W][Wire.cpp:301] begin(): Bus already started in Master Mode.
+[11:56:38.260] [IMU] imu_init = PASS (old bias kept; no blocking recalibration, 'c' or self-heal can refine it)
+[11:56:38.309] [101848][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[11:56:38.314] [101855][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[11:56:39.273] [STATUS] Rate: 195 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 102s | Frz: 4 | Heal: 0 | Rst: 1
+[11:56:40.271] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +1 | BiasZ: +0.38 | Up: 103s | Frz: 4 | Heal: 0 | Rst: 1
+[11:56:41.229] [IMU] Sensor frozen/dead (|a| = 0.000 g) -> re-initialising the ICM-20948
+[11:56:41.235] [104766][W][Wire.cpp:301] begin(): Bus already started in Master Mode.
+[11:56:41.266] [IMU] imu_init = PASS (old bias kept; no blocking recalibration, 'c' or self-heal can refine it)
+[11:56:42.146] [105683][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[11:56:42.156] [105693][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[11:56:42.270] [STATUS] Rate: 196 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 105s | Frz: 5 | Heal: 0 | Rst: 1
+[11:56:43.268] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 106s | Frz: 5 | Heal: 0 | Rst: 1
+[11:56:44.235] [IMU] Sensor frozen/dead (|a| = 0.000 g) -> re-initialising the ICM-20948
+[11:56:44.247] [107774][W][Wire.cpp:301] begin(): Bus already started in Master Mode.
+[11:56:44.271] [IMU] imu_init = PASS (old bias kept; no blocking recalibration, 'c' or self-heal can refine it)
+[11:56:45.279] [STATUS] Rate: 197 Hz | Stat: 0 | Clutch: 0 | dX:   +2, dY:   +5 | BiasZ: +0.38 | Up: 108s | Frz: 6 | Heal: 0 | Rst: 1
+[11:56:46.343] [109881][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[11:56:46.365] [109889][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[11:56:46.368] [STATUS] Rate: 101 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 109s | Frz: 6 | Heal: 0 | Rst: 1
+[11:56:47.242] [IMU] Sensor frozen/dead (|a| = 0.000 g) -> re-initialising the ICM-20948
+[11:56:47.248] [110780][W][Wire.cpp:301] begin(): Bus already started in Master Mode.
+[11:56:47.278] [IMU] imu_init = PASS (old bias kept; no blocking recalibration, 'c' or self-heal can refine it)
+[11:56:48.283] [STATUS] Rate: 188 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 111s | Frz: 7 | Heal: 0 | Rst: 1
+[11:56:49.285] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +1 | BiasZ: +0.38 | Up: 112s | Frz: 7 | Heal: 0 | Rst: 1
+[11:56:50.287] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   -1, dY:   -1 | BiasZ: +0.38 | Up: 113s | Frz: 7 | Heal: 0 | Rst: 1
+[11:56:51.286] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   +1, dY:   +1 | BiasZ: +0.38 | Up: 114s | Frz: 7 | Heal: 0 | Rst: 1
+[11:56:52.286] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   -2, dY:   +4 | BiasZ: +0.38 | Up: 115s | Frz: 7 | Heal: 0 | Rst: 1
+[11:56:53.288] [STATUS] Rate: 100 Hz | Stat: 0 | Clutch: 0 | dX:   -9, dY:  -11 | BiasZ: +0.38 | Up: 116s | Frz: 7 | Heal: 0 | Rst: 1
+[11:56:54.453] [117988][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error 263
+[11:56:54.462] [STATUS] Rate: 18 Hz | Stat: 0 | Clutch: 0 | dX:   +0, dY:   +0 | BiasZ: +0.38 | Up: 117s | Frz: 7 | Heal: 0 | Rst: 1
+[11:56:54.946] [IMU] Sensor frozen/dead (|a| = 0.000 g) -> re-initialising the ICM-20948
+[11:56:54.956] [118487][W][Wire.cpp:301] begin(): Bus already started in Master Mode.
+[11:56:54.984] [IMU] imu_init = PASS (old bias kept; no blocking recalibration, 'c' or self-heal can refine it)
+[11:56:55.412] [118948][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+[11:56:55.424] [118956][E][Wire.cpp:499] requestFrom(): i2cWriteReadNonStop returned Error -1
+# end elapsed_s=120.1 lines=196 bytes=18154 stopped_by=timeout
